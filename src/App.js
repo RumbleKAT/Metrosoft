@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import styles from "./app.css";
+
 import { BrowserRouter } from "react-router-dom";
 
 class App extends Component {
   render() {
     return (
-    <div>
+    <div className ={styles}>
           <BrowserRouter>
               <Header />
           </BrowserRouter>
