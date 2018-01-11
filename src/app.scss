@@ -1,14 +1,26 @@
  @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
+ $background_color : #f7f7f7;
+ $font_color : #d0d0d0;
+ $navfont_color : #999;
+ $footer_background : #363636;
+ $selected_item: #169b9b;
+
+
+body{
+    font-family: 15px/1.5 'Spoqa Han Sans',"Roboto","Apple SD Gothic Neo","Malgun Gothic","Arial,sans-serif,serif";
+    padding:0;
+    margin: 0;
+    background-color: $background_color;
+}
+
  .container{
     width:80%;
     margin:auto;
     overflow: hidden;
 }
 
-body{
-    font-family: 15px/1.5 Arial, Helvetica, sans-serif;
+.ul{
+    margin:0;
     padding:0;
-    margin: 0;
-    background-color: #f4f4f4;
 }
