@@ -1,0 +1,102 @@
+@import "../../../app.scss";
+
+.title{
+    width:100%;
+    text-align: left;
+    font-size: 20px;
+    color: $selected_item;
+    border-bottom: $selected_item 2px solid; /* 참고 */
+
+    font-weight: bold;
+    padding: 15px;
+}
+
+.boxes{
+    margin-top : 20px;
+
+    .box{
+        min-width: 300px;
+        float: left;
+        width : 45%;
+        padding : 20px;
+    }
+}
+p{
+    line-height:1.4em;
+}
+
+br{
+    line-height:2.0em;
+}
+
+.container{
+    width:80%;
+    margin:auto;
+    overflow: hidden;
+}
+
+.span{
+    color : $selected_item;
+}
+
+.signdiv{
+   text-align: center;
+   padding: 15px;
+}
+
+.boxImg{
+    margin-top:50px;
+    min-width: 250px;
+    border : 0;
+}
+
+.sign{
+    padding: 5px;
+    width: 15%;
+    height: 8%;
+    margin-left: 10px;
+    margin-top:10px;
+}
+
+.timeline{
+    
+    padding: 10px 40px;
+
+    ul{
+        list-style: none;
+        position: relative;
+        padding : 0;
+
+        &::before{
+        content: '';
+        position: absolute;
+        width: 2px;
+        height:100%;
+        top:0;
+        left:0;
+        background: #ddd;
+        }
+    }
+
+    li{
+    padding : 20px 20px;
+    }
+
+    div{
+        padding: 0 10px;
+    }
+
+    span{
+        color: #aaa;
+        position: absolute;
+        left: -20px;
+        //font-size:12px;
+        background-color : #fff;
+        padding: 5px;
+    }
+
+    
+    
+
+}
+

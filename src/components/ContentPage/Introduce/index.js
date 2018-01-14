@@ -1,22 +1,19 @@
 import React, { Component } from 'react';
-import DBLoad from "../DBLoad";
+import CEOIntroduce from "./CeoIntroduce";
+import Oragnization from "./Organization";
+import Timeliner from "./Timeline";
+import Map from "./map";
+
 
 class Introduce extends Component {
-    constructor(props){
-        super(props);
-        
-        this.state = {
-            index : 1
-        }
-    };
 
     render() {
-        return (
-            <div>
-                <h1>회사소개</h1>
-                <DBLoad index={this.state.index}/>
-            </div>
-        );
+        return <div>
+            <CEOIntroduce index={1} />
+            <Timeliner index={3} />
+            <Oragnization index={2} />
+            <Map />
+          </div>;
     }
 }
 

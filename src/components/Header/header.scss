@@ -4,7 +4,9 @@
     background: $background_color;
     padding-top: 10px;
     min-height: 50px;
-    border-bottom: $font_color 1px solid; /* 참고 */
+    
+    box-shadow: rgba(0,0,0,.117647) 0 1px 3px;
+    //border-bottom: $font_color 1px solid; /* 참고 */
 
     .context{
         color : $navfont_color;
