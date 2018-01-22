@@ -28,7 +28,7 @@ class CEOIntroduce extends Component {
         }
       }
     return (
-      <div>
+      <div style={{marginTop : "60px"}}>
         {
           total.split('\n').map(line => {
             if(line !== "")
