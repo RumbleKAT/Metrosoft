@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import DBLoad from "../DBLoad";
 
 class Organization extends Component {
   constructor(props) {

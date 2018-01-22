@@ -1,33 +1,52 @@
-import React, { Component } from "react";
-import DBLoad from "../DBLoad";
+import React from "react";
+import propTypes from "prop-types";
 import styles from "./styles.scss";
 import { Timeline, TimelineEvent } from "react-event-timeline";
+import * as actions from "../../../actions/ActionTypes";
+
 
 class Timeliner extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      index: this.props.index
-    };
+    console.log(this.props);
   }
 
   render() {
-    const styleadd = { background: "#d0d0d0" };
-    const titleStyle = { "fontSize" : "20px", "fontWeight" : "bold" };
-    return <div style={styleadd}>
+    const title = { fontSize: "30px", fontWeight: "bold", color: "#363636" };
+    const bubbleStyle = {
+      position: "absolute",
+      top: "0px",
+      left: "0px",
+      borderRadius: "50%",
+      width: "30px",
+      height: "30px",
+      marginLeft: "1px",
+      background: "#fff",
+      border: "3px solid #169b9b",
+      display: "flex"
+    };
+    const contentStyle = { fontSize: "15px", fontWeight: "400" };
+
+    return (
+      <div className={styles.TimelineStyle}>
+        <div />
         <Timeline>
-          <TimelineEvent titleStyle={titleStyle} title="2017">
-            I received the payment for $543. Should be shipping the item within a couple of hours.
-          </TimelineEvent>
-          <TimelineEvent title="You sent an email to John Doe" createdAt="2016-09-11 09:06 AM" icon={<i className="material-icons md-18">
-                email
-              </i>}>
-            Like we talked, you said that you would share the shipment details? This is an urgent order and so I am losing patience. Can you expedite the process and pls do share the details asap. Consider this a gentle reminder if you are on track already!
+          <TimelineEvent
+            titleStyle={title}
+            title="2017"
+            bubbleStyle={bubbleStyle}
+            contentStyle={contentStyle}>
+            <li>
+              I received the payment for $543. Should be shipping the item
+              within a couple of hours.
+            </li>
           </TimelineEvent>
         </Timeline>
-      </div>;
+      </div>
+    );
   }
 }
+
 
 export default Timeliner;

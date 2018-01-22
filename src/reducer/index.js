@@ -1,8 +1,12 @@
 import { combineReducers } from "redux";
-import loadjson from "./loadjson";
+import LOADJSON from "./loadjson";
+
 
 const reducers = combineReducers({
-  loadjson
+  LOADJSON
 });
+
+
+
 
 export default reducers;

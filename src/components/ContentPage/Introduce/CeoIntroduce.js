@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import DBLoad from "../DBLoad";
-import ceo from "../../../Image/ceo.png";
+import ceo from "../../../Image/ceo.jpeg";
 import sign from "../../../Image/sign.png";
 import styles from "./styles.scss";
 
@@ -10,11 +9,38 @@ class CEOIntroduce extends Component {
         super(props);
 
         this.state = {
-        index: this.props.index
+        object: this.props.object
     };
+
+    this._loadArray = this._loadArray.bind(this);
+  }
+
+  _loadArray = (obj) => {
+
+    var total = "";
+
+      for (const content in obj) {
+
+        if (obj.hasOwnProperty(content)) {
+          const element = obj[content];
+          total += element;
+          total += "\n";
+        }
+      }
+    return (
+      <div>
+        {
+          total.split('\n').map(line => {
+            if(line !== "")
+              return(<p>{line}<br /></p>);
+        }
+        )}
+      </div>
+    );
   }
 
   render() {
+    
   return <div>
       <div className={styles.boxes}>
         <div className={styles.container}>
@@ -22,26 +48,15 @@ class CEOIntroduce extends Component {
             <img className={styles.boxImg} src={ceo} alt="ceo_picture" />
           </div>
           <div className={styles.box}>
-            <h1>
-              <DBLoad index={this.state.index} result={"title"} />
-            </h1>
+            <h1>{this.state.object["title"]}</h1>
             <h2>
               <span className={styles.span}>
-                <DBLoad index={this.state.index} result={"subtitle"} />
+               {this.state.object["subtitle"]}
               </span>
             </h2>
-            <p>
-              <DBLoad index={this.state.index} result={"content"} keyIndex={0} />
-              <br />
-              <DBLoad index={this.state.index} result={"content"} keyIndex={1} />
-              <br />
-              <DBLoad index={this.state.index} result={"content"} keyIndex={2} />
-              <br />
-              <DBLoad index={this.state.index} result={"content"} keyIndex={3} />
-              <br />
-            </p>
+            {this._loadArray(this.state.object["content"])}
             <div className={styles.signdiv}>
-              <DBLoad index={this.state.index} result={"finish"} />
+              {this.state.object["finish"]}
               <img className={styles.sign} src={sign} alt="ceo_picture" />
             </div>
           </div>

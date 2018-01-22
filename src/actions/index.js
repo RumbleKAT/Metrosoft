@@ -1,15 +1,8 @@
 import * as types from "./ActionTypes";
 
-export function LOADJSON (index){
+export function TIMELINE (){
     return {
-        type: types.LOADJSON,
-        index
+        type: types.TIMELINE
     }
 } 
 
-export function TRANSLATE (lang){
-    return {
-        type: types.TRANSLATE,
-        lang
-    }
-} 
