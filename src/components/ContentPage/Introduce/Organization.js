@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import style from  "./organization.scss";
 
 class Organization extends Component {
   constructor(props) {
@@ -10,9 +11,21 @@ class Organization extends Component {
   }
 
   render() {
-    return <div >
-        
-        </div>;
+    return <div>
+        <div className={style.hvItem}>
+          <div className={style.hvItemParent}>
+            <p> This will be parent </p>
+          </div>
+          <div className={style.hvItemChildren}>
+            <div className={style.hvItemChild}>
+              <p> child Item </p>
+            </div>
+            <div className={style.hvItemChild}>
+              <p> child Item </p>
+            </div>
+          </div>
+        </div>
+      </div>;
   }
 }
 
