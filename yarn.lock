@@ -1754,6 +1754,10 @@ currently-unhandled@^0.4.1:
   dependencies:
     array-find-index "^1.0.1"
 
+cuuid@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/cuuid/-/cuuid-0.1.1.tgz#29b1e3e532054d69e95464e91615dcd877370329"
+
 d@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/d/-/d-1.0.0.tgz#754bb5bfe55451da69a58b94d45f4c5b0462d58f"
@@ -3922,6 +3926,10 @@ jsprim@^1.2.2:
     json-schema "0.2.3"
     verror "1.10.0"
 
+jss-node@^0.6.3:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/jss-node/-/jss-node-0.6.3.tgz#c4188c399d066ac2fef903051445361db5918b9a"
+
 jsx-ast-utils@^1.4.0:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/jsx-ast-utils/-/jsx-ast-utils-1.4.1.tgz#3867213e8dd79bf1e8f2300c0cfc1efb182c0df1"
@@ -5366,6 +5374,13 @@ react-event-timeline@^1.4.1:
   dependencies:
     prop-types "^15.6.0"
 
+react-pseudo@^1.0.16:
+  version "1.0.16"
+  resolved "https://registry.yarnpkg.com/react-pseudo/-/react-pseudo-1.0.16.tgz#3ea7e68a6a85a324a03ee89cfc9c091853508a0c"
+  dependencies:
+    cuuid "^0.1.1"
+    jss-node "^0.6.3"
+
 react-redux@^5.0.6:
   version "5.0.6"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.6.tgz#23ed3a4f986359d68b5212eaaa681e60d6574946"
@@ -6729,9 +6744,9 @@ webpack-sources@^1.0.1:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@3.8.1:
-  version "3.8.1"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.8.1.tgz#b16968a81100abe61608b0153c9159ef8bb2bd83"
+webpack@^3.8.1:
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-3.10.0.tgz#5291b875078cf2abf42bdd23afe3f8f96c17d725"
   dependencies:
     acorn "^5.0.0"
     acorn-dynamic-import "^2.0.0"
