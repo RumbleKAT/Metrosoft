@@ -27,43 +27,52 @@ class Timeliner extends React.Component {
 
     const box = {
       fontWeight : "bold",
-      padding: "2px",
+      padding: "5px",
       left: "-2.5em",
       top: "50%",
-      margiTop: "-1em",
+      marginTop: "1em",
       background: "#169b9b",
-      width: "6em",
-      height: "2em",
-      lineHeight: "2em",
+      width: "90px",
+      height: "1em",
+      lineHeight: "1em",
       textAlign: "center",
-      borderRadius : "5%"
+      borderRadius : "5%",
     }
 
 
-    return <div className={styles.boxes}>
-        <div className={styles.container}>
-          <div>
+    return <div style={{ marginTop: "20px" }}>
+        <div style={{ background: "#ddd" }}>
+          <div style={{ width: "90%", padding: "10px", marginLeft: "10px" }}>
+            <h1>회사소개</h1>
             <ol className={styles.rectangleList}>
               <li>
-                <div style={box}>사업자명</div>{" "}<a href="">{obj["company"]}</a>
+                <div style={box}>사업자명</div> <a href="">
+                  {obj["company"]}
+                </a>
               </li>
               <li>
-                <div style={box}>대표자</div><a href="">{obj["ceo"]}</a>
+                <div style={box}>대표자</div>
+                <a href="">{obj["ceo"]}</a>
               </li>
               <li>
-                <div style={box}>사업자분야</div><a href="">{obj["area"]}</a>
+                <div style={box}>사업자분야</div>
+                <a href="">{obj["area"]}</a>
               </li>
               <li>
-                <div style={box}>주소</div><a href="">{obj["address"]}</a>
+                <div style={box}>주소</div>
+                <a href="">{obj["address"]}</a>
               </li>
               <li>
-                <div style={box}>전화번호</div><a href="">{obj["tel"]}</a>
+                <div style={box}>전화번호</div>
+                <a href="">{obj["tel"]}</a>
               </li>
               <li>
-                <div style={box}>회사설립연도</div><a href="">{obj["birth"]}</a>
+                <div style={box}>회사설립연도</div>
+                <a href="">{obj["birth"]}</a>
               </li>
               <li>
-                <div style={box}>홈페이지</div><a href="">{obj["homepage"]}</a>
+                <div style={box}>홈페이지</div>
+                <a href="">{obj["homepage"]}</a>
               </li>
             </ol>
           </div>
