@@ -33,8 +33,8 @@ class CEOIntroduce extends Component {
           total.split('\n').map(line => {
             if(line !== "")
               return(<p>{line}<br /></p>);
+        })
         }
-        )}
       </div>
     );
   }

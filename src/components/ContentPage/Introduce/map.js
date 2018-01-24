@@ -1,10 +1,7 @@
 import React from "react"
 import { compose, withProps, withState, withHandlers } from "recompose";
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from "react-google-maps";
-import MarkerWithLabel from "react-google-maps/lib/components/addons/MarkerWithLabel";
 import TiCompass from "react-icons/lib/ti/compass";
-
-const google = window.google;
 
 const MapWithControlledZoom = compose(
   withProps({

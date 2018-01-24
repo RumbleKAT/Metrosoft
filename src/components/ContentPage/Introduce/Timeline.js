@@ -17,13 +17,6 @@ class Timeliner extends React.Component {
   };
 
   _loadTitle = obj => {
-    
-    const style = {
-     // padding: "inherit"
-      padding: "10px",
-      marginTop : "10px",
-      marginRight : "20px"
-    }
 
     const box = {
       fontWeight : "bold",
@@ -106,7 +99,7 @@ class Timeliner extends React.Component {
 
     const title = { fontSize: "30px", fontWeight: "bold", color: "#363636" };
     const bubbleStyle = { position: "absolute", top: "0px", left: "0px", borderRadius: "50%", width: "30px", height: "30px", marginLeft: "1px", background: "#fff", border: "3px solid #169b9b", display: "flex" };
-    const contentStyle = { fontSize: "15px", fontWeight: "400", width: "auto" ,backgroundColor : "none", boxShadow : "none" };
+    const contentStyle = { fontSize: "15px", fontWeight: "400", width: "auto" ,backgroundColor : "none", boxShadow : "none" ,marginTop:"0", marginBottom:"0"};
 
     return (
     content.reverse().map((object , i ) => {
