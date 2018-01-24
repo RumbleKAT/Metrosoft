@@ -71,7 +71,6 @@ br{
     li{
         float: none;
         display: list-item;
-       // color : $footer_background;
     }
 }
 
@@ -178,6 +177,7 @@ ol {
         left: -2.5em;
         top: 50%;
         margin-top: -1em;
+        color : #fff;
         background: $selected_item;
         height: 2em;
         width: 2em;
@@ -201,4 +201,10 @@ ol {
        border-left-color: $selected_item;
     }
   }
+}
+
+.organization {
+    img{
+        width : 50%;
+    }
 }

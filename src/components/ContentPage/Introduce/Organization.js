@@ -1,28 +1,41 @@
 import React, { Component } from "react";
-import style from  "./organization.scss";
+import style from "./styles.scss";
+import organization from "../../../Image/조직도.svg";
 
 class Organization extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      index: this.props.index
+      index: this.props.index,
+      object : this.props.object 
     };
+
+    this._loadData = this._loadData.bind(this);
+  }
+
+  _loadData = (obj) =>{
+
+    return (
+      <div style = {{lineHeight : "5%" , listStyle: "inherit" }}>
+          <li>    총원    : {obj["total"]}</li><br/>
+          <li>  현재 인원  : {obj["now"]}</li><br/>
+          <li> 추가예정인원 : {obj["add"]}</li><br/>
+      </div>
+    );
   }
 
   render() {
-    return <div>
-        <div className={style.hvItem}>
-          <div className={style.hvItemParent}>
-            <p> This will be parent </p>
+
+    return <div className={style.boxes}>
+        <div className={style.container}>
+          <div style={{ fontSize: "1em", float: "right", fontWeight: "400",padding : "10px" }}>
+            {this.state.object["updata_date"]}
+            <br/>
+            {this._loadData(this.state.object)}
           </div>
-          <div className={style.hvItemChildren}>
-            <div className={style.hvItemChild}>
-              <p> child Item </p>
-            </div>
-            <div className={style.hvItemChild}>
-              <p> child Item </p>
-            </div>
+          <div style={{ minWidth: "320px", width: "50%", display: "block", marginLeft: "auto", marginRight: "auto" }}>
+            <img style={{ width: "90%" }} src={organization} alt="조직도" />
           </div>
         </div>
       </div>;
