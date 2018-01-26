@@ -34,8 +34,8 @@ class Organization extends Component {
             <br/>
             {this._loadData(this.state.object)}
           </div>
-          <div style={{ minWidth: "400px", width: "50%", display: "block", marginLeft: "auto", marginRight: "auto" }}>
-            <img style={{minWidth : "400px"}} src={organization} alt="조직도" />
+          <div style={{ minWidth: "300px", width: "50%", display: "block", marginLeft: "auto", marginRight: "auto" }}>
+            <img style={{minWidth : "300px"}} src={organization} alt="조직도" />
           </div>
         </div>
       </div>;
