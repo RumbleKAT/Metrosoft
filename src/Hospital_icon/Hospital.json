@@ -145,6 +145,69 @@
         "title" : "척병원",
         "url" : "http://www.chukspine.com/",
         "img" : "./27.png"
+    },
+    {
+        "title" : "더큰병원",
+        "url" : "http://www.grandhospital.com/",
+        "img" : "./28.gif"
+    },
+    {
+        "title" : "대전 바로세움병원",
+        "url" : "http://www.grandhospital.com/",
+        "img" : "./29.png"
+    },
+    {
+        "title" : "대구 365병원",
+        "url" : "http://365hospital.com/",
+        "img" : "./30.jpg"
+    },
+    {
+        "title" : "광양 사랑병원",
+        "url" : "http://www.gysarang.com/",
+        "img" : "./31.gif"
+    },
+    {
+        "title" : "구리 굿병원",
+        "url" : "http://www.goodgmc.co.kr/",
+        "img" : "./32.jpg"
+    },
+    {
+        "title" : "구미 강남병원",
+        "url" : "http://www.knhospital.kr/",
+        "img" : "./33.png"
+    },
+    {
+        "title" : "대구 보건대학병원",
+        "url" : "http://www.dhch.ac.kr/",
+        "img" : "./34.gif"
+    },
+    {
+        "title" : "대구 서대구병원",
+        "url" : "http://www.sdg-hosp.com/",
+        "img" : "./35.gif"
+    },
+    {
+        "title" : "새움병원",
+        "url" : "http://www.saeumhospital.kr/",
+        "img" : "./36.gif"
+    },
+    {
+        "title" : "광명 새움병원",
+        "url" : "http://gmsaeum.com/",
+        "img" : "./37.jpg"
+    },
+    {
+        "title" : "부천 하이병원",
+        "url" : "http://hihospital.co.kr/",
+        "img" : "./38.png"
+    },
+    {
+        "title" : "새통영병원",
+        "url" : "http://saety.co.kr/",
+        "img" : "./39.gif"
+    },
+    {
+        
     }
     ]
 }

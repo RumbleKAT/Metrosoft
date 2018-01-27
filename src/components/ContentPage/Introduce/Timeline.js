@@ -35,7 +35,7 @@ class Timeliner extends React.Component {
 
     return <div style={{ marginTop: "20px" }}>
         <div style={{ background: "#ddd" }}>
-          <div style={{ width: "90%", padding: "10px", marginLeft: "10px" }}>
+          <div style={{ width: "90%", padding: "10px", marginLeft: "auto" , marginRight: "auto" }}>
             <h1>회사소개</h1>
             <ol className={styles.rectangleList}>
               <li>
