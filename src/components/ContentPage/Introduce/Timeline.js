@@ -19,7 +19,7 @@ class Timeliner extends React.Component {
   _loadTitle = obj => {
 
     const box = {
-      fontWeight : "bold",
+      fontWeight : "500",
       padding: "5px",
       left: "-2.5em",
       top: "50%",
@@ -30,13 +30,16 @@ class Timeliner extends React.Component {
       lineHeight: "1em",
       textAlign: "center",
       borderRadius : "5%",
+      color: "#fff"
     }
 
 
     return <div style={{ marginTop: "20px" }}>
+      <div style={{ marginLeft : "auto" , marginRight : "auto" ,textAlign:"center"}}>
+        <h1>회사소개</h1>
+      </div>
         <div style={{ background: "#ddd" }}>
-          <div style={{ width: "90%", padding: "10px", marginLeft: "auto" , marginRight: "auto" }}>
-            <h1>회사소개</h1>
+          <div style={{alignContent:"center", width: "100%", padding: "10px", marginLeft: "auto" , marginRight: "auto" }}>
             <ol className={styles.rectangleList}>
               <li>
                 <div style={box}>사업자명</div> <a href="">
@@ -114,7 +117,6 @@ class Timeliner extends React.Component {
   }
 
   render() {
-    
     return (
       <div className={styles.TimelineStyle}>
           {this._loadTitle(this.state.object["init"])}
