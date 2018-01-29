@@ -207,7 +207,109 @@
         "img" : "./39.gif"
     },
     {
-        
+        "title" : "안산 한사랑병원",
+        "url" : "http://www.hansarang7.com",
+        "img" : "./40.png"
+    },
+    {
+        "title" : "의정부 추병원",
+        "url" : "http://www.choomc.com/",
+        "img" : "./41.jpg"
+    },
+    {
+        "title" : "의정부 호원병원",
+        "url" : "http://www.howon-hospital.co.kr/",
+        "img" : "./42.jpg"
+    },
+    {
+        "title" : "선수촌병원",
+        "url" : "http://www.sunsoochon.co.kr/",
+        "img" : "./43.png"
+    },
+    {
+        "title" : "미래의료재단",
+        "url" : "http://www.mrhealth.co.kr/",
+        "img" : "./44.png"
+    },
+    {
+        "title" : "구로 예스병원",
+        "url" : "http://www.yespine.co.kr/",
+        "img" : "./45.png"
+    },
+    {
+        "title" : "김형근 예병원",
+        "url" : "http://www.김형근예병원.com/",
+        "img" : "./46.gif"
+    },
+    {
+        "title" : "21세기 라파병원",
+        "url" : "http://www.21crapha.com/",
+        "img" : "./47.gif"
+    },
+    {
+        "title" : "강남초이스 정형외과병원",
+        "url" : "http://www.choicehospital.co.kr/",
+        "img" : "./48.png"
+    },
+    {
+        "title" : "남기세병원",
+        "url" : "http://namkise.co.kr/",
+        "img" : "./49.png"
+    },
+    {
+        "title" : "대한민국 정형외과",
+        "url" : "http://www.대한민국정형외과.kr/",
+        "img" : "./50.gif"
+    },
+    {
+        "title" : "콕통증클리닉",
+        "url" : "http://www.kokhospital.com/",
+        "img" : "./50.jpg"
+    },
+    {
+        "title" : "안산 서울제일병원",
+        "url" : "http://www.sj-hospital.co.kr/",
+        "img" : "./51.jpg"
+    },
+    {
+        "title" : "가자연세병원",
+        "url" : "http://www.goyshospital.com/",
+        "img" : "./52.gif"
+    },
+    {
+        "title" : "대구 척척병원",
+        "url" : "http://wisemanhospital.com/",
+        "img" : "./53.gif"
+    },
+    {
+        "title" : "올바른 서울병원",
+        "url" : "http://www.allbarunhospital.co.kr/",
+        "img" : "./54.png"
+    },
+    {
+        "title" : "대구 우리병원",
+        "url" : "http://www.woorihospital.co.kr/",
+        "img" : "./55.gif"
+    },
+    {
+        "title" : "연세 방병원",
+        "url" : "http://www.ysbang.net/",
+        "img" : "./56.jpg"
+    },
+    {
+        "title" : "원주 H병원",
+        "url" : "http://www.h병원.com/",
+        "img" : "./57.png"
+    },
+    {
+        "title" : "서울 바른척도병원",
+        "url" : "http://www.chuckdo.com/",
+        "img" : "./58.png"
+    },
+    {
+        "title" : "더서울병원",
+        "url" : "http://theseoulhospital.com/",
+        "img" : "./59.png"
     }
     ]
 }
