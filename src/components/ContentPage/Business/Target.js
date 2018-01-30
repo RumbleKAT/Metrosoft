@@ -17,12 +17,10 @@ class Target extends Component {
             objects : icons["content"]
         }
         this.OnLoad = this.OnLoad.bind(this);
-        this.OnMoveLink = this.OnMoveLink.bind(this);
     }
 
     OnLoad(){
 
-        var height = "50%";
         const ImgStyle = { float: "left", padding: "50px" , width: "inherit" , height: "100px", margin: "30px 0 50px 0"};
 
         return  (
@@ -30,23 +28,26 @@ class Target extends Component {
                 {this.state.objects.map(function(icon , i) {
                     return (
                         <div style={ImgStyle} key={i}>
-                          <img src={path + icon.img} alt={icon.title} className={styles.customer} />
+                          <img src={path + icon.img} alt={icon.title} className={styles.customer} onClick={() => openNewTab(icon.url)} />
                         </div>);
                 })}
             </div>
         );
     }
-
-    OnMoveLink(name){
-        console.log("clicked!" + name);
-    }
-
     
     render() {
         const divStyle = { overflow: "hidden" ,padding: "40px" };
+        const titleStyle = { padding: "10px", marginLeft: "auto" , marginRight: "auto" , textAlign:"center"};
+        const pointStyle = { backgroundColor: "#169b9b", borderTopWidth: "5px", margin : "0px auto 0px auto" , maxWidth : "100px" , height: "5px"};
         return (
-        <div style={divStyle}>
-            {this.OnLoad()}
+        <div >
+            <div style={titleStyle}>
+                <h1>주요 고객사</h1>
+                <div style={pointStyle}></div>
+            </div>
+            <div style={divStyle}>
+                {this.OnLoad()}
+            </div>
         </div>
         );
     }
