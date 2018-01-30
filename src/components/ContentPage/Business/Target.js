@@ -14,7 +14,7 @@ class Target extends Component {
     constructor(props){
         super(props);
         this.state = {
-            title : ""
+            objects : icons["content"]
         }
         this.OnLoad = this.OnLoad.bind(this);
         this.OnMoveLink = this.OnMoveLink.bind(this);
@@ -22,8 +22,17 @@ class Target extends Component {
 
     OnLoad(){
 
+        var height = "50%";
+        const ImgStyle = { float: "left", padding: "50px" , width: "inherit" , height: "100px", margin: "30px 0 50px 0"};
+
         return  (
             <div>
+                {this.state.objects.map(function(icon , i) {
+                    return (
+                        <div style={ImgStyle} key={i}>
+                          <img src={path + icon.img} alt={icon.title} className={styles.customer} />
+                        </div>);
+                })}
             </div>
         );
     }
@@ -31,15 +40,15 @@ class Target extends Component {
     OnMoveLink(name){
         console.log("clicked!" + name);
     }
+
+    
     render() {
-        return <div>
-            <div>
-              <img className={styles.customer} src={path + icons["content"][0]["img"]} alt="메트로 병원" onClick={() => this.OnMoveLink("메트로")} />
-            </div>
-            <div>
-              <img className={styles.customer} src={path + icons["content"][2]["img"]} alt="분당 신우병원" />
-            </div>
-          </div>;
+        const divStyle = { overflow: "hidden" ,padding: "40px" };
+        return (
+        <div style={divStyle}>
+            {this.OnLoad()}
+        </div>
+        );
     }
 }
 
