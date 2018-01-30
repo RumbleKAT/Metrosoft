@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import icons from "../../../database/Hospital.json";
 import styles from "./Business.scss";
+import Pointdiv from "../pointDiv";
 
 function openNewTab(url){
     var win = window.open(url, "_blank");
@@ -37,19 +38,10 @@ class Target extends Component {
     
     render() {
         const divStyle = { overflow: "hidden" ,padding: "40px" };
-        const titleStyle = { padding: "10px", marginLeft: "auto" , marginRight: "auto" , textAlign:"center"};
-        const pointStyle = { backgroundColor: "#169b9b", borderTopWidth: "5px", margin : "0px auto 0px auto" , maxWidth : "100px" , height: "5px"};
-        return (
-        <div >
-            <div style={titleStyle}>
-                <h1>주요 고객사</h1>
-                <div style={pointStyle}></div>
-            </div>
-            <div style={divStyle}>
-                {this.OnLoad()}
-            </div>
-        </div>
-        );
+        return <div>
+            <Pointdiv onTitle={"주요 고객사"}/>
+            <div style={divStyle}>{this.OnLoad()}</div>
+          </div>;
     }
 }
 
