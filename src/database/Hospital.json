@@ -112,11 +112,6 @@
         "img" : "/22.png"
     },
     {
-        "title" : "분홍빛으로병원",
-        "url" : "http://www.mastopia.com",
-        "img" : "/22.png"
-    },
-    {
         "title" : "w병원",
         "url" : "http://www.w-hand.com/",
         "img" : "/23.png"
@@ -135,11 +130,6 @@
         "title" : "비에비스 나무병원",
         "url" : "http://www.vievisnamuh.com/",
         "img" : "/26.gif"
-    },
-    {
-        "title" : "척병원",
-        "url" : "http://www.chukspine.com/",
-        "img" : "/27.png"
     },
     {
         "title" : "더큰병원",
@@ -232,11 +222,6 @@
         "img" : "/45.png"
     },
     {
-        "title" : "김형근 예병원",
-        "url" : "http://www.김형근예병원.com/",
-        "img" : "/46.gif"
-    },
-    {
         "title" : "21세기 라파병원",
         "url" : "http://www.21crapha.com/",
         "img" : "/47.gif"
@@ -272,11 +257,6 @@
         "img" : "/52.gif"
     },
     {
-        "title" : "대구 척척병원",
-        "url" : "http://wisemanhospital.com/",
-        "img" : "/53.gif"
-    },
-    {
         "title" : "올바른 서울병원",
         "url" : "http://www.allbarunhospital.co.kr/",
         "img" : "/54.png"
@@ -292,11 +272,6 @@
         "img" : "/56.jpg"
     },
     {
-        "title" : "원주 H병원",
-        "url" : "http://www.h병원.com/",
-        "img" : "/57.png"
-    },
-    {
         "title" : "서울 바른척도병원",
         "url" : "http://www.chuckdo.com/",
         "img" : "/58.png"
@@ -305,6 +280,26 @@
         "title" : "더서울병원",
         "url" : "http://theseoulhospital.com/",
         "img" : "/59.png"
+    },
+    {
+        "title" : "서울 척병원",
+        "url" : "http://www.chukspine.com/",
+        "img" : "/27.png"
+    },
+    {
+        "title" : "김형근 예병원",
+        "url" : "http://www.김형근예병원.com/",
+        "img" : "/46.gif"
+    },
+    {
+        "title" : "대구 척척병원",
+        "url" : "http://wisemanhospital.com/",
+        "img" : "/53.gif"
+    },
+    {
+        "title" : "원주 H병원",
+        "url" : "http://www.h병원.com/",
+        "img" : "/57.png"
     }
     ]
 }

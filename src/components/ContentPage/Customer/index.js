@@ -27,12 +27,11 @@ const address = [
 
 class Customer extends Component {
     render() {
-        return (
-            <div style={{marginTop:"30px"}}>
-                <PointDiv onTitle={"고객지원"}/>
-                <CustomerTable onContent={address}/>
-            </div>
-        );
+        return <div style={{ marginTop: "30px" }}>
+            <PointDiv onTitle={"고객지원"} />
+            <CustomerTable onContent={address} />
+            <PointDiv onTitle={"원격지원"} />
+          </div>;
     }
 }
 

@@ -68,7 +68,7 @@ class CustomerTable extends Component {
 
     render() {
         return (
-            <div>
+            <div style ={{marginBottom: "100px"}}>
                 <div style = {{padding: "30px" , marginLeft:"10%" }}>
                     <div style ={{color: "#169b9b" ,float:"left" }}>
                     <FaPhoneSquare size={26}/>
