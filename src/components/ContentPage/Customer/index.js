@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CustomerTable from "./CustomerTable";
 import PointDiv from "../pointDiv";
+import Remote from "./RemoteControl";
 
 const address = [
   {
@@ -31,6 +32,7 @@ class Customer extends Component {
             <PointDiv onTitle={"고객지원"} />
             <CustomerTable onContent={address} />
             <PointDiv onTitle={"원격지원"} />
+            <Remote/>
           </div>;
     }
 }
