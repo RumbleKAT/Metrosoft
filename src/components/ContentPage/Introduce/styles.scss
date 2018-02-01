@@ -18,7 +18,7 @@
     .box{
         min-width: 300px;
         float: left;
-        width : 45%;
+        width : 50%;
         padding : 20px;
         margin-top : 10px;
     }
@@ -51,8 +51,8 @@ br{
 }
 
 .boxImg{
-    width: 70%;
-    margin-top:60px;
+    width: 65%;
+    margin-top:30px;
     min-width: 250px;
     border : 0;
 }
@@ -149,8 +149,8 @@ ol {
         transition: all .3s ease-out;
 
         //@include place-at-center();
-        width: 50%;
-        margin-left : 110px;
+        width: 60%;
+        margin-left : 170px;
         margin-top : -30px;
 
         // 반응형 디자인

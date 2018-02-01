@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import style from "./styles.scss";
 import organization from "../../../Image/조직도.svg";
-
+import PointDiv from "../pointDiv";
 class Organization extends Component {
   constructor(props) {
     super(props);
@@ -27,7 +27,12 @@ class Organization extends Component {
 
   render() {
 
-    return <div className={style.boxes}>
+    return(
+    <div>
+      <div style={{padding: "20px"}}>
+        <PointDiv onTitle={"조직도"}/>
+      </div>
+    <div className={style.boxes}>
         <div className={style.container}>
           <div style={{ fontSize: "1em", float: "right", fontWeight: "400",padding : "10px" }}>
             {this.state.object["updata_date"]}
@@ -38,7 +43,9 @@ class Organization extends Component {
             <img style={{minWidth : "300px"}} src={organization} alt="조직도" />
           </div>
         </div>
-      </div>;
+      </div>
+    </div>
+    );
   }
 }
 

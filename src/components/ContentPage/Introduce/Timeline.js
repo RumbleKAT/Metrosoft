@@ -1,8 +1,22 @@
 import React from "react";
 import styles from "./styles.scss";
 import { Timeline, TimelineEvent } from "react-event-timeline";
+import PointDiv from "../pointDiv";
 
-
+ const box = {
+      fontWeight : "500",
+      padding: "7px",
+      left: "-2.5em",
+      top: "50%",
+      marginTop: "1em",
+      background: "#169b9b",
+      width: "120px",
+      height: "1.7em",
+      lineHeight: "1em",
+      textAlign: "center",
+      borderRadius : "5%",
+      color: "#fff"
+    };
 class Timeliner extends React.Component {
   constructor(props) {
     super(props);
@@ -18,28 +32,12 @@ class Timeliner extends React.Component {
 
   _loadTitle = obj => {
 
-    const box = {
-      fontWeight : "500",
-      padding: "5px",
-      left: "-2.5em",
-      top: "50%",
-      marginTop: "1em",
-      background: "#169b9b",
-      width: "90px",
-      height: "1em",
-      lineHeight: "1em",
-      textAlign: "center",
-      borderRadius : "5%",
-      color: "#fff"
-    }
-
-
-    return <div style={{ marginTop: "20px" }}>
-      <div style={{ marginLeft : "auto" , marginRight : "auto" ,textAlign:"center"}}>
-        <h1>회사소개</h1>
+    return (<div>
+      <div style={{padding: "10px" , marginTop:"50px"}}>
+        <PointDiv onTitle={"회사소개"}/>
       </div>
-        <div style={{ background: "#ddd" }}>
-          <div style={{alignContent:"center", width: "100%", padding: "10px", marginLeft: "auto" , marginRight: "auto" }}>
+        <div>
+          <div style={{alignContent:"center", padding: "50px 20% 50px 10%"}}>
             <ol className={styles.rectangleList}>
               <li>
                 <div style={box}>사업자명</div> <a href="">
@@ -73,7 +71,7 @@ class Timeliner extends React.Component {
             </ol>
           </div>
         </div>
-      </div>;
+    </div>);
   }
 
   _loadDetail = obj => {
@@ -88,8 +86,8 @@ class Timeliner extends React.Component {
     return (
       <div>
         {
-          total.split('/').map(line => {
-              return(line.toString() === "" ? null : <li><a href="">{line.toString()}</a></li>);
+          total.split('/').map((line,i) => {
+              return(line.toString() === "" ? null : <li key={i}><a href="">{line.toString()}</a></li>);
           }
         )
         }
@@ -106,7 +104,7 @@ class Timeliner extends React.Component {
 
     return (
     content.reverse().map((object , i ) => {
-      return <TimelineEvent titleStyle={title} title={object.year} bubbleStyle={bubbleStyle} contentStyle={contentStyle}>
+      return <TimelineEvent titleStyle={title} title={object.year} bubbleStyle={bubbleStyle} contentStyle={contentStyle} key={i}>
           <ol className={styles.roundedList}>
             {this._loadDetail(obj.content[i])}
           </ol>

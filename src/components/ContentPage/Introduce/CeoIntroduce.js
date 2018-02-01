@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ceo from "../../../Image/ceo.jpeg";
 import sign from "../../../Image/sign.png";
 import styles from "./styles.scss";
+import PointDiv from "../pointDiv";
 
 class CEOIntroduce extends Component {
   
@@ -30,9 +31,12 @@ class CEOIntroduce extends Component {
     return (
       <div style={{marginTop : "60px"}}>
         {
-          total.split('\n').map(line => {
-            if(line !== "")
-              return(<p>{line}<br /></p>);
+          total.split('\n').map(function(line,i){
+            if(line !== ""){
+              return(<p key={i}>{line}<br /></p>);
+            }else{
+              return null;
+            }
         })
         }
       </div>
@@ -42,16 +46,18 @@ class CEOIntroduce extends Component {
   render() {
     
   return <div>
+      <div style={{padding:"50px"}}>
+        <PointDiv onTitle={this.state.object["title"]} />
+      </div>
       <div className={styles.boxes}>
         <div className={styles.container}>
           <div className={styles.box}>
             <img className={styles.boxImg} src={ceo} alt="ceo_picture" />
           </div>
           <div className={styles.box}>
-            <h1>{this.state.object["title"]}</h1>
             <h2>
               <span className={styles.span}>
-               {this.state.object["subtitle"]}
+                {this.state.object["subtitle"]}
               </span>
             </h2>
             {this._loadArray(this.state.object["content"])}
