@@ -8,6 +8,7 @@ import ceointroduce from "../../../database/CeoIntroduce.json";
 import organization from "../../../database/Organization.json";
 import timeline from "../../../database/Timeline.json";
 
+import PointDiv from "../pointDiv";
 
 class Introduce extends Component {
 
@@ -37,9 +38,14 @@ class Introduce extends Component {
     render() {
         return <div>
             <CEOIntroduce object={this._loadFile(1)} />
-            <Timeliner object={this._loadFile(3)}/>
+            <Timeliner object={this._loadFile(3)} />
             <Oragnization object={this._loadFile(2)} />
-            <Map />
+            <div>
+                <div style={{padding: "50px"}}>
+                    <PointDiv onTitle={"오시는 길"}/>
+                </div>
+              <Map />
+            </div>
           </div>;
     }
 }

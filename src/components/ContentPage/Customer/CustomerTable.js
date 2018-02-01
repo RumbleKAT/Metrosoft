@@ -22,7 +22,7 @@ function letterSeperate(value , i){
     return (
         <TableCell key ={i}>
             {obj[0]} <br/>
-            <a href='#'> {obj[1]} </a>
+            <a href='/'> {obj[1]} </a>
         </TableCell>
     );
 }

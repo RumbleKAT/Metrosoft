@@ -16,13 +16,16 @@ class Organization extends Component {
 
   _loadData = (obj) =>{
 
-    return (
-      <div style = {{lineHeight : "5%" , listStyle: "inherit" }}>
-          <li>    총원    : {obj["total"]}</li><br/>
-          <li>  현재 인원  : {obj["now"]}</li><br/>
-          <li> 추가예정인원 : {obj["add"]}</li><br/>
-      </div>
-    );
+    return <div style={{ lineHeight: "5%", listStyle: "inherit", marginLeft: "5px" }}>
+        <li>{this.state.object["updata_date"]}</li>
+        <br/>
+        <li> 총원 : {obj["total"]}</li>
+        <br />
+        <li> 현재 인원 : {obj["now"]}</li>
+        <br />
+        <li> 추가예정인원 : {obj["add"]}</li>
+        <br />
+      </div>;
   }
 
   render() {
@@ -34,9 +37,7 @@ class Organization extends Component {
       </div>
     <div className={style.boxes}>
         <div className={style.container}>
-          <div style={{ fontSize: "1em", float: "right", fontWeight: "400",padding : "10px" }}>
-            {this.state.object["updata_date"]}
-            <br/>
+          <div style={{ fontSize: "1em", float: "right", fontWeight: "400",padding : "10px" , border: ".2em solid #dfdfdf" ,borderRadius: "2em"}}>
             {this._loadData(this.state.object)}
           </div>
           <div style={{ minWidth: "300px", width: "50%", display: "block", marginLeft: "auto", marginRight: "auto" }}>

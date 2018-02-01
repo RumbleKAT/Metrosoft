@@ -63,6 +63,4 @@ const MapWithControlledZoom = compose(
   </GoogleMap>
 ));
 
-<MapWithControlledZoom />
-
 export default MapWithControlledZoom;

@@ -98,8 +98,8 @@ class Timeliner extends React.Component {
   _loadContent = obj => {
     var content = obj["content"];
 
-    const title = { fontSize: "30px", fontWeight: "bold", color: "#363636" };
-    const bubbleStyle = { position: "absolute", top: "0px", left: "0px", borderRadius: "50%", width: "30px", height: "30px", marginLeft: "1px", background: "#fff", border: "3px solid #169b9b", display: "flex" };
+    const title = { fontSize: "30px", fontWeight: "bold", color: "#363636" ,padding: "3px" };
+    const bubbleStyle = { position: "absolute", top: "0px", left: "0px", borderRadius: "50%", width: "35px", height: "35px", marginLeft: "1px", background: "#fff", border: "3px solid #169b9b", display: "flex" };
     const contentStyle = { fontSize: "15px", fontWeight: "400", width: "auto" ,backgroundColor : "none", boxShadow : "none" ,marginTop:"0", marginBottom:"0"};
 
     return (
@@ -118,9 +118,14 @@ class Timeliner extends React.Component {
     return (
       <div className={styles.TimelineStyle}>
           {this._loadTitle(this.state.object["init"])}
+        <div style={{padding: "30px" , marginBottom: "50px"}}>
+        <div style={{padding: "30px"}}>
+          <PointDiv onTitle={"연혁"}/>
+        </div>
         <Timeline>
           {this._loadContent(this.state.object)}
         </Timeline>
+        </div>
       </div>
     );
   }
