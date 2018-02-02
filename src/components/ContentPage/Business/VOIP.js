@@ -82,10 +82,10 @@ class VoIPContent extends Component {
               </div>
             </div>
             <RoundTitle onTitle={"특징"} />
-            <div style={{ marginTop: "50px", padding: "10px" }}>
+            <div style={{ marginTop: "50px", padding: "10px" ,marginBottom : "50px" }}>
               <ContentList OnContent={features} OnType={"number"} OnColor={"#ff9b0b"} />
             </div>
-            <RoundTitle onTitle={"도입효과"} />
+            <RoundTitle onTitle={"도입 효과"} />
             <div style={{ marginTop: "50px", padding: "10px" }}>
               <ContentList OnContent={effects} />
             </div>

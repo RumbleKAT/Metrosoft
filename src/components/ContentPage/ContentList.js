@@ -34,7 +34,7 @@ class ContentList extends Component {
                            if (check){
                                //involve subtitles
                                return <div key={i}>
-                                   <li className="item" style={{ fontSize: "18px"}}>
+                                   <li className="item" style={{ fontSize: "18px", marginBottom: "5px" }}>
                                      {obj.title}
                                    </li>
                                    <br />
@@ -50,7 +50,15 @@ class ContentList extends Component {
                                                i
                                              }
                                            >
-                                             <li value="-">
+                                             <li
+                                               value="-"
+                                               style={{
+                                                 fontSize:
+                                                   "13px",
+                                                 marginBottom:
+                                                   "5px"
+                                               }}
+                                             >
                                                {
                                                  el
                                                }
