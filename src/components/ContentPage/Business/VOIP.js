@@ -1,4 +1,9 @@
 import React, { Component } from 'react';
+import PointDiv from "../pointDiv";
+import RoundTitle from "../RoundTitle";
+import ContentList from "../ContentList";
+import ContentImg from "../../../Image/VOIP.svg";
+import FlowChart from "../../../Image/서비스 구성도.svg";
 
 const intro = [
     "유선 전화를 통한 가계비 부담을 줄이기 위해 기존 또는 신규 인터넷 회선을 이용하여 저렴한 통신비용과 PSTN과 PSDN의 양방향 통신 서비스를 지원하여 더욱 안정적인 서비스를 지원합니다."
@@ -34,11 +39,18 @@ const features = [
     ]
   },
   {
-      title: "유연성",
-      content : [
-          "특수번호를 걸더라도 가격은 똑같습니다.",
-          "특수번호 등 일반 인터넷 전화에서는 사용할 수 없거나 별도의 요금이 발생되는 타사와는 달리 저희 제품은 시내요금으로 통화가 가능합니다."
-      ]
+    title: "유연성",
+    content: [
+      "특수번호를 걸더라도 가격은 똑같습니다.",
+      "특수번호 등 일반 인터넷 전화에서는 사용할 수 없거나 별도의 요금이 발생되는 타사와는 달리 저희 제품은 시내요금으로 통화가 가능합니다."
+    ]
+  },
+  {
+    title: "본지사 무료통화",
+    content: [
+      "본사와 지사간 통화는 무료입니다.",
+      "본사와 지사간 통화가 무료일 뿐만 아니라 주거래처까지 저희 제품을 사용하실 경우 통화료는 무료입니다."
+    ]
   }
 ];
 
@@ -51,12 +63,33 @@ const effects = [
 ];
 class VoIPContent extends Component {
     render() {
-        return (
-            <div>
-
-                
+        return <div style={{ padding: "50px" }}>
+            <PointDiv onTitle={"VOIP 사업"} />
+            <RoundTitle onTitle={"소개"} />
+            <div style={{ marginTop: "50px", padding: "10px" }}>
+              <ContentList OnContent={intro} />
             </div>
-        );
+            <RoundTitle onTitle={"사업 내용"} />
+            <div style={{ marginLeft: "20px" }}>
+              <div style={{ padding: "10px", margin: "90px auto 0px auto", width: "50%", minWidth: "320px" }}>
+                <img style={{ marginRight: "50px" }} src={ContentImg} alt="VOIP 사업내용 이미지" />
+              </div>
+            </div>
+            <RoundTitle onTitle={"서비스 구성도"} />
+            <div style={{ marginLeft: "20px" }}>
+              <div style={{ padding: "10px", margin: "90px auto 0px auto", width: "50%", minWidth: "320px" }}>
+                <img style={{ marginRight: "50px" }} src={FlowChart} alt="VOIP 서비스 구성도" />
+              </div>
+            </div>
+            <RoundTitle onTitle={"특징"} />
+            <div style={{ marginTop: "50px", padding: "10px" }}>
+              <ContentList OnContent={features} OnType={"number"} OnColor={"#ff9b0b"} />
+            </div>
+            <RoundTitle onTitle={"도입효과"} />
+            <div style={{ marginTop: "50px", padding: "10px" }}>
+              <ContentList OnContent={effects} />
+            </div>
+          </div>;
     }
 }
 

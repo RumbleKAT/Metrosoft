@@ -46,7 +46,7 @@ class Commercial extends Component {
               {steps.map((step, i) => {
                 return <div className="step" key={i}>
                     <div style={{ color: "#999" }}>
-                      <i class="idea icon" />
+                      <i className="idea icon" />
                     </div>
                     <div className="content" style={{ color: "#169b9b" }}>
                       <div className="title">{step}</div>
