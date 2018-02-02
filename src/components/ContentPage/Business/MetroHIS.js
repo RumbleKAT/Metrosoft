@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PointDiv from "../pointDiv";
-import RoundTitle from "./RoundTitle";
+import RoundTitle from "../RoundTitle";
 import BusinessContent from "../../../Image/businessContent.svg";
 
 const titleStyle = (obj) => {
@@ -128,8 +128,9 @@ class MetroHIS extends Component {
                 <ul className="ui list">
                 {
                     objects.map((obj,i) => {
-                        return <div>
-                            <li key={i}>{obj}</li><br/>
+                        return <div key={i}>
+                            <li>{obj}</li>
+                            <br />
                           </div>;
                     })
                 }
