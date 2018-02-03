@@ -35,7 +35,7 @@ class RoundTitle extends Component {
     }
 
     render() {
-        return <div style={{ padding: "0px", marginTop: "30px", marginRight: "50px" }}>
+        return <div style={{ padding: "0px", marginTop: "30px", marginRight: "50px"}}>
             <div style={circularButton}>{this.state.object}</div>
             <div style={borderLine} />
           </div>;

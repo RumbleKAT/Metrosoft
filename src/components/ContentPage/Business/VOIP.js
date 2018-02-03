@@ -68,6 +68,11 @@ class VoIPContent extends Component {
             <RoundTitle onTitle={"소개"} />
             <div style={{ marginTop: "50px", padding: "10px" }}>
               <ContentList OnContent={intro} />
+              <div style={{ padding: "10px", margin: "0px 0 0px 40px " }}>
+                <a className="ui teal basic button" href="http://www.metro070.com/">
+                  Metro 070 바로가기
+                </a>
+              </div>
             </div>
             <RoundTitle onTitle={"사업 내용"} />
             <div style={{ marginLeft: "20px" }}>
@@ -82,7 +87,7 @@ class VoIPContent extends Component {
               </div>
             </div>
             <RoundTitle onTitle={"특징"} />
-            <div style={{ marginTop: "50px", padding: "10px" ,marginBottom : "50px" }}>
+            <div style={{ marginTop: "50px", padding: "10px", marginBottom: "50px" }}>
               <ContentList OnContent={features} OnType={"number"} OnColor={"#ff9b0b"} />
             </div>
             <RoundTitle onTitle={"도입 효과"} />

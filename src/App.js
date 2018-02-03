@@ -23,9 +23,9 @@ class App extends Component {
             <Route path="/business" component={Business} />
             <Route path="/product" component={Product} />
             <Route path="/customer" component={Customer} />
-            <ScrollToTop showUnder={200} style = {{bottom : "80px"}}>
-              <div style ={{color : "#169b9b"}}>
-                <FaCaretSquareOUp size ={40}/>
+            <ScrollToTop showUnder={200} style={{ bottom: "80px" }}>
+              <div style={{ color: "#169b9b" }}>
+                <FaCaretSquareOUp size={40} />
               </div>
             </ScrollToTop>
           </div>
