@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import EMRImg from "../../../Image/EMR.svg";
-import LabelContent from "./LabelContent";
+import LabelContent from "../LabelContent";
 import ContentList from "../ContentList";
+import PointDiv from "../pointDiv";
 
 const intro = {
     title : "Metro-EMR",
@@ -115,6 +116,7 @@ class EMR extends Component {
       }
     render() {
         return <div style={{ padding: "50px", width: "100%" }}>
+            <PointDiv onTitle= {"EMR"}/>
             <div style={{ overflow: "hidden" }}>
               {this.loadIMG()}
               <div style={{ minWidth: "250px" }}>
