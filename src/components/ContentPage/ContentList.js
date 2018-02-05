@@ -13,13 +13,14 @@ class ContentList extends Component {
 
     constructor(props){
         super(props);
-        console.log(this.props);
         this.state = {
             objects : this.props.OnContent,
             types : this.props.OnType,
             color : this.props.OnColor
         };
         this.loadData = this.loadData.bind(this);
+        console.log(this.state.objects);
+
     }
 
     loadData(objects){
