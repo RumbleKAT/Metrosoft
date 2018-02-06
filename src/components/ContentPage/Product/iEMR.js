@@ -3,6 +3,7 @@ import LabelContent from "../LabelContent";
 import PointDiv from "../pointDiv";
 import ContentList from "../ContentList";
 import iEMRImg from "../../../Image/iEMR.svg";
+import DottedTitle from "../DottedTitle";
 
 const Title = {
     title : 'Metro-iEMR',
@@ -16,69 +17,52 @@ const features =[
     "Attach File 등으로 정보 활용 증대",
     "rlwhs 데이터 전환으로 정보 활용성 증대"
 ];
-class IEMR extends Component {
-
+class IEMR extends React.Component {
   constructor(props) {
     super(props);
-    this.loadTitle = this.loadTitle.bind(this);
     this.loadImg = this.loadImg.bind(this);
   }
 
-  loadTitle(obj) {
+  loadImg() {
     return (
-      <div style={{ marginTop: "30px" , padding: "50px" }}>
-        <div style={{ fontSize: "30px", fontWeight: "bold" , float:"left", marginBottom:"15px",marginRight:"20px" }}>{obj.title}</div>
-        <div style={{ fontSize: "20px", fontWeight: "bold", color: "#888", minWidth:"330px",float:"left" }}>
-          {obj.subtitle}
-        </div>
-        <div
-          style={{
-            borderTop: "dotted 2px #888",
-            overflow: "hidden",
-            marginTop: "60px",
-            padding: "10px",
-          }}
-        >
-          {obj.content.split("/").map((row, i) => {
-            return (
-              <div
-                style={{
-                  marginTop: "10px",
-                  fontWeight: "400",
-                  fontSize: "16px"
-                }}
-                key={i}
-              >
-                {row}
-              </div>
-            );
-          })}
+      <div style={{ marginTop: "40px" }}>
+        <LabelContent
+          onTitle={"구축 흐름도"}
+          onAddLine={true}
+          onColor={"#dfdfdf"}
+        />
+        <div style={{ marginTop: "50px" }}>
+          <div
+            style={{
+              padding: "10px",
+              margin: "10px auto 0px auto",
+              width: "40%",
+              minWidth: "320px"
+            }}
+          >
+            <img style={{ marginRight: "50px" }} src={iEMRImg} alt="iEMR" />
+          </div>
         </div>
       </div>
     );
   }
 
-  loadImg() {
-      return <div style={{marginTop:"40px"}}>
-          <LabelContent onTitle={"구축 흐름도"} onAddLine={true} onColor={"#dfdfdf"} />
-          <div style={{ marginTop: "50px" }}>
-            <div style={{ padding: "10px", margin: "10px auto 0px auto", width: "40%", minWidth: "320px" }}>
-              <img style={{marginRight:"50px"}} src={iEMRImg} alt="iEMR" />
-            </div>
-          </div>
-        </div>;
-  }
-
   render() {
-    return <div>
+    return (
+      <div>
         <PointDiv onTitle={"iEMR"} />
-        {this.loadTitle(Title)}
+        <DottedTitle onTitle={Title}/>
         <div style={{ padding: "50px" }}>
-          <LabelContent onTitle={"서비스 특징"} onAddLine={true} onColor={"#dfdfdf"} />
+          <LabelContent
+            onTitle={"서비스 특징"}
+            onAddLine={true}
+            onColor={"#dfdfdf"}
+          />
           <ContentList OnContent={features} />
           {this.loadImg()}
         </div>
-      </div>;
+      </div>
+    );
   }
 }
 

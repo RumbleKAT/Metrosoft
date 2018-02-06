@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import iEMR from "./iEMR";
 import PointDiv from "../pointDiv";
+import DottedTitle from "../DottedTitle";
 
 const titleStyle = obj => {
   return {
@@ -21,7 +23,7 @@ const selectedcolors = ["#64b764", "#649dc2", "#feb40e", "#9fc543"];
 const Title = {
     title : 'Metro-OCS',
     subtitle : "(Order Communication System)",
-    content : "Metro-OCS는 환자의 등록 및 진료, 수납, 청구 등 원내의 모든 DATA를 관리 전달하는 것은 물론 병원의 모든 행정을 효율적으로 관리할 수 있도록 자동화 및 통합구축을 통하여 진료 생산성을 극대화하여 환자 서비스를 향상시키기 위해 개발된 통합 의료정보시스템입니다. 중소병원은 물론 의원 및 대학병원까지 적용 가능하며 향후 EMR 시스템으로 전환되는 토대로 제공합니다."
+    content : "Metro-OCS는 환자의 등록 및 진료, 수납, 청구 등 원내의 모든 DATA를 관리 전달하는 것은 물론, / 병원의 모든 행정을 효율적으로 관리할 수 있도록 자동화 및 통합구축을 통하여 진료 생산성을 극대화하여 환자 서비스를 향상시키기 위해 개발된 통합 의료정보시스템입니다. / 중소병원은 물론 의원 및 대학병원까지 적용 가능하며 향후 EMR 시스템으로 전환되는 토대로 제공합니다."
 }
 
 const compositions = [
@@ -334,7 +336,7 @@ class MetroOCS extends Component {
 
   loadComposition() {
     return (
-      <div style={{ padding: "0px", overflow: "hidden", marginTop: "50px" }}>
+      <div style={{ padding: "0px", overflow: "hidden" }}>
         <div className="ui green segment" style={contentStyle}>
           <h2 style={titleStyle(selectedcolors[0])}>원무</h2>
           <ul className="ui list">
@@ -407,7 +409,7 @@ class MetroOCS extends Component {
     );
   }
 
-  loadContent() {
+  loadContent(){
 
   }
 
@@ -422,6 +424,7 @@ class MetroOCS extends Component {
     return (
       <div>
         <PointDiv onTitle={"OCS"}/>
+        <DottedTitle onTitle={Title}/>
         <div style={{ padding: "60px" , marginRight:"10px" }}>{this.loadComposition()}</div>
       </div>
     );

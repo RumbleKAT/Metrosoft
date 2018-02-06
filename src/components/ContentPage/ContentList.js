@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 function CheckChild(objects) {
         var keys = Object.keys(objects);
-        
         if (keys.includes("title")) {
             return true;
         }else{
