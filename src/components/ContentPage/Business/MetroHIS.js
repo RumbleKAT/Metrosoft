@@ -39,7 +39,6 @@ const contentStyle = {
     marginRight : "10px",
     height:"210px"
 }
-
 class MetroHIS extends Component {
 
     constructor(props){

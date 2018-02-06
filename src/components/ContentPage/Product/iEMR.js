@@ -63,7 +63,7 @@ class IEMR extends Component {
           <LabelContent onTitle={"구축 흐름도"} onAddLine={true} onColor={"#dfdfdf"} />
           <div style={{ marginTop: "50px" }}>
             <div style={{ padding: "10px", margin: "10px auto 0px auto", width: "40%", minWidth: "320px" }}>
-              <img src={iEMRImg} alt="iEMR" />
+              <img style={{marginRight:"50px"}} src={iEMRImg} alt="iEMR" />
             </div>
           </div>
         </div>;
