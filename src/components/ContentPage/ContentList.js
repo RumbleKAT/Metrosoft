@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
-function CheckChild(objects) {
+function CheckChild(objects, key) {
+        console.log(key);
         var keys = Object.keys(objects);
-        if (keys.includes("title")) {
+        if (keys.includes(key)) {
             return true;
         }else{
             return false;
@@ -15,11 +16,11 @@ class ContentList extends Component {
         this.state = {
             objects : this.props.OnContent,
             types : this.props.OnType,
-            color : this.props.OnColor
+            color : this.props.OnColor,
+            key : this.props.OnKey,
         };
         this.loadData = this.loadData.bind(this);
-        console.log(this.state.objects);
-
+        //console.log(this.state.objects);
     }
 
     loadData(objects){
@@ -30,7 +31,7 @@ class ContentList extends Component {
                     <ol className="ui list" >
                       {
                        objects.map((obj, i) => {
-                           var check = objects.filter(CheckChild);
+                           var check = CheckChild(obj,this.state.key);
                            if (check){
                                //involve subtitles
                                return <div key={i}>
@@ -116,7 +117,8 @@ class ContentList extends Component {
 ContentList.defaultProps = {
   OnContent: {},
   OnType: null,
-  OnColor : "#000"
+  OnColor: "#000",
+  OnKey : "title"
 };
 
 export default ContentList;

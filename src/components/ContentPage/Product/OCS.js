@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import iEMR from "./iEMR";
 import PointDiv from "../pointDiv";
 import DottedTitle from "../DottedTitle";
+import LabelContent from "../LabelContent";
+import ContentList from '../ContentList';
 
 const titleStyle = obj => {
   return {
@@ -319,7 +321,6 @@ class MetroOCS extends Component {
     super(props);
     this.loadComposition = this.loadComposition.bind(this);
     this.loadDetail = this.loadDetail.bind(this);
-    this.loadContent = this.loadContent.bind(this);
     this.loadSubtitle = this.loadSubtitle.bind(this);
     this.loadList = this.loadList.bind(this);
   }
@@ -409,16 +410,19 @@ class MetroOCS extends Component {
     );
   }
 
-  loadContent(){
-
+  loadSubtitle(obj) {
+    return (
+      <div style={{padding: "50px"}}>
+        <LabelContent onTitle={obj.title} onAddLine={true}/>
+        {this.obj.description}
+      </div>
+    );
   }
 
-  loadSubtitle() {
-
-  }
-
-  loadList() {
-
+  loadList(obj) {
+    return <div style={{ padding: "50px" }}>
+      {obj.keys("content") !== null ? <ContentList OnContent={obj} /> : <ContentList OnContent={obj} OnKey={"content"}/>}
+      </div>;
   }
   render() {
     return (

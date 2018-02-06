@@ -15,13 +15,10 @@ class LabelContent extends Component {
     }
 
     loadAddLine(){
-        if (this.state.line) {
-          return <div style={{ marginTop: "30px" }}>
+        return this.state.line ?
+          <div style={{ marginTop: "30px" }}>
               <div style={{ width:"100%" ,height: "2px", background: this.state.color }} />
-            </div>;
-        } else {
-          return null;
-        }
+          </div> : null;
     }
 
      loadLabel(){
