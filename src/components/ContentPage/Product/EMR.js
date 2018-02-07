@@ -97,10 +97,7 @@ class EMR extends Component {
           default:
             break;
         }
-        //console.log(security[1].content);
-        //console.log(security);
-        console.log(obj);
-
+        
           return <div style={{ padding: "10px", marginTop: "40px" }}>
               <LabelContent onTitle={title} onAddLine={true} onColor={"#dfdfdf"} />
               <div style={{ padding: "10px" }}>

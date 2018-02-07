@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import iEMR from "./iEMR";
 import PointDiv from "../pointDiv";
 import DottedTitle from "../DottedTitle";
 import LabelContent from "../LabelContent";
@@ -59,24 +58,24 @@ const Lists = [
   {
     title: "1. 원무/보험",
     description:
-      "병원의 수납 및 청구 업무를 진료시스템과 얀계한 전산화를 통해 정확하고 신속한 접수/수납업무 를지원하고 진료비 계산 및 보험청구 등의 정확도를 높임으로써 병원의 수익증대와 환자 서비스의 질을 향상시킬 수 있도록 개발된 시스템입니다.",
-    works: [
+      "병원의 수납 및 청구 업무를 진료시스템과 얀계한 전산화를 통해 정확하고 신속한 접수/수납업무 를 지원하고 | 진료비 계산 및 보험청구 등의 정확도를 높임으로써 병원의 수익증대와 환자 서비스의 질을 향상시킬 수 있도록 개발된 시스템입니다.",
+    contents: [
       {
         title: "원무",
         contents: [
           {
             title: "접수 업무 처리의 신속화",
             contents: [
-              "환자의 인적사항, 보험사항 ,진료과 스케줄 및 진료 Capacity 등을 한 화면에서 처리 가능",
-              "진료전달체계를 수용하는 접수가능 (진료의뢰서, 진료사실통보서 등)"
+              { title : "환자의 인적사항, 보험사항 ,진료과 스케줄 및 진료 Capacity 등을 한 화면에서 처리 가능"},
+              { title : "진료전달체계를 수용하는 접수가능 (진료의뢰서, 진료사실통보서 등)"}
             ]
           },
           {
             title: "수납 업무 처리의 신속화",
             contents: [
-              "처방전달과 수가자동계산 기능에 의한 수납처리 기능",
-              "D/C 처방 및 반환처리를 자유롭게 수용하는 기능",
-              "환자의 선택에 의한 부분 수납및 잔여분 수납기능"
+              { title : "처방전달과 수가자동계산 기능에 의한 수납처리 기능"},
+              { title : "D/C 처방 및 반환처리를 자유롭게 수용하는 기능"},
+              { title : "환자의 선택에 의한 부분 수납및 잔여분 수납기능"}
             ]
           },
           {
@@ -93,7 +92,7 @@ const Lists = [
       },
       {
         title: "보험",
-        content: [
+        contents: [
           {
             title:
               "청구누락방지 / 삭감율 저하(삭감 분석 및 이의 신청기능, 수가정보의 사전관리"
@@ -117,11 +116,11 @@ const Lists = [
   {
     title: "2. 진료",
     description:
-      "처방입력의 전산화를 통해 원무 및 진료지원 시스템에 정확하고 신솟한 처방전달을 구현함으로써 진료진의 업무효율을 증대시키고 환자에 대한 서비스의 질을 높이도록 개발된 시스템입니다.",
-    works: [
+      "처방입력의 전산화를 통해 원무 및 진료지원 시스템에 정확하고 신솟한 처방전달을 구현함으로써 | 진료진의 업무효율을 증대시키고 환자에 대한 서비스의 질을 높이도록 개발된 시스템입니다.",
+    contents: [
       {
         title: "진료",
-        content: [
+        contents: [
           {
             title: "다양한 진단서 서식지원"
           },
@@ -133,30 +132,30 @@ const Lists = [
           },
           {
             title: "모든 처방 유형에 대한 전산 처리 기능",
-            content: [
-              "다양한 처방입력 기능(일일처방, 약속처방, 반복처방, 계속처방 등)",
-              "상병 및 처방의 편리하고 다양한 검색기능 제공",
-              "환자별 및 처방별 Message 기능 부가"
+            contents: [
+              { title : "다양한 처방입력 기능(일일처방, 약속처방, 반복처방, 계속처방 등)"},
+              { title : "상병 및 처방의 편리하고 다양한 검색기능 제공" },
+              { title : "환자별 및 처방별 Message 기능 부가"}
             ]
           },
           {
             title: "진료와 간호업무, 진료지원 및 원무시스템과의 완벽한 연결",
-            content: [
-              "진료정보, 처방의 접수, 실시, 결과 및 수납여부 등의 상태 정보를 실시간으로 전달"
+            contents: [
+              { title : "진료정보, 처방의 접수, 실시, 결과 및 수납여부 등의 상태 정보를 실시간으로 전달"}
             ]
           },
           {
             title: "검사에 대한 다양한 결과 조회",
-            content: [
-              "진료 화면에서도 검사에 대한 결과를 손쉽게 확인",
-              "임상병리검사의 경우 Text 결과 뿐만 아니라 수치결과 및 누적결과와 그래프에 의한 상태 변화까지 조회"
+            contents: [
+              { title : "진료 화면에서도 검사에 대한 결과를 손쉽게 확인" },
+              { title : "임상병리검사의 경우 Text 결과 뿐만 아니라 수치결과 및 누적결과와 그래프에 의한 상태 변화까지 조회"}
             ]
           }
         ]
       },
       {
         title: "간호",
-        content: [
+        contents: [
           {
             title: "처방에 근거한 간호관리 자동화"
           },
@@ -179,10 +178,10 @@ const Lists = [
     title: "3. 진료지원",
     description:
       "처방과 관련된 주요 진료지원부서 및 특수부서의 포괄적인 전산화를 통해 부분적인 전산화로 인한 정보",
-    works: [
+    contents: [
       {
         title: "의무기록",
-        content: [
+        contents: [
           {
             title: "암 환자 분석"
           },
@@ -197,7 +196,7 @@ const Lists = [
       },
       {
         title: "약국",
-        content: [
+        contents: [
           {
             title: "진료, 간호와 연계한 신속하고 정확한 처방전달"
           },
@@ -215,7 +214,7 @@ const Lists = [
       },
       {
         title: "종합검진",
-        content: [
+        contents: [
           {
             title: "패키지별 묶음 처방 (추가처방가능)"
           },
@@ -233,7 +232,7 @@ const Lists = [
       },
       {
         title: "일반검진",
-        content: [
+        contents: [
           {
             title: "공단 수진자 자격조회 및 자동입력"
           },
@@ -244,7 +243,7 @@ const Lists = [
       },
       {
         title: "방사선",
-        content: [
+        contents: [
           {
             title: "외래 검사의 처방/수납 발생시 알림 기능"
           },
@@ -262,7 +261,7 @@ const Lists = [
       },
       {
         title: "기능검사",
-        content: [
+        contents: [
           {
             title: "PACS와 연동"
           }
@@ -274,7 +273,7 @@ const Lists = [
       },
       {
         title: "핵의학",
-        content: [
+        contents: [
           {
             title: "PACS연동 및 약품 재고 관리"
           }
@@ -282,7 +281,7 @@ const Lists = [
       },
       {
         title: "영양관리",
-        content: [
+        contents: [
           {
             title: "병동과 연계하여 정확한 환자의 식이정보 제공"
           },
@@ -296,7 +295,7 @@ const Lists = [
       },
       {
         title: "물리치료[재활의학]",
-        content: [
+        contents: [
           {
             title: "메시지 처방에 대한 치료사 상세처방"
           },
@@ -320,12 +319,12 @@ class MetroOCS extends Component {
   constructor(props) {
     super(props);
     this.loadComposition = this.loadComposition.bind(this);
+    this.loadContent = this.loadContent.bind(this);
     this.loadDetail = this.loadDetail.bind(this);
     this.loadSubtitle = this.loadSubtitle.bind(this);
-    this.loadList = this.loadList.bind(this);
+    this.loadSublist = this.loadSublist.bind(this);
   }
   loadDetail(objects) {
-    console.log(objects);
     return (
       <div>
         {objects[0]}
@@ -410,26 +409,47 @@ class MetroOCS extends Component {
     );
   }
 
+  loadContent(obj) {
+    return this.loadSubtitle(obj);
+  }
+
   loadSubtitle(obj) {
     return (
-      <div style={{padding: "50px"}}>
-        <LabelContent onTitle={obj.title} onAddLine={true}/>
-        {this.obj.description}
+      <div style={{ marginTop: "50px" }}>
+        <LabelContent onTitle={obj.title} onAddLine={true} onColor={"#dfdfdf"} />
+        {obj.description.split("|").map((line, i) => {
+          return <p key={i}>{line}</p>;
+        })}
+        {this.loadSublist(obj.contents)}
       </div>
     );
   }
 
-  loadList(obj) {
-    return <div style={{ padding: "50px" }}>
-      {obj.keys("content") !== null ? <ContentList OnContent={obj} /> : <ContentList OnContent={obj} OnKey={"content"}/>}
-      </div>;
+  loadSublist(obj) {
+    return(
+      <div style={{padding: "10px"}}>
+      {
+          obj.map((line,i)=>{
+            return <div key={i}>
+                <LabelContent onTitle={line.title} />
+                {Object.keys(line).indexOf("contents") !== -1 ? <ContentList OnContent={line.contents} OnType={"number"} /> : console.log("list not")}
+              </div>;
+          })
+      }
+      </div>
+    )
   }
   render() {
     return (
       <div>
-        <PointDiv onTitle={"OCS"}/>
-        <DottedTitle onTitle={Title}/>
-        <div style={{ padding: "60px" , marginRight:"10px" }}>{this.loadComposition()}</div>
+        <PointDiv onTitle={"OCS"} />
+        <DottedTitle onTitle={Title} />
+        <div style={{ padding: "60px", marginRight: "10px" }}>
+          {this.loadComposition()}
+          {Lists.map((list, i) => {
+            return <div key={i}>{this.loadContent(list)}</div>;
+          })}
+        </div>
       </div>
     );
   }

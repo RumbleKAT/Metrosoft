@@ -17,7 +17,7 @@ const features =[
     "Attach File 등으로 정보 활용 증대",
     "rlwhs 데이터 전환으로 정보 활용성 증대"
 ];
-class IEMR extends React.Component {
+class IEMR extends Component {
   constructor(props) {
     super(props);
     this.loadImg = this.loadImg.bind(this);

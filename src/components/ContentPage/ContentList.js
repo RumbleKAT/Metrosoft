@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 function CheckChild(objects, key) {
-        console.log(key);
+        //console.log(key);
         var keys = Object.keys(objects);
         if (keys.includes(key)) {
             return true;
@@ -20,8 +20,45 @@ class ContentList extends Component {
             key : this.props.OnKey,
         };
         this.loadData = this.loadData.bind(this);
+        this.loadList = this.loadList.bind(this);
+        this.loadSub = this.loadSub.bind(this);
         //console.log(this.state.objects);
     }
+
+    loadSub(objects){
+        return (
+            objects.map((object, i)=> {
+                return <div key={i}>
+                    <li value="-" style={{ fontSize: "13px", marginBottom: "5px" }}>
+                      {object.title}
+                    </li><br/>
+                  </div>;
+            })
+        )
+    }
+
+    loadList(objects){
+        console.log(objects);
+        return  <div>
+                  <li value="*" style={{ fontSize: "13px", marginBottom: "5px" }}>
+                    {objects.title}
+                  </li>
+                  <ol style={{ color: "#000" }}>
+                    {Object.keys(objects).indexOf("contents") !== -1 ? this.loadSub(objects.contents) : null}
+                  </ol><br/>
+                </div>;
+        }
+
+        loadMap(objects){
+            return (objects.map((object,i) => {
+                            return (
+                                <div key={i}>
+                                    {this.loadList(object.content)}
+                                </div>
+                            );
+                        })
+            );
+        }
 
     loadData(objects){
 
@@ -35,41 +72,7 @@ class ContentList extends Component {
                            if (check){
                                //involve subtitles
                                return <div key={i}>
-                                   <li className="item" style={{ fontSize: "18px", marginBottom: "5px" }}>
-                                     {obj.title}
-                                   </li>
-                                   <br />
-                                   <ol style={{ color: "#000" }}>
-                                     {obj.content.map(
-                                       (
-                                         el,
-                                         i
-                                       ) => {
-                                         return (
-                                           <div
-                                             key={
-                                               i
-                                             }
-                                           >
-                                             <li
-                                               value="-"
-                                               style={{
-                                                 fontSize:
-                                                   "13px",
-                                                 marginBottom:
-                                                   "5px"
-                                               }}
-                                             >
-                                               {
-                                                 el
-                                               }
-                                             </li>
-                                             <br />
-                                           </div>
-                                         );
-                                       }
-                                     )}
-                                   </ol>
+                                        { this.loadList(obj) }
                                  </div>;
                            }else{
                                 return (
@@ -79,7 +82,6 @@ class ContentList extends Component {
                                         objects.map((obj, i) => {
                                                 return <div key={i}>
                                                     <li>{obj}</li>
-                                                    <br />
                                                 </div>;
                                         })}
                                         </ol>
