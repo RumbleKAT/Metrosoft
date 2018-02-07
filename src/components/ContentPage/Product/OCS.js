@@ -11,6 +11,13 @@ const titleStyle = obj => {
   };
 };
 
+const imgStyle = {
+  padding: "10px",
+  margin: "10px auto 0px auto",
+  width: "40%",
+  minWidth: "320px"
+};
+
 const contentStyle = {
   marginTop: "20px",
   float: "left",
@@ -18,6 +25,8 @@ const contentStyle = {
   marginRight: "10px",
   height: "230px"
 };
+
+const path = process.env.PUBLIC_URL + "/Metro_product/OCS";
 
 const selectedcolors = ["#64b764", "#649dc2", "#feb40e", "#9fc543"];
 
@@ -160,15 +169,14 @@ const Lists = [
             title: "처방에 근거한 간호관리 자동화"
           },
           {
-            title:
-              "각종 기록지 지원(입태원 기록지, 수술마취기록지, TPRBP,I/O 기록지 등)"
+            title: "각종 기록지 지원(입태원 기록지, 수술마취기록지, TPRBP,I/O 기록지 등)"
           },
           {
             title: "외래예약 스케줄 설정의 간편화"
           }
         ],
         image: {
-          url: "../../../Image/OCS/00.png",
+          url: "/00.png",
           align: "center"
         }
       }
@@ -190,7 +198,7 @@ const Lists = [
           }
         ],
         image: {
-          url: "../../../Image/OCS/01.png",
+          url: "/01.png",
           align: "right"
         }
       },
@@ -208,7 +216,7 @@ const Lists = [
           }
         ],
         image: {
-          url: "../../../Image/OCS/02.png",
+          url: "/02.png",
           align: "right"
         }
       },
@@ -226,7 +234,7 @@ const Lists = [
           }
         ],
         image: {
-          url: "../../../Image/OCS/03.png",
+          url: "/03.png",
           align: "right"
         }
       },
@@ -255,7 +263,7 @@ const Lists = [
           }
         ],
         image: {
-          url: "../../../Image/OCS/04.png",
+          url: "/04.png",
           align: "right"
         }
       },
@@ -267,7 +275,7 @@ const Lists = [
           }
         ],
         image: {
-          url: "../../../Image/OCS/05.png",
+          url: "/05.png",
           align: "right"
         }
       },
@@ -307,7 +315,7 @@ const Lists = [
           }
         ],
         image: {
-          url: "../../../Image/OCS/06.png",
+          url: "/06.png",
           align: "right"
         }
       }
@@ -421,6 +429,7 @@ class MetroOCS extends Component {
           return <p key={i}>{line}</p>;
         })}
         {this.loadSublist(obj.contents)}
+
       </div>
     );
   }
@@ -432,13 +441,27 @@ class MetroOCS extends Component {
           obj.map((line,i)=>{
             return <div key={i}>
                 <LabelContent onTitle={line.title} />
-                {Object.keys(line).indexOf("contents") !== -1 ? <ContentList OnContent={line.contents} OnType={"number"} /> : console.log("list not")}
+                {Object.keys(line).indexOf("contents") !== -1 ? <ContentList OnContent={line.contents} OnType={"number"} /> : null}
+                {Object.keys(line).indexOf("image") !== -1 ? this.loadImg(line) : null}
               </div>;
           })
       }
       </div>
     )
   }
+
+  loadImg(objects){
+            if(objects.image.align === "center"){
+                return (
+                <div style={imgStyle}>
+                    <img style={{ marginRight: "50px" }} src={path + objects.image.url} alt="object_Image" />
+                </div>)
+            }else if (objects.image.align === "right"){
+                return <div style={{ float: "right" }}>
+                    <img style={{ marginRight: "50px" }} src={path + objects.image.url} alt="object_Image" />
+                  </div>;
+            }
+        }
   render() {
     return (
       <div>

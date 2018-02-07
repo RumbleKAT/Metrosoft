@@ -9,6 +9,7 @@ function CheckChild(objects, key) {
             return false;
         }
     }
+
 class ContentList extends Component {
 
     constructor(props){
@@ -22,7 +23,6 @@ class ContentList extends Component {
         this.loadData = this.loadData.bind(this);
         this.loadList = this.loadList.bind(this);
         this.loadSub = this.loadSub.bind(this);
-        //console.log(this.state.objects);
     }
 
     loadSub(objects){
@@ -46,18 +46,8 @@ class ContentList extends Component {
                   <ol style={{ color: "#000" }}>
                     {Object.keys(objects).indexOf("contents") !== -1 ? this.loadSub(objects.contents) : null}
                   </ol><br/>
+                    {Object.keys(objects).indexOf("image") !== -1 ? this.loadImg(objects.image) : null}
                 </div>;
-        }
-
-        loadMap(objects){
-            return (objects.map((object,i) => {
-                            return (
-                                <div key={i}>
-                                    {this.loadList(object.content)}
-                                </div>
-                            );
-                        })
-            );
         }
 
     loadData(objects){
@@ -71,9 +61,7 @@ class ContentList extends Component {
                            var check = CheckChild(obj,this.state.key);
                            if (check){
                                //involve subtitles
-                               return <div key={i}>
-                                        { this.loadList(obj) }
-                                 </div>;
+                               return <div key={i}>{ this.loadList(obj) }</div>;
                            }else{
                                 return (
                                     <div style={{ padding: "10px", marginTop: "20px" }}>
@@ -96,15 +84,13 @@ class ContentList extends Component {
 
             return(
                 <div style={{padding:"10px" , marginTop: "20px"}}>
-                    <ul className="ui list">
-                    {
+                    <ul className="ui list">{
                         objects.map((obj,i) => {
                             return <div key={i}>
                                 <li>{obj}</li>
                                 <br />
                               </div>;
-                        })
-                    }
+                        })}
                     </ul>
                 </div>
             );

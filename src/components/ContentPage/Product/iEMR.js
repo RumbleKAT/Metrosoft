@@ -15,7 +15,7 @@ const features =[
     "OCS 및 EMR, PACS System과의 연동",
     "동시간대에 동일한 차트를 필요로 하는 부서의 차트 공유 기능",
     "Attach File 등으로 정보 활용 증대",
-    "rlwhs 데이터 전환으로 정보 활용성 증대"
+    "데이터 전환으로 정보 활용성 증대"
 ];
 class IEMR extends Component {
   constructor(props) {
