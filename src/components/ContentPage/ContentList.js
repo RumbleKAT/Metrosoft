@@ -65,7 +65,7 @@ class ContentList extends Component {
                            }else{
                                 return (
                                     <div style={{ padding: "10px", marginTop: "20px" }}>
-                                        <ol className="ui list" style={{ li: { color: this.state.color } }}>
+                                        <ol className="ui list" style={{ li: { color: this.state.color }}}>
                                         {
                                         objects.map((obj, i) => {
                                                 return <div key={i}>

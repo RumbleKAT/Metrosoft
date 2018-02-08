@@ -14,8 +14,9 @@ const titleStyle = obj => {
 const imgStyle = {
   padding: "10px",
   margin: "10px auto 0px auto",
-  width: "40%",
-  minWidth: "320px"
+  width: "50%",
+  minWidth: "320px",
+  overflow: "hidden"
 };
 
 const contentStyle = {
@@ -185,7 +186,7 @@ const Lists = [
   {
     title: "3. 진료지원",
     description:
-      "처방과 관련된 주요 진료지원부서 및 특수부서의 포괄적인 전산화를 통해 부분적인 전산화로 인한 정보",
+      "처방과 관련된 주요 진료지원부서 및 특수부서의 포괄적인 전산화를 통해 부분적인 전산화로 인한 정보흐름의 단절을 피하고 검사결과의 완벽한 Follow up을 구현하도록 개발된 시스템입니다.",
     contents: [
       {
         title: "의무기록",
@@ -454,11 +455,11 @@ class MetroOCS extends Component {
             if(objects.image.align === "center"){
                 return (
                 <div style={imgStyle}>
-                    <img style={{ marginRight: "50px" }} src={path + objects.image.url} alt="object_Image" />
+                    <img style={{ width: "90%" }} src={path + objects.image.url} alt="object_Image" />
                 </div>)
             }else if (objects.image.align === "right"){
-                return <div style={{ float: "right" }}>
-                    <img style={{ marginRight: "50px" }} src={path + objects.image.url} alt="object_Image" />
+                return <div style={imgStyle}>
+                    <img style={{ width: "90%"}} src={path + objects.image.url} alt="object_Image" />
                   </div>;
             }
         }

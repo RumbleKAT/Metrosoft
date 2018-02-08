@@ -8,7 +8,6 @@ class Business extends Component {
     render() {
         return <div>
             <MetroHIS />
-            <Commercial />
             <VoIP/>
             <Target />
           </div>;
