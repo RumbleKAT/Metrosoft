@@ -10,7 +10,6 @@ const titleStyle = obj => {
     color: obj
   };
 };
-
 const imgStyle = {
   padding: "10px",
   margin: "10px auto 0px auto",
