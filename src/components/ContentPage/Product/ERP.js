@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import DottedTitle from "../DottedTitle";
 import ContentList from "../ContentList";
 import LabelContent from "../LabelContent";
+import PointDiv from "../pointDiv";
+
 import ERPImg from "../../../Image/ERP.svg";
 
 const MetroERP = {
@@ -66,7 +68,8 @@ class ERP extends Component {
 
 
     render() {
-        return <div>
+        return <div style={{marginTop:"50px"}}>
+            <PointDiv onTitle={"ERP"}/>
             <DottedTitle onTitle={MetroERP} />
             {this.loadImg()}
             {this.loadContent(management, "인사급여")}
