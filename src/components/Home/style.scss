@@ -1,9 +1,10 @@
 @import "../../app.scss";
 
 .Hotline{
-    padding: 50px;
+    //padding: 50px;
     min-width: 320px;
-    float : right;
+    float : left;
+    margin-left: 40px;
     h2{
         color : $selected-item;
     }
@@ -11,7 +12,6 @@
         padding: 10px;
         font-size: 17px;
         font-weight: bold;
-        //color: #32CD32;
     }
     .title{
         font-size: 17px;
@@ -34,4 +34,46 @@
         width: 200px;
     }
 
+}
+
+
+.imgSlide{
+
+.slider-wrapper {
+  overflow:hidden;
+  width:100%;
+  position:relative;
+  height:300px;
+}
+
+.slides {
+  transition: left 2s;
+  position:absolute;
+  top:0;
+  height:100%;
+
+    li {
+        float:left;
+        background:#ccc;
+        list-style-type:none;
+        height:300px;
+    }
+}
+
+
+.pagers {
+  text-align:center;
+  top:-50px;
+  z-index:1000;
+  position:relative;
+
+    li {
+        width:20px;
+        height:20px;
+        border:1px solid #fff;
+        display:inline-block;
+        border-radius: 20px;
+        margin-right:8px;
+    }
+}
 }
