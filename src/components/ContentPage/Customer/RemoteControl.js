@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import connectIcon from "../../../Image/connect.svg";
 class RemoteControl extends Component {
     render() {
-        return <div style={{ borderTop: "solid .1em #dfdfdf" }}>
+        return <div>
             <div style={{ overflow: "hidden", width: "90%", margin: "auto", padding: "50px" }}>
               <div style={{ width: "160px", height: "160px", marginLeft: "50px", padding: "20px", float: "left", marginTop:"10px" }}>
                 <img style={{ float: "left" }} src={connectIcon} alt="원격지원" />

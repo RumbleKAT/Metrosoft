@@ -29,7 +29,7 @@ class ContentList extends Component {
         return (
             objects.map((object, i)=> {
                 return <div key={i}>
-                    <li value="-" style={{ fontSize: "13px", marginBottom: "5px" }}>
+                    <li  style={{ fontSize: "13px", marginBottom: "5px" }}>
                       {object.title}
                     </li><br/>
                   </div>;
@@ -38,7 +38,6 @@ class ContentList extends Component {
     }
 
     loadList(objects){
-        console.log(objects);
         return  <div>
                   <li value="*" style={{ fontSize: "13px", marginBottom: "5px" }}>
                     {objects.title}
@@ -55,7 +54,7 @@ class ContentList extends Component {
         if(this.state.types === "number"){
 
                 return <div style={{ padding: "10px", marginTop: "20px" }}>
-                    <ol className="ui list" >
+                    <ol >
                       {
                        objects.map((obj, i) => {
                            var check = CheckChild(obj,this.state.key);
@@ -65,12 +64,10 @@ class ContentList extends Component {
                            }else{
                                 return (
                                     <div style={{ padding: "10px", marginTop: "20px" }}>
-                                        <ol className="ui list" style={{ li: { color: this.state.color }}}>
+                                        <ol style={{ li: { color: this.state.color }}}>
                                         {
                                         objects.map((obj, i) => {
-                                                return <div key={i}>
-                                                    <li>{obj}</li>
-                                                </div>;
+                                                return <li key={i}>{obj}</li>;
                                         })}
                                         </ol>
                                     </div>
@@ -84,12 +81,9 @@ class ContentList extends Component {
 
             return(
                 <div style={{padding:"10px" , marginTop: "20px"}}>
-                    <ul className="ui list">{
+                    <ul >{
                         objects.map((obj,i) => {
-                            return <div key={i}>
-                                <li>{obj}</li>
-                                <br />
-                              </div>;
+                            return <li style={{display:"listItem" , padding:'10px 20px 20px 0'}} key={i}>{obj}</li>;
                         })}
                     </ul>
                 </div>

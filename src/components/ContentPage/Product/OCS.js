@@ -22,8 +22,10 @@ const contentStyle = {
   marginTop: "20px",
   float: "left",
   minWidth: "250px",
+  width:"20%",
   marginRight: "10px",
-  height: "230px"
+  height: "230px",
+  position:"inherit"
 };
 
 const path = process.env.PUBLIC_URL + "/Metro_product/OCS";
@@ -347,7 +349,7 @@ class MetroOCS extends Component {
       <div style={{ padding: "0px", overflow: "hidden" }}>
         <div className="ui green segment" style={contentStyle}>
           <h2 style={titleStyle(selectedcolors[0])}>원무</h2>
-          <ul className="ui list">
+          <ul>
             {compositions[0].map((composition, i) => {
               return (
                 <div key={i} style={{ width: "160px" }}>
@@ -356,7 +358,6 @@ class MetroOCS extends Component {
                       ? this.loadDetail(composition.split("|"))
                       : composition}
                   </li>
-                  <br />
                 </div>
               );
             })}
@@ -364,7 +365,7 @@ class MetroOCS extends Component {
         </div>
         <div className="ui blue segment" style={contentStyle}>
           <h2 style={titleStyle(selectedcolors[1])}>진료</h2>
-          <ul className="ui list">
+          <ul>
             {compositions[1].map((composition, i) => {
               return (
                 <div key={i}>
@@ -373,7 +374,6 @@ class MetroOCS extends Component {
                       ? this.loadDetail(composition.split("|"))
                       : composition}
                   </li>
-                  <br />
                 </div>
               );
             })}
@@ -381,7 +381,7 @@ class MetroOCS extends Component {
         </div>
         <div className="ui yellow segment" style={contentStyle}>
           <h2 style={titleStyle(selectedcolors[2])}>경영관리</h2>
-          <ul className="ui list">
+          <ul>
             {compositions[2].map((composition, i) => {
               return (
                 <div key={i}>
@@ -390,7 +390,6 @@ class MetroOCS extends Component {
                       ? this.loadDetail(composition.split("|"))
                       : composition}
                   </li>
-                  <br />
                 </div>
               );
             })}
@@ -398,7 +397,7 @@ class MetroOCS extends Component {
         </div>
         <div className="ui olive segment" style={contentStyle}>
           <h2 style={titleStyle(selectedcolors[3])}>진료지원</h2>
-          <ul className="ui list">
+          <ul>
             {compositions[3].map((composition, i) => {
               return (
                 <div key={i}>
@@ -407,7 +406,6 @@ class MetroOCS extends Component {
                       ? this.loadDetail(composition.split("|"))
                       : composition}
                   </li>
-                  <br />
                 </div>
               );
             })}

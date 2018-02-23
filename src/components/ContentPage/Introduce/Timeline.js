@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./styles.scss";
 import { Timeline, TimelineEvent } from "react-event-timeline";
 import PointDiv from "../pointDiv";
+import Test from './test';
 
  const box = {
       fontWeight : "500",
@@ -15,7 +16,12 @@ import PointDiv from "../pointDiv";
       lineHeight: "1em",
       textAlign: "center",
       borderRadius : "5%",
-      color: "#fff"
+      color: "#fff",
+      float:"left"
+    };
+
+    const boxLabel = {
+      float:"left",marginLeft:"30px",marginTop:"20px"
     };
 class Timeliner extends React.Component {
   constructor(props) {
@@ -40,33 +46,38 @@ class Timeliner extends React.Component {
           <div style={{alignContent:"center", padding: "50px 20% 50px 10%"}}>
             <ol className={styles.rectangleList}>
               <li>
-                <div style={box}>사업자명</div> <a href="">
-                  {obj["company"]}
-                </a>
+                <div style={box}>사업자명</div>
+                  <div style={boxLabel}>
+                    {obj["company"]}
+                  </div>
               </li>
               <li>
                 <div style={box}>대표자</div>
-                <a href="">{obj["ceo"]}</a>
+                  <div style={boxLabel}>
+                  {obj["ceo"]}
+                  </div>
               </li>
               <li>
                 <div style={box}>사업자분야</div>
-                <a href="">{obj["area"]}</a>
+                 <div style={boxLabel}>
+                  {obj["area"]}
+                  </div>
               </li>
               <li>
                 <div style={box}>주소</div>
-                <a href="">{obj["address"]}</a>
+                {obj["address"]}
               </li>
               <li>
                 <div style={box}>전화번호</div>
-                <a href="">{obj["tel"]}</a>
+                {obj["tel"]}
               </li>
               <li>
                 <div style={box}>회사설립연도</div>
-                <a href="">{obj["birth"]}</a>
+                {obj["birth"]}
               </li>
               <li>
                 <div style={box}>홈페이지</div>
-                <a href="">{obj["homepage"]}</a>
+                {obj["homepage"]}
               </li>
             </ol>
           </div>
@@ -115,19 +126,17 @@ class Timeliner extends React.Component {
   }
 
   render() {
-    return (
-      <div className={styles.TimelineStyle}>
-          {this._loadTitle(this.state.object["init"])}
-        <div style={{padding: "30px" , marginBottom: "50px"}}>
-        <div style={{padding: "30px"}}>
-          <PointDiv onTitle={"연혁"}/>
-        </div>
-        <Timeline>
-          {this._loadContent(this.state.object)}
-        </Timeline>
-        </div>
-      </div>
-    );
+    return <div className={styles.TimelineStyle}>
+        {this._loadTitle(this.state.object["init"])}
+        <div style={{ padding: "30px", marginBottom: "50px" }}>
+          <div style={{ padding: "30px" }}>
+            <PointDiv onTitle={"연혁"} />
+          </div>
+          <Timeline style={{position : "inherit"}}>
+           {this._loadContent(this.state.object)}
+          </Timeline>
+          </div>
+      </div>;
   }
 }
 

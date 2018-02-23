@@ -7,22 +7,28 @@ import Introduce from "./components/ContentPage/Introduce";
 import Business from "./components/ContentPage/Business";
 import Product from "./components/ContentPage/Product";
 import Customer from "./components/ContentPage/Customer";
-import { Route, BrowserRouter } from "react-router-dom";
+import { Route, BrowserRouter,Switch } from "react-router-dom";
 import ScrollToTop from "react-scroll-up";
 import FaCaretSquareOUp from  "react-icons/lib/fa/caret-square-o-up";
+import Sticky from "react-sticky-el";
+import Layout from "./Layout";
 
 class App extends Component {
  
   render() {
     return <div className={styles}>
+        <Sticky>
+          <Header />
+        </Sticky>
         <BrowserRouter>
           <div>
-              <Header />
-            <Route exact path="/" component={Home} />
-            <Route path="/introduce" component={Introduce} />
-            <Route path="/business" component={Business} />
-            <Route path="/product" component={Product} />
-            <Route path="/customer" component={Customer} />
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/introduce" component={Introduce} />
+              <Route path="/business" component={Business} />
+              <Route path="/product" component={Product} />
+              <Route path="/customer" component={Customer} />
+            </Switch>
             <ScrollToTop showUnder={200} style={{ bottom: "80px" }}>
               <div style={{ color: "#169b9b" }}>
                 <FaCaretSquareOUp size={40} />

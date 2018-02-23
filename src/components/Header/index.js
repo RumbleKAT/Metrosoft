@@ -10,31 +10,31 @@ class Header extends Component {
             <div className={styles.header}>
             <div className={styles.container}>
               <div className={styles.branding}>
-                <Link to = "/">
+                <a href= "/">
                 <img className={styles.boxImg} src={logo} alt="logo" />
-                </Link>
+                </a>
               </div>
               <nav>
                 <ul className={styles.ul}>
                   <li className={styles.highlight}>
-                    <Link className={styles.context} to="/introduce">
+                    <a className={styles.context} href="/introduce">
                       회사소개
-                    </Link>
+                    </a>
                   </li>
                   <li className={styles.highlight}>
-                    <Link className={styles.context} to="/business">
+                    <a className={styles.context} href="/business">
                       사업영역
-                    </Link>
+                    </a>
                   </li>
                   <li className={styles.highlight}>
-                    <Link className={styles.context} to="/product">
+                    <a className={styles.context} href="/product">
                       제품소개
-                    </Link>
+                    </a>
                   </li>
                   <li className={styles.highlight}>
-                    <Link className={styles.context} to="/customer">
+                    <a className={styles.context} href="/customer">
                       고객센터
-                    </Link>
+                    </a>
                   </li>
                 </ul>
               </nav>

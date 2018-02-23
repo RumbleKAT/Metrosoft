@@ -37,7 +37,8 @@ const contentStyle = {
     float : "left",
     minWidth : "250px", 
     marginRight : "10px",
-    height:"210px"
+    height:"210px",
+    position:"inherit"
 }
 class MetroHIS extends Component {
 
@@ -54,7 +55,7 @@ class MetroHIS extends Component {
                   <h2 style={titleStyle(selectedcolors[0])}>
                     원무
                   </h2>
-                  <ul className="ui list">
+                  <ul>
                     <li>신속하고 투명한 수납관리</li>
                     <br />
                     <li>재원심사로 누락방지/삭감율 격감</li>
@@ -70,7 +71,7 @@ class MetroHIS extends Component {
                   <h2 style={titleStyle(selectedcolors[1])}>
                     진료
                   </h2>
-                  <ul className="ui list">
+                  <ul>
                     <li>Full Text 기반의 전자의무 기록관리</li>
                     <br />
                     <li>다 기능의 간편한 처방관리 기능</li>
@@ -86,7 +87,7 @@ class MetroHIS extends Component {
                   <h2 style={titleStyle(selectedcolors[2])}>
                     경영관리
                   </h2>
-                  <ul className="ui list">
+                  <ul>
                     <li>생산성 향상을 지원하는 행정관리 시스템</li>
                     <br />
                     <li>OCS와 연계된 EIS 원가분석</li>
@@ -98,7 +99,7 @@ class MetroHIS extends Component {
                   <h2 style={titleStyle(selectedcolors[3])}>
                     진료지원
                   </h2>
-                  <ul className="ui list">
+                  <ul>
                     <li>처방에 의한 검사 예약 관리</li>
                     <br />
                     <li>
@@ -124,7 +125,7 @@ class MetroHIS extends Component {
 
         return(
             <div style={{padding:"10px" , marginTop: "20px"}}>
-                <ul className="ui list">
+                <ul>
                 {
                     objects.map((obj,i) => {
                         return <div key={i}>

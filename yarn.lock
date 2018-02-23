@@ -928,7 +928,7 @@ babel-register@^6.26.0:
     mkdirp "^0.5.1"
     source-map-support "^0.4.15"
 
-babel-runtime@6.26.0, babel-runtime@^6.11.6, babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.25.0, babel-runtime@^6.26.0:
+babel-runtime@6.26.0, babel-runtime@^6.11.6, babel-runtime@^6.18.0, babel-runtime@^6.22.0, babel-runtime@^6.25.0, babel-runtime@^6.26.0, babel-runtime@^6.6.1:
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   dependencies:
@@ -5510,6 +5510,10 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-addons-css-transition-group@^0.14.8:
+  version "0.14.8"
+  resolved "https://registry.yarnpkg.com/react-addons-css-transition-group/-/react-addons-css-transition-group-0.14.8.tgz#c7a2279e71095e743c43a3a4583a1e4f1a2dd61d"
+
 react-addons-css-transition-group@^15.6.2:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/react-addons-css-transition-group/-/react-addons-css-transition-group-15.6.2.tgz#9e4376bcf40b5217d14ec68553081cee4b08a6d6"
@@ -5658,6 +5662,13 @@ react-slick@^0.18.1:
     enquire.js "^2.1.6"
     json2mq "^0.2.0"
     object-assign "^4.1.0"
+
+react-sticky-dynamic-header@^0.1.2:
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/react-sticky-dynamic-header/-/react-sticky-dynamic-header-0.1.2.tgz#465ae7529a67399b7251dcc57510c432e2331b36"
+  dependencies:
+    babel-runtime "^6.6.1"
+    react-addons-css-transition-group "^0.14.8"
 
 react-sticky-el@^1.0.16:
   version "1.0.16"

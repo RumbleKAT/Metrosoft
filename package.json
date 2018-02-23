@@ -53,6 +53,7 @@
     "react-scroll-up": "^1.3.3",
     "react-slick": "^0.18.1",
     "react-sticky": "^6.0.1",
+    "react-sticky-dynamic-header": "^0.1.2",
     "react-sticky-el": "^1.0.16",
     "react-vertical-timeline-component": "^2.0.3",
     "recompose": "^0.26.0",
