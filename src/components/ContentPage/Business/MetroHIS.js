@@ -33,13 +33,15 @@ const effects = [
 const selectedcolors = ["#64b764", "#649dc2", "#feb40e", "#9fc543"];
 
 const contentStyle = {
-    marginTop:"20px",
-    float : "left",
-    minWidth : "250px", 
-    marginRight : "10px",
-    height:"210px",
-    position:"inherit"
-}
+  marginTop: "20px",
+  float: "left",
+  minWidth: "250px",
+  width: "20%",
+  marginRight: "10px",
+  height: "230px",
+  position: "inherit"
+};
+
 class MetroHIS extends Component {
 
     constructor(props){
@@ -57,13 +59,9 @@ class MetroHIS extends Component {
                   </h2>
                   <ul>
                     <li>신속하고 투명한 수납관리</li>
-                    <br />
                     <li>재원심사로 누락방지/삭감율 격감</li>
-                    <br />
                     <li>수납 및 청구 미수의 통합관리</li>
-                    <br />
                     <li>보험청구의 화면 심사</li>
-                    <br />
                     <li>EDI 청구</li>
                   </ul>
                 </div>
@@ -73,13 +71,9 @@ class MetroHIS extends Component {
                   </h2>
                   <ul>
                     <li>Full Text 기반의 전자의무 기록관리</li>
-                    <br />
                     <li>다 기능의 간편한 처방관리 기능</li>
-                    <br />
                     <li>처방에 근거한 간호관리 자동화</li>
-                    <br />
                     <li>진료재료 청구 자동화</li>
-                    <br />
                     <li>검사결과 및 누적결과 조회 통합</li>
                   </ul>
                 </div>
@@ -89,9 +83,7 @@ class MetroHIS extends Component {
                   </h2>
                   <ul>
                     <li>생산성 향상을 지원하는 행정관리 시스템</li>
-                    <br />
                     <li>OCS와 연계된 EIS 원가분석</li>
-                    <br />
                     <li>다중 재고 Location을 지원하는 물류체계</li>
                   </ul>
                 </div>
@@ -101,14 +93,11 @@ class MetroHIS extends Component {
                   </h2>
                   <ul>
                     <li>처방에 의한 검사 예약 관리</li>
-                    <br />
                     <li>
                       검사장비와의 Interface <br />
                       (결과관리의 오류 / 전송지연방지)
                     </li>
-                    <br />
                     <li>임상병리검사의 QC관리</li>
-                    <br />
                     <li>OCS에 의한 재료관리 및 청구</li>
                   </ul>
                 </div>

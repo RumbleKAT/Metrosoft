@@ -11,7 +11,6 @@ import { Route, BrowserRouter,Switch } from "react-router-dom";
 import ScrollToTop from "react-scroll-up";
 import FaCaretSquareOUp from  "react-icons/lib/fa/caret-square-o-up";
 import Sticky from "react-sticky-el";
-import Layout from "./Layout";
 
 class App extends Component {
  

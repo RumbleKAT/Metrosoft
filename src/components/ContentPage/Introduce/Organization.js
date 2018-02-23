@@ -37,7 +37,7 @@ class Organization extends Component {
       </div>
     <div className={style.boxes}>
         <div className={style.container}>
-          <div style={{ fontSize: "1em", float: "right", fontWeight: "400",padding : "10px" , border: ".2em solid #dfdfdf" ,borderRadius: "2em"}}>
+          <div style={{ fontSize: "1em", float: "right", fontWeight: "400", padding : "20px" , border: ".2em solid #dfdfdf" ,borderRadius: "2em"}}>
             {this._loadData(this.state.object)}
           </div>
           <div style={{ minWidth: "300px", width: "50%", display: "block", marginLeft: "auto", marginRight: "auto" }}>

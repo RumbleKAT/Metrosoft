@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "./styles.scss";
-import { Timeline, TimelineEvent } from "react-event-timeline";
 import PointDiv from "../pointDiv";
-import Test from './test';
+import { Card } from "semantic-ui-react";
+import { Header, Segment } from "semantic-ui-react";
+
+
 
  const box = {
       fontWeight : "500",
@@ -21,122 +23,131 @@ import Test from './test';
     };
 
     const boxLabel = {
-      float:"left",marginLeft:"30px",marginTop:"20px"
+      float:"left",padding:"20px"
     };
+
 class Timeliner extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      object : this.props.object
-    }
-  
+      object: this.props.object
+    };
+
     this._loadContent = this._loadContent.bind(this);
     this._loadDetail = this._loadDetail.bind(this);
     this._loadTitle = this._loadTitle.bind(this);
-  };
+    this._loadDetailContent = this._loadDetailContent.bind(this);
+  }
 
   _loadTitle = obj => {
-
-    return (<div>
-      <div style={{padding: "10px" , marginTop:"50px"}}>
-        <PointDiv onTitle={"회사소개"}/>
-      </div>
-        <div>
-          <div style={{alignContent:"center", padding: "50px 20% 50px 10%"}}>
+    return (
+      <div>
+        <div style={{ padding: "10px", marginTop: "50px" }}>
+          <PointDiv onTitle={"회사소개"} />
+        </div>
+        <div style={{ marginBottom: "50px" }}>
+          <div style={{ alignContent: "center", padding: "50px 20% 50px 10%" }}>
             <ol className={styles.rectangleList}>
               <li>
                 <div style={box}>사업자명</div>
-                  <div style={boxLabel}>
-                    {obj["company"]}
-                  </div>
+                <div style={boxLabel}>{obj["company"]}</div>
               </li>
               <li>
                 <div style={box}>대표자</div>
-                  <div style={boxLabel}>
-                  {obj["ceo"]}
-                  </div>
+                <div style={boxLabel}>{obj["ceo"]}</div>
               </li>
               <li>
                 <div style={box}>사업자분야</div>
-                 <div style={boxLabel}>
-                  {obj["area"]}
-                  </div>
+                <div style={boxLabel}>{obj["area"]}</div>
               </li>
               <li>
                 <div style={box}>주소</div>
-                {obj["address"]}
+                <div style={boxLabel}>{obj["address"]}</div>
               </li>
               <li>
                 <div style={box}>전화번호</div>
-                {obj["tel"]}
+                <div style={boxLabel}>{obj["tel"]}</div>
               </li>
               <li>
                 <div style={box}>회사설립연도</div>
-                {obj["birth"]}
+                <div style={boxLabel}>{obj["birth"]}</div>
               </li>
               <li>
                 <div style={box}>홈페이지</div>
-                {obj["homepage"]}
+                <div style={boxLabel}>{obj["homepage"]}</div>
               </li>
             </ol>
           </div>
         </div>
-    </div>);
-  }
+      </div>
+    );
+  };
 
   _loadDetail = obj => {
     var total = "";
-    
+
     for (let index = 0; index < obj["content"].length; index++) {
       const element = obj["content"][index];
       total += element;
-      total += '/';
+      total += "/";
     }
 
     return (
       <div>
-        {
-          total.split('/').map((line,i) => {
-              return(line.toString() === "" ? null : <li key={i}><a href="">{line.toString()}</a></li>);
-          }
-        )
-        }
+        {total.split("/").map((line, i) => {
+          return line.toString() === "" ? null : (
+            <li key={i}>
+              <a href="">{line.toString()}</a>
+            </li>
+          );
+        })}
       </div>
     );
-  }
+  };
 
   _loadContent = obj => {
-    var content = obj["content"];
+      return <div style={{ padding: "50px" }}>
+          <Header as="h2" color="teal" attached="top" style={{ borderTop: "solid 2px rgb(22, 155, 155)" }}>
+            {obj["year"]}
+          </Header>
+          <Segment attached style={{ position: "inherit", background:"#dfdfdf" }}>
+            {this._loadDetailContent(obj["content"])}
+          </Segment>
+          <div style={{ padding: "30px" }}>
+            <i style={{ marginLeft: "48.5%" }} className="teal big chevron down icon" />
+          </div>
+        </div>;
+  };
 
-    const title = { fontSize: "30px", fontWeight: "bold", color: "#363636" ,padding: "3px" };
-    const bubbleStyle = { position: "absolute", top: "0px", left: "0px", borderRadius: "50%", width: "35px", height: "35px", marginLeft: "1px", background: "#fff", border: "3px solid #169b9b", display: "flex" };
-    const contentStyle = { fontSize: "15px", fontWeight: "400", width: "auto" ,backgroundColor : "none", boxShadow : "none" ,marginTop:"0", marginBottom:"0"};
-
-    return (
-    content.reverse().map((object , i ) => {
-      return <TimelineEvent titleStyle={title} title={object.year} bubbleStyle={bubbleStyle} contentStyle={contentStyle} key={i}>
-          <ol className={styles.roundedList}>
-            {this._loadDetail(obj.content[i])}
-          </ol>
-        </TimelineEvent>;
-    })
-  );
-
+  _loadDetailContent = objects => {
+    return <div className="ui segments" style={{ position: "inherit" }}>
+        {objects.map((obj, i) => {
+          return <div className="ui segment" style={{ position: "inherit",fontWeight:"500" }}>
+              <div key={i} style={{fontSize:"15px"}}> {obj}</div>
+            </div>;
+        })}
+      </div>;
   }
 
   render() {
-    return <div className={styles.TimelineStyle}>
+    return (
+      <div className={styles.TimelineStyle}>
         {this._loadTitle(this.state.object["init"])}
         <div style={{ padding: "30px", marginBottom: "50px" }}>
           <div style={{ padding: "30px" }}>
             <PointDiv onTitle={"연혁"} />
           </div>
-          <Timeline style={{position : "inherit"}}>
-           {this._loadContent(this.state.object)}
-          </Timeline>
+          <div>
+            {this.state.object["content"].map((object,i)=>{
+              return (
+                this._loadContent(object)
+              )
+            })}
           </div>
-      </div>;
+        </div>
+      </div>
+    );
   }
 }
 

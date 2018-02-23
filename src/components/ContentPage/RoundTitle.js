@@ -10,20 +10,16 @@ const circularButton = {
   color: "#fff",
   fontSize: "14px",
   padding: "3px 0 3px 10px",
-  zIndex: "1",
-  position:"absolute"
-
+  float:"left"
 };
 
 const borderLine = {
-   position: "absolute",
+   float:'left',
    height: "2px",
    width: "65%",
    background : "#dfdfdf",
-   marginTop : "16px",
-   marginLeft : "320px",
-   zIndex: "0"
-
+   marginTop : "-15px",
+   marginLeft : "320px"
 }
 class RoundTitle extends Component {
 
