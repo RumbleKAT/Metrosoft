@@ -111,20 +111,22 @@ class Timeliner extends React.Component {
           <Header as="h2" color="teal" attached="top" style={{ borderTop: "solid 2px rgb(22, 155, 155)" }}>
             {obj["year"]}
           </Header>
-          <Segment attached style={{ position: "inherit", background:"#dfdfdf" }}>
+          <Segment attached style={{ position: "inherit", background: "#dfdfdf" }}>
             {this._loadDetailContent(obj["content"])}
           </Segment>
-          <div style={{ padding: "30px" }}>
-            <i style={{ marginLeft: "48.5%" }} className="teal big chevron down icon" />
+          <div style={{ padding:"20px" , float:"left" ,marginLeft:"30%"}}>
+            <i className="teal huge chevron down icon" />
           </div>
         </div>;
   };
 
+  //resolution change 1028 300
+
   _loadDetailContent = objects => {
     return <div className="ui segments" style={{ position: "inherit" }}>
         {objects.map((obj, i) => {
-          return <div className="ui segment" style={{ position: "inherit",fontWeight:"500" }}>
-              <div key={i} style={{fontSize:"15px"}}> {obj}</div>
+          return <div key={i} className="ui segment" style={{ position: "inherit", fontWeight: "500" }}>
+              <div style={{ fontSize: "15px" }}> {obj}</div>
             </div>;
         })}
       </div>;
@@ -140,9 +142,7 @@ class Timeliner extends React.Component {
           </div>
           <div>
             {this.state.object["content"].map((object,i)=>{
-              return (
-                this._loadContent(object)
-              )
+              return <div key={i}>{this._loadContent(object)}</div>;
             })}
           </div>
         </div>

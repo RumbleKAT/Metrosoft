@@ -10,10 +10,10 @@ class HotLine extends Component {
             <img src={paper} alt={"paper"} style={{width : "100%" , height : "240px"}}/>
             </div>
             <div className={style.Hotline}>
-              <h2>
+              <div className={style.top}>
                 <FaPhoneSquare size={28} />
-                {" "}대표전화{" "}
-              </h2>
+                <span style={{fontSize:"23px" , fontWeight:"bold", marginLeft:"25px",padding:"10px"}}>대표전화</span>
+              </div>
               <div style={{ padding: "20px 20px 0px 30px" }}>
                 <ol>
                   <li>평일 : 09 : 00 ~ 18 : 00</li>
@@ -24,8 +24,8 @@ class HotLine extends Component {
                 <span className={style.content}>031-465-9971~3</span> <br />
               </div>
               <div style={{padding: "10px"}}>
-                <a href="/customer" className="ui compact labeled icon teal button">
-                    <i className="help icon" />문의하기
+                <a href="/customer" className="ui compact labeled icon teal button" style={{position:"inherit"}}>
+                    <span style={{marginRight:"35px"}}>문의하기</span>
                 </a>
               </div>
             </div>

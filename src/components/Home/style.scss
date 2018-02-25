@@ -5,9 +5,11 @@
     min-width: 320px;
     float : left;
     margin-left: 40px;
+    /*
     h2{
         color : $selected-item;
     }
+    */
     .content{
         padding: 10px;
         font-size: 17px;
@@ -34,6 +36,10 @@
         width: 200px;
     }
 
+}
+
+.top{
+    color : $selected_item;
 }
 
 
