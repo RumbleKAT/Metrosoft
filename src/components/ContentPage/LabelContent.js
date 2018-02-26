@@ -23,7 +23,7 @@ class LabelContent extends Component {
 
      loadLabel(){
         return <div className="ui label">
-            <i className="chevron right icon" />
+            &#9830;&nbsp;&nbsp;&nbsp;
             {this.state.title}
           </div>;
      }

@@ -18,8 +18,8 @@ function checkSize(title){
 }
 
 const path =  process.env.PUBLIC_URL + "/Hospital_icon";
-const ImgStyle = { float: "left", padding: "50px" , width: "inherit" , height: "100px", margin: "30px 0 50px 0"};
-const ImgStyleSub = { float: "left", padding: "50px" , width: "inherit" , margin: "30px 0 50px 0"};
+const ImgStyle = { float: "left", padding: "20px"  , height: "100px", margin: "30px 0 50px 0"};
+const ImgStyleSub = { float: "left", padding: "20px" , margin: "30px 0 50px 0"};
 
 class Target extends Component {
 

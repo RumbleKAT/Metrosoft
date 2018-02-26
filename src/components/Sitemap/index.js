@@ -22,17 +22,13 @@ const Lists = [
 function checkLink(index){
     switch (index) {
         case 0:
-            return "/introduce"
-            break;
+            return "/introduce";
         case 1:
-            return "/business"
-            break;
+            return "/business";
         case 2:
-            return "/product"
-            break;
+            return "/product";
         case 3:
-            return "/customer"
-            break;
+            return "/customer";
         default:
             break;
     }
@@ -49,30 +45,30 @@ class Sitemap extends Component {
     init() {
     return <div style={{width:"100%",padding:"20px"}}>
         <div className="ui label">
-          <i className="chevron right icon" />
+        &#9830;&nbsp;&nbsp;&nbsp;
           사이트 맵
         </div>
       </div>;
   }
 
     load(objects,index){
-        return <div style={{ width: "20%", float: "left", height: "200px", margin: "10px", minWidth: "300px" }}>
-            <ol className="ui list">
-              <li value=" ">
+        return <div style={{ width: "15%", float: "left", height: "200px", margin: "10px", minWidth: "300px" }}>
+            <div className="ui list">
+              <div className="item">
                 <a style={{ color: "white", fontSize: "20px", fontWeight: "500" }} href={checkLink(index)}>
                   {objects.title}
                 </a>
-                <ol>
+                <div className="list">
                   {objects.contents.map((obj, i) => {
-                    return <li key={i} value=" " style={{ position: "inherit" }}>
-                        <a style={{ color: "#fff", position: "inherit" }} href={checkLink(index) + "/#" + obj}>
+                    return <div className="item" key={i} value=" " style={{ position: "inherit" }}>
+                        <a className="item" style={{ color: "#dfdfdf", position: "inherit" }} href={checkLink(index) + "/#" + obj}>
                           {obj}
                         </a>
-                      </li>;
+                      </div>;
                   })}
-                </ol>
-              </li>
-            </ol>
+                </div>
+              </div>
+            </div>
           </div>;
     }
 

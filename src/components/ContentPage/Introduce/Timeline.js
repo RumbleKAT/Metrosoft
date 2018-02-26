@@ -22,7 +22,9 @@ import { Header, Segment } from "semantic-ui-react";
     };
 
     const boxLabel = {
-      float:"left",padding:"20px"
+      float:"left",padding:"20px",
+      width:"75%",
+      minWidth:"350px"
     };
 
 class Timeliner extends React.Component {
@@ -42,7 +44,7 @@ class Timeliner extends React.Component {
   _loadTitle = obj => {
     return (
       <div>
-        <div style={{ padding: "10px", marginTop: "50px" }}>
+        <div style={{ padding: "10px", marginTop: "100px" }}>
           <PointDiv onTitle={"회사소개"} />
         </div>
         <div style={{ marginBottom: "50px" }}>
@@ -132,8 +134,8 @@ class Timeliner extends React.Component {
     return (
       <div className={styles.TimelineStyle}>
         {this._loadTitle(this.state.object["init"])}
-        <div style={{ padding: "30px", marginBottom: "50px" }}>
-          <div style={{ padding: "30px" }}>
+        <div style={{ padding: "30px", marginBottom: "50px", marginTop:"100px" }}>
+          <div style={{ padding: "30px",overflow:"hidden" }}>
             <PointDiv onTitle={"연혁"} />
           </div>
           <div>
