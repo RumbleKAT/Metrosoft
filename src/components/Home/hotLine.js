@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
-import FaPhoneSquare from "react-icons/lib/fa/phone-square";
 import style from "./style.scss";
 import paper from "../../Image/paper.jpg";
 class HotLine extends Component {
 
     render() {
-        return <div style={{ overflow: "hidden", padding:"50px",marginTop:"500px"}}>
-            <div style={{width: "70%", minWidth : "300px" , height : "300px", float: "left"}}>
+        return <div style={{ overflow: "hidden", padding:"50px",minWidth:"400px"}}>
+            <div style={{width: "60%", minWidth : "300px" , height : "300px", float: "left"}}>
             <img src={paper} alt={"paper"} style={{width : "100%" , height : "240px"}}/>
             </div>
             <div className={style.Hotline}>
               <div className={style.top}>
-                <FaPhoneSquare size={28} />
-                <span style={{fontSize:"23px" , fontWeight:"bold", marginLeft:"25px",padding:"10px"}}>대표전화</span>
+                <div style={{fontSize:"30px" , fontWeight:"bold", marginLeft:"40px",padding:"10px"}}>대표전화</div>
               </div>
               <div style={{ padding: "20px 20px 0px 30px",lineHeight:"1.2em"} }>
                 <ol>

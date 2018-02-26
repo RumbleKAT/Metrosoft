@@ -1,5 +1,7 @@
 @import "../../app.scss";
 
+$breakpoint: 1300px;
+
 .Hotline{
     //padding: 50px;
     min-width: 320px;
@@ -11,8 +13,9 @@
     }
     */
     .content{
-        padding: 10px;
-        font-size: 17px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 20px;
         font-weight: bold;
     }
     .title{
@@ -36,7 +39,14 @@
         width: 200px;
     }
 
+    @media (max-width: #{$breakpoint}) {
+        body{
+            background: gray;
+        }
+    }
 }
+
+
 
 .top{
     color : $selected_item;

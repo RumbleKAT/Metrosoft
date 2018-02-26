@@ -1,23 +1,9 @@
 import React, { Component } from 'react';
-import Slider from 'react-slick';
 import paper from "../../Image/paper.jpg";
 import paper2 from "../../Image/mPOC_process.png";
 import paper3 from "../../Image/mPOC.png";
 
 const papers = [];
-
-const settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1
-};
-
-const divStyle = {
-    width : "100%"
-}
-
 
 function setQueue(){
   papers.push(paper);

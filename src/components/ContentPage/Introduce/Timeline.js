@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./styles.scss";
 import PointDiv from "../pointDiv";
-import { Card } from "semantic-ui-react";
 import { Header, Segment } from "semantic-ui-react";
 
 
@@ -114,9 +113,6 @@ class Timeliner extends React.Component {
           <Segment attached style={{ position: "inherit", background: "#dfdfdf" }}>
             {this._loadDetailContent(obj["content"])}
           </Segment>
-          <div style={{ padding:"20px" , float:"left" ,marginLeft:"30%"}}>
-            <i className="teal huge chevron down icon" />
-          </div>
         </div>;
   };
 
@@ -141,7 +137,7 @@ class Timeliner extends React.Component {
             <PointDiv onTitle={"연혁"} />
           </div>
           <div>
-            {this.state.object["content"].map((object,i)=>{
+            {this.state.object["content"].reverse().map((object,i)=>{
               return <div key={i}>{this._loadContent(object)}</div>;
             })}
           </div>

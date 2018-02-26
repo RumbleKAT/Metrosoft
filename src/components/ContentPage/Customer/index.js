@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import CustomerTable from "./CustomerTable";
 import PointDiv from "../pointDiv";
 import Remote from "./RemoteControl";
+import TitleList from "../TitleList";
 
 const address = [
   {
@@ -23,12 +24,14 @@ const address = [
   {
     content: ["통신(VOIP)","서진원","팀장","jinwon@metrosoft.co.kr"]
   }
-
 ];
+
+const Lists = ['고객지원','원격지원'];
 
 class Customer extends Component {
     render() {
         return <div style={{ marginTop: "30px" }}>
+            <TitleList object={Lists}/>
             <PointDiv onTitle={"고객지원"} />
             <CustomerTable onContent={address} />
             <PointDiv onTitle={"원격지원"} />

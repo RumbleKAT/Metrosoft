@@ -5,13 +5,10 @@ const titleStyle = { padding: "10px", marginLeft: "auto", marginRight: "auto", t
 
 const PointDiv = (props) => {
 
-    return(
-        <div style={titleStyle}>
-            <h1>{props.onTitle}</h1>
-            <div style={pointStyle}>
-            </div>
-        </div>
-    );
+    return <div style={titleStyle}>
+        <h1 id={props.onTitle}>{props.onTitle}</h1>
+        <div style={pointStyle} />
+      </div>;
 }
 
 export default PointDiv;

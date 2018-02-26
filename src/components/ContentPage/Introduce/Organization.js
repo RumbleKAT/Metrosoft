@@ -16,7 +16,7 @@ class Organization extends Component {
 
   _loadData = (obj) =>{
 
-    return <div style={{ lineHeight: "5%", listStyle: "inherit", marginLeft: "5px" }}>
+    return <div style={{ lineHeight: "10%", listStyle: "inherit", marginTop: "20px" }}>
         <li>{this.state.object["updata_date"]}</li>
         <br/>
         <li> 총원 : {obj["total"]}</li>

@@ -9,6 +9,14 @@ import organization from "../../../database/Organization.json";
 import timeline from "../../../database/Timeline.json";
 
 import PointDiv from "../pointDiv";
+import TitleList from "../TitleList";
+
+const Lists = [
+    '인사말',
+    '회사연력',
+    '조직도',
+    '오시는 길'
+];
 
 class Introduce extends Component {
 
@@ -37,6 +45,7 @@ class Introduce extends Component {
 
     render() {
         return <div>
+            <TitleList object={Lists}/>
             <CEOIntroduce object={this._loadFile(1)} />
             <Timeliner object={this._loadFile(3)} />
             <Oragnization object={this._loadFile(2)} />
