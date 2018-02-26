@@ -35,7 +35,7 @@ const selectedcolors = ["#64b764", "#649dc2", "#feb40e", "#9fc543"];
 const contentStyle = {
   marginTop: "20px",
   float: "left",
-  minWidth: "250px",
+  minWidth: "220px",
   width: "20%",
   marginRight: "10px",
   height: "230px",
@@ -106,7 +106,7 @@ class MetroHIS extends Component {
 
     loadTitle(obj){
         return <div className="ui label">
-            <i className="chevron right icon" />{obj}
+            &#9830;&nbsp;&nbsp;&nbsp;{obj}
           </div>;
     }
 

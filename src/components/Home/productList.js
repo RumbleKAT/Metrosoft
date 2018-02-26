@@ -40,8 +40,8 @@ class productList extends Component {
     }
 /*  <div style={{fontSize:"20px",fontWeight:"bold",padding:"5px",textAlign:"center" , color:"#169b9b"}}>{contents.lists[i]}</div> */
     content(obj,i){
-        return <div style={{ marginTop: "50px", width: "10%", minWidth: "280px", padding: "10px", borderRadius: "5px", border: "solid 3px #dfdfdf", float: "left" , marginRight:"20px"}}>
-            <img src={obj} alt="EMR" style={{ width: "120px", height: "100px", marginLeft: "26%", padding: "10px" }} />
+        return <div style={{ marginTop: "50px", width: "10%", minWidth: "260px", padding: "10px", borderRadius: "5px", border: "solid 3px #dfdfdf", float: "left" , marginRight:"20px"}}>
+            <img src={obj} alt="EMR" style={{ width: "120px", height: "100px", marginLeft: "24%", padding: "10px" }} />
             <div style={{ textAlign: "center", marginTop: "5px" }}>
               <a className="ui teal basic button" href={"./product/#" + contents.lists[i]}>
                 {contents.lists[i]}

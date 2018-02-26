@@ -21,7 +21,7 @@ const imgStyle = {
 const contentStyle = {
   marginTop: "20px",
   float: "left",
-  minWidth: "250px",
+  minWidth: "220px",
   width:"20%",
   marginRight: "10px",
   height: "230px",
