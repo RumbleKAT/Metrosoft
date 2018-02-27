@@ -187,7 +187,7 @@ const Lists = [
   {
     title: "3. 진료지원",
     description:
-      "처방과 관련된 주요 진료지원부서 및 특수부서의 포괄적인 전산화를 통해 부분적인 전산화로 인한 정보흐름의 단절을 피하고 검사결과의 완벽한 Follow up을 구현하도록 개발된 시스템입니다.",
+      "처방과 관련된 주요 진료지원부서 및 특수부서의 포괄적인 전산화를 통해 부분적인 전산화로 인한 정보흐름의 단절을 피하고 | 검사결과의 완벽한 Follow up을 구현하도록 개발된 시스템입니다.",
     contents: [
       {
         title: "의무기록",
@@ -424,7 +424,7 @@ class MetroOCS extends Component {
       <div style={{ marginTop: "50px" }}>
         <LabelContent onTitle={obj.title} onAddLine={true} onColor={"#dfdfdf"} />
         {obj.description.split("|").map((line, i) => {
-          return <p key={i}>{line}</p>;
+          return <p key={i} style={{fontSize:"16px"}}>{line}</p>;
         })}
         {this.loadSublist(obj.contents)}
 
@@ -434,7 +434,7 @@ class MetroOCS extends Component {
 
   loadSublist(obj) {
     return(
-      <div style={{padding: "10px"}}>
+      <div style={{padding: "10px",marginTop:"100px"}}>
       {
           obj.map((line,i)=>{
             return <div key={i}>

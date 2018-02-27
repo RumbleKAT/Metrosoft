@@ -29,7 +29,7 @@ class ContentList extends Component {
         return (
             objects.map((object, i)=> {
                 return <div key={i}>
-                    <li  style={{ fontSize: "13px", marginBottom: "5px" }}>
+                    <li style={{ fontSize: "13px", marginBottom: "5px" ,listStyleType:"circle" }}>
                       {object.title}
                     </li><br/>
                   </div>;
@@ -38,15 +38,18 @@ class ContentList extends Component {
     }
 
     loadList(objects){
-        return  <div>
-                  <li value="*" style={{ fontSize: "13px", marginBottom: "5px" }}>
-                    {objects.title}
-                  </li>
-                  <ol style={{ color: "#000" }}>
-                    {Object.keys(objects).indexOf("contents") !== -1 ? this.loadSub(objects.contents) : null}
-                  </ol><br/>
-                    {Object.keys(objects).indexOf("image") !== -1 ? this.loadImg(objects.image) : null}
-                </div>;
+        return <div>
+            <li style={{ fontSize: "16px", marginBottom: "5px",listStyleType:"initial" }}>
+                {objects.title}
+            </li>
+            <br />
+            <ol style={{ color: "#000" }}>
+              {Object.keys(objects).indexOf("contents") !== -1
+                ? this.loadSub(objects.contents)
+                : null}
+            </ol>
+            {Object.keys(objects).indexOf("image") !== -1 ? this.loadImg(objects.image) : null}
+          </div>;
         }
 
     loadData(objects){
@@ -83,7 +86,7 @@ class ContentList extends Component {
                 <div style={{padding:"10px" , marginTop: "20px"}}>
                     <ul >{
                         objects.map((obj,i) => {
-                            return <li style={{display:"listItem" , padding:'10px 20px 20px 0'}} key={i}>{obj}</li>;
+                            return <li style={{display:"listItem" , padding:'10px 20px 20px 0',fontSize:"16px"}} key={i}>{obj}</li>;
                         })}
                     </ul>
                 </div>

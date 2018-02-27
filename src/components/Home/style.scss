@@ -1,6 +1,29 @@
 @import "../../app.scss";
+@import "../../util.scss";
 
 $breakpoint: 1300px;
+
+.ipad{
+    min-Width : 260px;
+    height : 300px;
+    float: right;
+
+    @include media("<max"){
+        width: 67%;
+    }
+
+    @include media("<huge") {
+        width: 67%;
+    }
+
+    @include media("<large") {
+        width: 50%;
+    }
+
+    @include media("<medium") {
+        width: 60%;
+    }
+}
 
 .Hotline{
     //padding: 50px;

@@ -50,9 +50,9 @@ class DottedTitle extends Component {
         <div style={styles.borderline} >
           {obj.content.split("/").map((row, i) => {
             return (
-              <div style={styles.content} key={i}>
+              <p style={styles.content} key={i}>
                 {row}
-              </div>
+              </p>
             );})}
         </div>
       </div>

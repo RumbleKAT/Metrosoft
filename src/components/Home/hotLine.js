@@ -5,7 +5,7 @@ class HotLine extends Component {
 
     render() {
         return <div style={{ overflow: "hidden", padding:"50px",minWidth:"260px"}}>
-            <div style={{width: "73%", minWidth : "260px" , height : "300px", float: "right"}}>
+            <div className={style.ipad}>
             <img src={paper} alt={"paper"} style={{width : "100%" , height : "240px"}}/>
             </div>
             <div className={style.Hotline}>

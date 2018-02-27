@@ -14,7 +14,7 @@ class TitleList extends Component {
         <div className="ui celled horizontal list" style={{border:"solid 2px #dfdfdf",padding:"20px",borderRadius:"4px"}} >
             {
                 objects.map((obj,i) => {
-                    return <a className="item" key={i} style={{ position: "inherit", fontSize: "15px", color: "rgb(22, 155, 155)" }} href={'#'+obj}>
+                    return <a className="item" key={i} style={{ position: "inherit", fontSize: "15px", color: "rgb(22, 155, 155)", fontWeight:"bold" }} href={'#'+obj}>
                         {obj}
                       </a>;
             })}

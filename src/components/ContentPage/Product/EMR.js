@@ -70,7 +70,7 @@ class EMR extends Component {
               {
                 intro.content.split('/').map((row, i) => {
                     return(
-                      <div style={{ marginTop:"10px" , fontWeight:"400", fontSize:"16px"}} key={i}>{row}</div>
+                      <p style={{ marginTop:"10px" , fontWeight:"400", fontSize:"16px"}} key={i}>{row}</p>
                     )
                 }
               )
@@ -103,7 +103,7 @@ class EMR extends Component {
               <div style={{ padding: "10px" }}>
                 {content === 3 ? <div style={{ marginTop:"10px" , fontWeight:"400", fontSize:"16px"}}>{security[0].title.split("/").map((el,i)=>{
                   return (
-                    <div key={i}>{el}</div>
+                    <p key={i}>{el}</p>
                   )
                 })}
                 </div> : null}
