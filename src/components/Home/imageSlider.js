@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import paper from "../../Image/paper.jpg";
-import paper2 from "../../Image/mPOC_process.png";
-import paper3 from "../../Image/mPOC.png";
+import paper from "../../Image/slide_img/Challenge.jpg";
+import paper2 from "../../Image/slide_img/Creative.jpg";
+import paper3 from "../../Image/slide_img/Credible.jpg";
 
 const papers = [];
 
@@ -64,9 +64,9 @@ class ImageSlider extends Component {
 
   render() {
     return (
-      <div style={{ marginLeft: "auto" }}>
+      <div style={{ marginLeft: "auto",marginTop:"0px" }}>
         <img
-          style={{ width: "100%", height: "200px" }}
+          style={{ width: "100%",backgroundSize: "cover" }}
           src={this.state.image}
           alt="pic"
         />

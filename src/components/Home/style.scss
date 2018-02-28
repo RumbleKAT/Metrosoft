@@ -4,9 +4,10 @@
 $breakpoint: 1300px;
 
 .ipad{
-    min-Width : 260px;
+    min-Width : 240px;
     height : 300px;
     float: right;
+    width: 67%;
 
     @include media("<max"){
         width: 67%;
@@ -30,6 +31,23 @@ $breakpoint: 1300px;
     min-width: 260px;
     float : left;
     margin-left: 40px;
+    border-right: solid #dfdfdf;
+
+    @include media("<max"){
+        border-right:none;
+    }
+
+    @include media("<huge") {
+        border-right: solid #dfdfdf;
+    }
+
+    @include media("<large") {
+        border-right: solid #dfdfdf;
+    }
+
+    @include media("<medium") {
+        border-right:none;
+    }
     /*
     h2{
         color : $selected-item;

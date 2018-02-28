@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import style from "./style.scss";
-import paper from "../../Image/paper.jpg";
+import paper from "../../Image/phone.jpg";
 class HotLine extends Component {
 
     render() {
         return <div style={{ overflow: "hidden", padding:"50px",minWidth:"260px"}}>
             <div className={style.ipad}>
-            <img src={paper} alt={"paper"} style={{width : "100%" , height : "240px"}}/>
+            <img src={paper} alt={"paper"} style={{width : "100%" , height : "240px",borderRadius:"4px"}}/>
             </div>
             <div className={style.Hotline}>
               <div className={style.top}>

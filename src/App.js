@@ -9,7 +9,7 @@ import Product from "./components/ContentPage/Product";
 import Customer from "./components/ContentPage/Customer";
 import { Route, BrowserRouter,Switch } from "react-router-dom";
 import ScrollToTop from "react-scroll-up";
-import FaCaretSquareOUp from  "react-icons/lib/fa/caret-square-o-up";
+import FaCaretUp from "react-icons/lib/fa/caret-up";
 import Sticky from "react-sticky-el";
 import Sitemap from "./components/Sitemap";
 
@@ -31,12 +31,12 @@ class App extends Component {
             </Switch>
             <ScrollToTop showUnder={200} style={{ bottom: "80px" }}>
               <div style={{ color: "#169b9b" }}>
-                <FaCaretSquareOUp size={40} />
+                <FaCaretUp size={40} />
               </div>
             </ScrollToTop>
           </div>
         </BrowserRouter>
-        <Sitemap/>
+        <Sitemap />
         <Footer />
       </div>;
   }
