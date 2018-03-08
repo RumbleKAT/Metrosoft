@@ -4,9 +4,9 @@ import Oragnization from "./Organization";
 import Timeliner from "./Timeline";
 import Map from "./map";
 
-import ceointroduce from "../../../database/CeoIntroduce.json";
-import organization from "../../../database/Organization.json";
-import timeline from "../../../database/Timeline.json";
+import ceointroduce from "../../../database/Introduce/CeoIntroduce.json";
+import organization from "../../../database/Introduce/Organization.json";
+import timeline from "../../../database/Introduce/Timeline.json";
 
 import PointDiv from "../pointDiv";
 import TitleList from "../TitleList";

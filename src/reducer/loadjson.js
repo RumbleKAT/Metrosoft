@@ -1,8 +1,8 @@
 import * as types from "../actions/ActionTypes";
 
-import ceointroduce from "../database/CeoIntroduce.json";
-import organization from "../database/Organization.json";
-import timeline from "../database/Timeline.json";
+import ceointroduce from "../database/Introduce/CeoIntroduce.json";
+import organization from "../database/Introduce/Organization.json";
+import timeline from "../database/Introduce/Timeline.json";
 
 
 const InitialState = {

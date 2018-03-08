@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import icons from "../../../database/Hospital.json";
+import icons from "../../../database/Business/Hospital.json";
 import styles from "./Business.scss";
 import Pointdiv from "../pointDiv";
 
