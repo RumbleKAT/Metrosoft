@@ -31,17 +31,16 @@ class productList extends Component {
     }
 
     title(){
-        return <div style={{ textAlign: "center",marginBottom:"50px" }}>
+        return <div style={{ textAlign: "center" }}>
             <span style={{ fontSize: "30px", fontWeight: "bold",lineHeight:"1.1em"}}>
               {contents.title}
             </span>
             <div style={{ width : "30%", height:"3px",background:"rgb(22, 155, 155)" ,marginLeft:"35%",marginTop:"10px"}}></div>
           </div>;
     }
-/*  <div style={{fontSize:"20px",fontWeight:"bold",padding:"5px",textAlign:"center" , color:"#169b9b"}}>{contents.lists[i]}</div> */
     content(obj,i){
-        return <div style={{ marginTop: "50px", width: "10%", minWidth: "260px", padding: "10px", borderRadius: "5px", border: "solid 3px #dfdfdf", float: "left" , marginRight:"20px"}}>
-            <img src={obj} alt="EMR" style={{ width: "120px", height: "100px", marginLeft: "24%", padding: "10px" }} />
+        return <div style={{ marginTop: "50px", width: "10%", minWidth: "150px", padding: "10px", borderRadius: "5px", float: "left" , marginRight:"20px"}}>
+            <img src={obj} alt="EMR" style={{ width: "120px", height: "100px", padding: "10px" }} />
             <div style={{ textAlign: "center", marginTop: "5px" }}>
               <a className="ui teal basic button" href={"./product/#" + contents.lists[i]}>
                 {contents.lists[i]}
@@ -54,7 +53,7 @@ class productList extends Component {
     render() {
         return <div style={{ padding: "50px",overflow:"hidden"}}>
             {this.title()}
-            <div style={{height:"500px",width:"100%",padding:"10px"}}>
+            <div style={{width:"100%",marginLeft:"10px",padding:"60px",height:"400px"}}>
               {arr.map((element, i) => {
                 return <div key={i}>{this.content(element, i)}</div>;
               })}

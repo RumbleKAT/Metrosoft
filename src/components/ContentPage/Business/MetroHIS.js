@@ -52,7 +52,7 @@ class MetroHIS extends Component {
 
 
     loadComposition(){
-            return <div style={{ padding: "0px", overflow: "hidden" , marginTop:"50px" }}>
+            return <div style={{ padding: "0px", overflow: "hidden", marginTop: "50px" }}>
                 <div className="ui green segment" style={contentStyle}>
                   <h2 style={titleStyle(selectedcolors[0])}>
                     원무
@@ -79,26 +79,26 @@ class MetroHIS extends Component {
                 </div>
                 <div className="ui yellow segment" style={contentStyle}>
                   <h2 style={titleStyle(selectedcolors[2])}>
+                    진료지원
+                  </h2>
+                  <ul>
+                    <li>처방에 의한 검사 예약 관리</li>
+                    <li>
+                      검사장비와의 Interface <br/>
+                      (결과관리의 오류 / 전송지연방지)
+                    </li>
+                    <li>임상병리검사의 QC관리</li>
+                    <li>OCS에 의한 재료관리 및 청구</li>
+                  </ul>
+                </div>
+                <div className="ui olive segment" style={contentStyle}>
+                  <h2 style={titleStyle(selectedcolors[3])}>
                     경영관리
                   </h2>
                   <ul>
                     <li>생산성 향상을 지원하는 행정관리 시스템</li>
                     <li>OCS와 연계된 EIS 원가분석</li>
                     <li>다중 재고 Location을 지원하는 물류체계</li>
-                  </ul>
-                </div>
-                <div className="ui olive segment" style={contentStyle}>
-                  <h2 style={titleStyle(selectedcolors[3])}>
-                    진료지원
-                  </h2>
-                  <ul>
-                    <li>처방에 의한 검사 예약 관리</li>
-                    <li>
-                      검사장비와의 Interface <br />
-                      (결과관리의 오류 / 전송지연방지)
-                    </li>
-                    <li>임상병리검사의 QC관리</li>
-                    <li>OCS에 의한 재료관리 및 청구</li>
                   </ul>
                 </div>
               </div>;

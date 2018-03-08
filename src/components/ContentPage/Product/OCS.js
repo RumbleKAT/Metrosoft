@@ -53,15 +53,15 @@ const compositions = [
     "검사결과 및 누적결과조회 통합"
   ],
   [
+    "생산성 향상을 지원하는 행정관리 시스템",
+    "OCS와 연계된 EIS 원가분석 기초자료",
+    "다중 재고 Location을 지원하는 물류체계"
+  ],
+  [
     "처방에 의한 검사 예약 관리",
     "검사장비와의 Interface | (결과 관리의 오류/전송지연방지)",
     "임상병리검사의 QC관리",
     "OCS에 의한 재료관리 및 청구"
-  ],
-  [
-    "생산성 향상을 지원하는 행정관리 시스템",
-    "OCS와 연계된 EIS 원가분석 기초자료",
-    "다중 재고 Location을 지원하는 물류체계"
   ]
 ];
 
@@ -380,7 +380,7 @@ class MetroOCS extends Component {
           </ul>
         </div>
         <div className="ui yellow segment" style={contentStyle}>
-          <h2 style={titleStyle(selectedcolors[2])}>경영관리</h2>
+          <h2 style={titleStyle(selectedcolors[2])}>진료지원</h2>
           <ul>
             {compositions[2].map((composition, i) => {
               return (
@@ -396,7 +396,7 @@ class MetroOCS extends Component {
           </ul>
         </div>
         <div className="ui olive segment" style={contentStyle}>
-          <h2 style={titleStyle(selectedcolors[3])}>진료지원</h2>
+          <h2 style={titleStyle(selectedcolors[3])}>경영관리</h2>
           <ul>
             {compositions[3].map((composition, i) => {
               return (
