@@ -18,7 +18,7 @@ function checkSize(title){
 }
 
 const path =  process.env.PUBLIC_URL + "/Hospital_icon";
-const ImgStyle = { float: "left", padding: "20px"  , height: "100px", margin: "30px 0 50px 0"};
+const ImgStyle = { float: "left", padding: "20px 0px 20px 30px"  , height: "100px", margin: "30px 0 50px 0"};
 const ImgStyleSub = { float: "left", padding: "20px" , margin: "30px 0 50px 0"};
 
 class Target extends Component {
@@ -37,7 +37,7 @@ class Target extends Component {
             <div>
                 {this.state.objects.map(function(icon , i) {
                     return (
-                        <div style={(checkSize(icon.title))} key={i}>
+                        <div className={styles.Target} style={(checkSize(icon.title))} key={i}>
                           <img src={path + icon.img} alt={icon.title} className={styles.customer} onClick={() => openNewTab(icon.url)} />
                         </div>);
                 })}

@@ -11,18 +11,18 @@ const address = [
   },
   {
     title: "성명",
-    content: ["병원 영업", "이용구", "이사", "yglee@metrosoft.co.kr/010-8877-2676"]
+    content: ["HIS 사업부", "이용구", "이사", "yglee@metrosoft.co.kr/010-8877-2676"]
   },
   {
     title: "직위",
-    content: ["기술 연구소", "노우창", "부장", "wcrho@metrosoft.co.kr"]
+    content: ["ERP 사업부", "송병민", "부장", "bmsong@metrosoft.co.kr/010-3465-5448"]
   },
   {
     title: "이메일 주소",
-    content: ["개발" , "이우일" , "부장","wooil@metrosoft.co.kr"]
+    content: ["HealthCare 컨텐츠" , "육기호" , "부사장","/010-2839-4920"]
   },
   {
-    content: ["통신(VOIP)","서진원","팀장","jinwon@metrosoft.co.kr"]
+    content: ["통신 부가서비스","이광희","팀장","taesan-3@metrosoft.co.kr/010-9038-8613"]
   }
 ];
 

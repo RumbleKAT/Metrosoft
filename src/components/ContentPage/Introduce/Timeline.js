@@ -23,7 +23,7 @@ import { Header, Segment } from "semantic-ui-react";
 
     const boxLabel = {
       float:"left",padding:"20px",
-      width:"75%",
+      width:"76%",
       minWidth:"350px"
     };
 

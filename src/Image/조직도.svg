@@ -8,6 +8,7 @@
 	.st2{fill:#FFFFFF;}
 	.st3{font-family:'NanumGothicExtraBold';}
 	.st4{font-size:18px;}
+	.st10{font-size:13px;}
 	.st5{fill:#FFFFFF;stroke:#169B9B;stroke-width:3;}
 	.st6{fill:#169B9B;}
 	.st7{font-size:22px;}
@@ -20,14 +21,14 @@
 <path class="st0" d="z"/>
 <path id="사각형_1_복사_4" class="st1" d="M583,438h155v40H583V438z M416,438h155v40H416V438z M252,438h155v40H252V438z
 	 M86,438h155v40H86V438z"/>
-<text id="의료시스템사업부" transform="matrix(1 0 0 1 95.138 464.776)" class="st2 st3 st4">의료시스템사업부</text>
-<text id="헬스케어사업부" transform="matrix(1 0 0 1 270.138 464.776)" class="st2 st3 st4">헬스케어사업부</text>
-<text id="Cloud_사업부" transform="matrix(1 0 0 1 440.138 464.776)" class="st2 st3 st4">Cloud 사업부</text>
-<text id="통신사업부" transform="matrix(1 0 0 1 618.138 463.776)" class="st2 st3 st4">통신사업부</text>
+<text id="HIS사업부" transform="matrix(1 0 0 1 125.138 464.776)" class="st2 st3 st4">HIS사업부</text>
+<text id="HealthCare컨텐츠사업부" transform="matrix(1 0 0 1 260.138 464.776)" class="st2 st3 st10">HealthCare컨텐츠사업부</text>
+<text id="ERP사업부" transform="matrix(1 0 0 1 450.138 464.776)" class="st2 st3 st4">ERP사업부</text>
+<text id="통신사업팀" transform="matrix(1 0 0 1 618.138 463.776)" class="st2 st3 st4">통신사업부</text>
 <g>
 	<rect id="_2nd_" x="467" y="301" class="st5" width="188" height="49"/>
 	<rect id="_2nd" x="172" y="301" class="st5" width="188" height="49"/>
-	<text id="연구개발팀" transform="matrix(1 0 0 1 214.185 333.381)" class="st6 st3 st7">연구개발팀</text>
+	<text id="자문/비즈니스그룹" transform="matrix(1 0 0 1 194.185 333.381)" class="st6 st3 st4">자문/비즈니스 그룹</text>
 	<text id="경영지원팀" transform="matrix(1 0 0 1 507.185 333.381)" class="st6 st3 st7">경영지원팀</text>
 	<g>
 		<rect id="사각형_1" x="319" y="154" class="st1" width="188" height="49"/>
