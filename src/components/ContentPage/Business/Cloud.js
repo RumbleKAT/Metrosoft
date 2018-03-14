@@ -24,6 +24,14 @@ const imgCenterStyle = {
 const path = process.env.PUBLIC_URL + "/Cloud";
 
 class Cloud extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      url : this.props.url
+    }
+  }
+
   loadTitle = obj => {
     return (
       <div style={{ padding: "50px" }}>
@@ -76,6 +84,10 @@ class Cloud extends Component {
             </div>;
         })}
       </div>;
+  }
+
+  componentDidMount(){
+
   }
 
   render() {

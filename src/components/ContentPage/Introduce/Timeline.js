@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.scss";
 import PointDiv from "../pointDiv";
 import { Header, Segment } from "semantic-ui-react";
-
+import Axios from 'axios';
 
 
  const box = {
@@ -27,21 +27,52 @@ import { Header, Segment } from "semantic-ui-react";
       minWidth:"350px"
     };
 
+var init = {
+  company: "",
+  ceo: "",
+  area:"",
+  address: "",
+  tel: "",
+  birth: "",
+  homepage: ""
+};
+
 class Timeliner extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      object: this.props.object
+      object: false,
+      dir: this.props.dir,
+      url: this.props.url,
+      load: "Timeline"
     };
 
     this._loadContent = this._loadContent.bind(this);
     this._loadDetail = this._loadDetail.bind(this);
     this._loadTitle = this._loadTitle.bind(this);
     this._loadDetailContent = this._loadDetailContent.bind(this);
+    this.upDated = this.upDated.bind(this);
+  }
+
+  upDated(response) {
+    this.setState({ object: response });
+  }
+
+  componentDidMount() {
+    console.log(this.state.url + this.state.load + "&dir=" + this.props.dir);
+    Axios.get(this.state.url + this.state.load + "&dir=" + this.props.dir)
+      .then(res => {
+        const answer = res.data;
+        this.upDated(answer);
+      })
+      .catch(err => {
+        console.log(err);
+      });
   }
 
   _loadTitle = obj => {
+    console.log(obj);
     return (
       <div>
         <div style={{ padding: "10px", marginTop: "100px" }}>
@@ -108,46 +139,66 @@ class Timeliner extends React.Component {
   };
 
   _loadContent = obj => {
-      return <div style={{ padding: "50px" }}>
-          <Header as="h2" color="teal" attached="top" style={{ borderTop: "solid 2px rgb(22, 155, 155)" }}>
-            {obj["year"]}
-          </Header>
-          <Segment attached style={{ position: "inherit", background: "#dfdfdf" }}>
-            {this._loadDetailContent(obj["content"])}
-          </Segment>
-        </div>;
+    return (
+      <div style={{ padding: "50px" }}>
+        <Header
+          as="h2"
+          color="teal"
+          attached="top"
+          style={{ borderTop: "solid 2px rgb(22, 155, 155)" }}
+        >
+          {obj["year"]}
+        </Header>
+        <Segment
+          attached
+          style={{ position: "inherit", background: "#dfdfdf" }}
+        >
+          {this._loadDetailContent(obj["content"])}
+        </Segment>
+      </div>
+    );
   };
 
   //resolution change 1028 300
 
   _loadDetailContent = objects => {
-    return <div className="ui segments" style={{ position: "inherit" }}>
-        {objects.map((obj, i) => {
-          return <div key={i} className="ui segment" style={{ position: "inherit", fontWeight: "500" }}>
-              <div style={{ fontSize: "15px" }}> {obj}</div>
-            </div>;
-        })}
-      </div>;
-  }
-
-  render() {
     return (
-      <div className={styles.TimelineStyle}>
-        {this._loadTitle(this.state.object["init"])}
-        <div style={{ padding: "30px", marginBottom: "50px", marginTop:"100px" }}>
-          <div style={{ padding: "30px",overflow:"hidden" }}>
-            <PointDiv onTitle={"연혁"} />
-          </div>
-          <div>
-            {this.state.object["content"].reverse().map((object,i)=>{
-              return <div key={i}>{this._loadContent(object)}</div>;
-            })}
-          </div>
-        </div>
+      <div className="ui segments" style={{ position: "inherit" }}>
+        {objects.map((obj, i) => {
+          return (
+            <div
+              key={i}
+              className="ui segment"
+              style={{ position: "inherit", fontWeight: "500" }}
+            >
+              <div style={{ fontSize: "15px" }}> {obj}</div>
+            </div>
+          );
+        })}
       </div>
     );
+  };
+
+  render() {
+    if(!this.state.object) {
+      return "loading...";
+    }
+    else{
+      return <div className={styles.TimelineStyle}>
+          {this._loadTitle(this.state.object.init)}
+          <div style={{ padding: "30px", marginBottom: "50px", marginTop: "100px" }}>
+            <div style={{ padding: "30px", overflow: "hidden" }}>
+              <PointDiv onTitle={"연혁"} />
+            </div>
+            <div>
+              {this.state.object["content"].reverse().map((object, i) => {
+                return <div key={i}>{this._loadContent(object)}</div>;
+              })}
+            </div>
+          </div>
+        </div>;
+    }
   }
 }
-
 
 export default Timeliner;

@@ -28,6 +28,8 @@ const address = [
 
 const Lists = ['고객지원','원격지원'];
 
+const dir = "04";
+
 class Customer extends Component {
     render() {
         return <div style={{ marginTop: "30px" }}>

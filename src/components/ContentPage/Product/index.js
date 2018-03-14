@@ -11,6 +11,9 @@ import TitleList from '../TitleList';
 const List = [
     'EMR','iEMR','OCS','mPOC','mEAMS','ERP','CRM'
 ]
+
+const dir = "03";
+
 class Product extends Component {
     render() {
         return <div>
