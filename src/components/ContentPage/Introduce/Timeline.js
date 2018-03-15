@@ -27,16 +27,6 @@ import Axios from 'axios';
       minWidth:"350px"
     };
 
-var init = {
-  company: "",
-  ceo: "",
-  area:"",
-  address: "",
-  tel: "",
-  birth: "",
-  homepage: ""
-};
-
 class Timeliner extends React.Component {
   constructor(props) {
     super(props);

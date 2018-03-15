@@ -3,11 +3,6 @@ import CEOIntroduce from "./CeoIntroduce";
 import Oragnization from "./Organization";
 import Timeliner from "./Timeline";
 import Map from "./map";
-import Axios from 'axios';
-
-
-//import organization from "../../../database/Introduce/Organization.json";
-//import timeline from "../../../database/Introduce/Timeline.json";
 
 import PointDiv from "../pointDiv";
 import TitleList from "../TitleList";
@@ -22,15 +17,7 @@ const Lists = [
 
 const dir = "01";
 
-
 class Introduce extends Component {
-  
-   constructor(props){
-      super(props);
-      this.state = {
-          object : {}
-      }
-   }
 
   render() {
     return(

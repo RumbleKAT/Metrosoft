@@ -3,7 +3,10 @@ import CustomerTable from "./CustomerTable";
 import PointDiv from "../pointDiv";
 import Remote from "./RemoteControl";
 import TitleList from "../TitleList";
+import url from "../../server.json";
+import Axios from 'axios';
 
+/*
 const address = [
   {
     title: "부서",
@@ -25,21 +28,57 @@ const address = [
     content: ["통신 부가서비스","이광희","팀장","taesan-3@metrosoft.co.kr/010-9038-8613"]
   }
 ];
+*/
 
 const Lists = ['고객지원','원격지원'];
 
 const dir = "04";
 
 class Customer extends Component {
-    render() {
-        return <div style={{ marginTop: "30px" }}>
-            <TitleList object={Lists}/>
-            <PointDiv onTitle={"고객지원"} />
-            <CustomerTable onContent={address} />
-            <PointDiv onTitle={"원격지원"} />
-            <Remote/>
-          </div>;
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      object: false,
+      url : url.url,
+      dir : dir,
+      load: "customer"
+    };
+
+    this.upDated = this.upDated.bind(this);
+  }
+
+  upDated(response) {
+    this.setState({ object: response });
+  }
+
+  componentDidMount() {
+    Axios.get(this.state.url + this.state.load + "&dir=" + this.state.dir)
+      .then(res => {
+        const answer = res.data;
+        this.upDated(answer);
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
+
+  render() {
+    if(!this.state.object){
+      return "loading...";
     }
+    else{
+      return (
+        <div style={{ marginTop: "30px" }}>
+          <TitleList object={Lists} />
+          <PointDiv onTitle={"고객지원"} />
+          <CustomerTable onContent={this.state.object.address} />
+          <PointDiv onTitle={"원격지원"} />
+          <Remote />
+        </div>
+      );
+    }
+  }
 }
 
 export default Customer;

@@ -9,7 +9,7 @@ class CEOIntroduce extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      object: {},
+      object: false,
       dir: this.props.dir,
       url: this.props.url,
       load: "CEOIntroduce"
@@ -67,32 +67,34 @@ class CEOIntroduce extends Component {
   };
 
   render() {
-    return (
-      <div>
-        <div style={{ padding: "50px" }}>
-          <PointDiv onTitle={this.state.object["title"]} />
-        </div>
-        <div className={styles.boxes}>
-          <div className={styles.container}>
-            <div className={styles.box}>
-              <img className={styles.boxImg} src={ceo} alt="ceo_picture" />
-            </div>
-            <div className={styles.box}>
-              <h2>
-                <span className={styles.span}>
-                  {this.state.object["subtitle"]}
-                </span>
-              </h2>
-              {this._loadArray(this.state.object["content"])}
-              <div className={styles.signdiv}>
-                {this.state.object["finish"]}
-                <img className={styles.sign} src={sign} alt="ceo_picture" />
+    if(!this.state.object){
+      return "loading....";
+    }else{
+      return <div>
+          <div style={{ padding: "50px" }}>
+            <PointDiv onTitle={this.state.object["title"]} />
+          </div>
+          <div className={styles.boxes}>
+            <div className={styles.container}>
+              <div className={styles.box}>
+                <img className={styles.boxImg} src={ceo} alt="ceo_picture" />
+              </div>
+              <div className={styles.box}>
+                <h2>
+                  <span className={styles.span}>
+                    {this.state.object["subtitle"]}
+                  </span>
+                </h2>
+                {this._loadArray(this.state.object["content"])}
+                <div className={styles.signdiv}>
+                  {this.state.object["finish"]}
+                  <img className={styles.sign} src={sign} alt="ceo_picture" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    );
+        </div>;
+    }
   }
 }
 

@@ -8,7 +8,7 @@ class Organization extends Component {
     super(props);
 
     this.state = {
-      object: {},
+      object: false,
       dir: this.props.dir,
       url: this.props.url,
       load: "Organization"
@@ -50,44 +50,48 @@ class Organization extends Component {
   };
 
   render() {
-    return (
-      <div>
-        <div style={{ padding: "20px" }}>
-          <PointDiv onTitle={"조직도"} />
-        </div>
-        <div className={style.boxes}>
-          <div className={style.container}>
-            <div
-              style={{
-                fontSize: "1em",
-                float: "right",
-                fontWeight: "400",
-                padding: "20px",
-                border: ".2em solid #dfdfdf",
-                borderRadius: "2em"
-              }}
-            >
-              {this._loadData(this.state.object)}
-            </div>
-            <div
-              style={{
-                minWidth: "300px",
-                width: "50%",
-                display: "block",
-                marginLeft: "auto",
-                marginRight: "auto"
-              }}
-            >
-              <img
-                style={{ minWidth: "300px" }}
-                src={organization}
-                alt="조직도"
-              />
+    if(!this.state.object){
+      return "loading....";
+    }
+    else {
+      return (
+        <div>
+          <div style={{ padding: "20px" }}>
+            <PointDiv onTitle={"조직도"} />
+          </div>
+          <div className={style.boxes}>
+            <div className={style.container}>
+              <div
+                style={{
+                  fontSize: "1em",
+                  float: "right",
+                  fontWeight: "400",
+                  padding: "20px",
+                  border: ".2em solid #dfdfdf",
+                  borderRadius: "2em"
+                }}
+              >
+                {this._loadData(this.state.object)}
+              </div>
+              <div
+                style={{
+                  minWidth: "300px",
+                  width: "50%",
+                  display: "block",
+                  marginLeft: "auto",
+                  marginRight: "auto"
+                }}>
+                <img
+                  style={{ minWidth: "300px" }}
+                  src={organization}
+                  alt="조직도"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    );
+      );
+    }
   }
 }
 
