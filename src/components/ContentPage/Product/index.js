@@ -6,10 +6,11 @@ import MPOC from "./mPOC";
 import ERP from "./ERP";
 import MEAMS from "./mEAMS";
 import CRM from "./CRM";
+import TBiz from "./T_Biz";
 import TitleList from '../TitleList';
 
 const List = [
-    'EMR','iEMR','OCS','mPOC','mEAMS','ERP','CRM'
+    'EMR','iEMR','OCS','T-BIZ 모바일 EMR','ERP','CRM'
 ]
 
 class Product extends Component {
@@ -19,8 +20,7 @@ class Product extends Component {
             <EMR />
             <IEMR />
             <OCS />
-            <MPOC />
-            <MEAMS/>
+            <TBiz/>
             <ERP />
             <CRM />
           </div>;

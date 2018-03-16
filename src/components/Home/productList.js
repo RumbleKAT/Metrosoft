@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import EMR from "../../Image/product_icons/EMR.svg";
 import iEMR from "../../Image/product_icons/iEMR.svg";
 import OCS from "../../Image/product_icons/OCS.svg";
-import mEAMS from "../../Image/product_icons/mEAMS.svg";
-import mPOC from "../../Image/product_icons/mPOC.svg";
+//import mEAMS from "../../Image/product_icons/mEAMS.svg";
+import T_Biz from "../../Image/product_icons/mPOC.svg";
 import ERP from "../../Image/product_icons/ERP.svg";
 import CRM from "../../Image/product_icons/CRM.svg";
 
@@ -12,14 +12,13 @@ var arr = [];
 arr.push(EMR);
 arr.push(iEMR);
 arr.push(OCS);
-arr.push(mPOC);
-arr.push(mEAMS);
+arr.push(T_Biz);
 arr.push(ERP);
 arr.push(CRM);
 
 const contents = {
     title : 'Metrosoft의 제품을 활용하세요',
-    lists : ['EMR','iEMR','OCS','mPOC','mEAMS','ERP','CRM']
+    lists : ['EMR','iEMR','OCS','T_Biz','ERP','CRM']
 };
 
 class productList extends Component {
