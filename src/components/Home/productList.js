@@ -17,9 +17,17 @@ arr.push(ERP);
 arr.push(CRM);
 
 const contents = {
-    title : 'Metrosoft의 제품을 활용하세요',
-    lists : ['EMR','iEMR','OCS','T_Biz','ERP','CRM']
+  title: "Metrosoft의 제품을 활용하세요",
+  lists: ["EMR", "iEMR", "OCS", "T-BIZ", "ERP", "CRM"]
 };
+
+function check(obj){
+  if(obj.indexOf("T-BIZ") !== -1){
+    return "T-BIZ 모바일 EMR"
+  }else{
+    return obj;
+  }
+}
 
 class productList extends Component {
 
@@ -38,10 +46,10 @@ class productList extends Component {
           </div>;
     }
     content(obj,i){
-        return <div style={{ marginTop: "50px", width: "10%", minWidth: "150px", padding: "10px", borderRadius: "5px", float: "left" , marginRight:"20px"}}>
+        return <div style={{ marginTop: "50px", width: "10%", minWidth: "150px", padding: "10px", borderRadius: "5px", float: "left", marginRight: "50px" }}>
             <img src={obj} alt="EMR" style={{ width: "120px", height: "100px", padding: "10px" }} />
             <div style={{ textAlign: "center", marginTop: "5px" }}>
-              <a className="ui teal basic button" href={"./product/#" + contents.lists[i]}>
+              <a className="ui teal basic button" href={"./product/#" + check(contents.lists[i])}>
                 {contents.lists[i]}
               </a>
             </div>

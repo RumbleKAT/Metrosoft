@@ -3,7 +3,47 @@ import PointDiv from "../pointDiv";
 import ContentList from "../ContentList";
 import LabelContent from "../LabelContent";
 import exImg from "../../../Image/mPOC.png";
+import DottedTitle from '../DottedTitle';
 
+const imgLeftStyle = {
+  width: "200px",
+  float: "left",
+  margin: "-10px 30px 30px 50px"
+};
+
+const styles = {
+  title: {
+    fontSize: "30px",
+    fontWeight: "bold",
+    float: "left",
+    marginBottom: "15px",
+    marginRight: "20px"
+  },
+  subtitle: {
+    fontSize: "20px",
+    fontWeight: "bold",
+    color: "#888",
+    minWidth: "330px",
+    float: "left"
+  },
+  borderline: {
+    borderTop: "dotted 2px #888",
+    overflow: "hidden",
+    padding: "10px",
+    float : "left"
+  },
+  content: {
+    marginTop: "10px",
+    fontWeight: "400",
+    fontSize: "16px"
+  }
+};
+
+const TBIZ = {
+  title: "T-BIZ 모바일 EMR",
+  subtitle: "(Mobile EMR)",
+  content:"의료기관에서 환자 서비스를 위해 필요한 의무기록차트를 전자화 하여 의사 및 진료지원부서에서 진료차트의 공유를 통해 진료정보의 활용도를 높이고 / 차트보관 및 불출의 번거로움 없이 항상 환자의 상태 및 진료상황을 확인할 수 있는 어플리케이션 입니다."
+};
 
 const features = [
     "현장 중심 환자 CARE(POC)",
@@ -129,98 +169,133 @@ const con_style = {
 
 class T_Biz extends Component {
 
-    loadFeature = obj => {
-        return (
-            <div style={{padding:"20px"}}>
-                <LabelContent onTitle={"특징"} onAddLine={true} onColor={"#dfdfdf"} />
-                <ContentList OnContent={obj} />
-            </div>
-        )
-    }
+  loadFeature = obj => {
+    return (
+      <div style={{ padding: "20px" }}>
+        <LabelContent onTitle={"특징"} onAddLine={true} onColor={"#dfdfdf"} />
+        <ContentList OnContent={obj} />
+      </div>
+    );
+  };
 
-    loadTable = obj => {
-        return <div style={{ padding: "20px" }}>
-            <LabelContent onTitle={"기능"} />
-            <table className="ui teal fixed single line celled table">
-              <thead style={{ textAlign: "center" }}>
-                <tr>
-                  {obj.title.map((el,i)=>{
-                      return (<th key={i}>
-                        {el}
-                      </th>)
+  loadTable = obj => {
+    return (
+      <div style={{ padding: "20px" }}>
+        <LabelContent onTitle={"기능"} />
+        <table className="ui teal fixed single line celled table">
+          <thead style={{ textAlign: "center" }}>
+            <tr>
+              {obj.title.map((el, i) => {
+                return <th key={i}>{el}</th>;
+              })}
+            </tr>
+          </thead>
+          <tbody style={{ textAlign: "center" }}>
+            {obj.content.map((el, i) => {
+              return (
+                <tr key={i}>
+                  {el.content.map((e, i) => {
+                    return <td key={i}>{e}</td>;
                   })}
                 </tr>
-              </thead>
-              <tbody style={{ textAlign: "center" }}>
-                {
-                  obj.content.map((el,i)=>{
-                      return (
-                          <tr key={i}>
-                             {el.content.map((e,i)=>{
-                                 return (<td key={i}>
-                                     {e}
-                                 </td>)
-                             })}
-                          </tr>
-                      )
-                  })
-                }
-              </tbody>
-            </table>
-          </div>;
-    }
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    );
+  };
 
-    loadExample = (obj) =>{
-        return (
-            <div>
-                {
-                    obj.map((el,i) => {
-                        return <div key={i}>
-                            <LabelContent onTitle={el.title} />
-                            <div style={{ padding: "10px", margin: "10px auto 0px auto", width: "40%", minWidth: "320px" }}>
-                              <img src={path + el.img} alt={el.img} style={{ width: "100%" }} />
-                            </div>
-                          </div>;
-                    })
-                }
+  loadExample = obj => {
+    return (
+      <div>
+        {obj.map((el, i) => {
+          return (
+            <div key={i}>
+              <LabelContent onTitle={el.title} />
+              <div
+                style={{
+                  padding: "10px",
+                  margin: "10px auto 0px auto",
+                  width: "40%",
+                  minWidth: "320px"
+                }}
+              >
+                <img
+                  src={path + el.img}
+                  alt={el.img}
+                  style={{ width: "100%" }}
+                />
+              </div>
             </div>
-        )
-    }
+          );
+        })}
+      </div>
+    );
+  };
 
-    loadWithImg = (obj) =>{
-        return <div>
-            <LabelContent onTitle={obj.title} onAddLine={true} onColor={"#dfdfdf"}/>
-            {
-                obj.hasOwnProperty("description") === true ?
-                obj.description.split('|').map((el, i) => {
-                    return <p key={i}>{el}</p>;
-                }) : null
-            }
-            <div style={{ padding: "10px", margin: "10px auto 0px auto", width: "40%", minWidth: "320px" }}>
-              <img src={path + obj.img} alt={obj.img} style={{ width: "100%" }} />
+  loadWithImg = obj => {
+    return (
+      <div>
+        <LabelContent
+          onTitle={obj.title}
+          onAddLine={true}
+          onColor={"#dfdfdf"}
+        />
+        {obj.hasOwnProperty("description") === true
+          ? obj.description.split("|").map((el, i) => {
+              return <p key={i}>{el}</p>;
+            })
+          : null}
+        <div
+          style={{
+            padding: "10px",
+            margin: "10px auto 0px auto",
+            width: "40%",
+            minWidth: "320px"
+          }}
+        >
+          <img src={path + obj.img} alt={obj.img} style={{ width: "100%" }} />
+        </div>
+      </div>
+    );
+  };
+
+  loadTitle = () => {
+    return <div style={{ marginBottom: "300px" }}>
+        <PointDiv onTitle={"T-BIZ 모바일 EMR"} />
+        <div style={{ marginBottom: "30px" }}>
+          <img src={exImg} alt="obj" style={imgLeftStyle} />
+          <div style={{marginTop:"80px",height:"fitContent"}}>
+            <div style={styles.title}>{TBIZ.title}</div>
+            <div style={styles.subtitle}>{TBIZ.subtitle}</div>
+            <div style={styles.borderline}>
+              {TBIZ.content.split("/").map((row, i) => {
+                return <p style={styles.content} key={i}>
+                    {row}
+                  </p>;
+              })}
             </div>
-          </div>;
-    }
+          </div>
+        </div>
+      </div>;
+  };
 
-    render() {
-        return <div style={divStyle}>
-            <PointDiv onTitle={"T-BIZ 모바일 EMR"} />
-            {this.loadFeature(features)}
-            {this.loadTable(functions)}
-            {this.loadExample(examples)}
-            {this.loadWithImg(security)}
-            {this.loadWithImg(Device)}
-            {
-                Effects.map((el,i)=>{
-                    return (
-                        <div key={i}>
-                            {this.loadWithImg(el)}
-                        </div>
-                    )
-                })
-            }
-          </div>;
-    }
+  render() {
+    return (
+      <div style={divStyle}>
+        {this.loadTitle()}
+        {this.loadFeature(features)}
+        {this.loadTable(functions)}
+        {this.loadExample(examples)}
+        {this.loadWithImg(security)}
+        {this.loadWithImg(Device)}
+        {Effects.map((el, i) => {
+          return <div key={i}>{this.loadWithImg(el)}</div>;
+        })}
+      </div>
+    );
+  }
 }
 
 export default T_Biz;
