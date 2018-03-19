@@ -12,7 +12,6 @@ import ScrollToTop from "react-scroll-up";
 import FaCaretUp from "react-icons/lib/fa/caret-up";
 import Sticky from "react-sticky-el";
 import Sitemap from "./components/Sitemap";
-
 class App extends Component {
  
   render() {
@@ -36,7 +35,7 @@ class App extends Component {
             </ScrollToTop>
           </div>
         </BrowserRouter>
-        <Sitemap />
+        <Sitemap/>
         <Footer />
       </div>;
   }
