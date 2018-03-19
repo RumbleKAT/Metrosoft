@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PointDiv from "../pointDiv";
 import ContentList from "../ContentList";
 import LabelContent from "../LabelContent";
-import exImg from "../../../Image/mPOC.png";
+import exImg from "../../../Image/TBiz.png";
 //import DottedTitle from '../DottedTitle';
 
 const imgLeftStyle = {
@@ -130,7 +130,7 @@ const security = {
 const Device = {
     title: "사용 Device",
     description : "Android OS 3.1 이상 | 디스플레이 크기 10.1 인치 (갤럭시 기준)",
-    img : "/10.png"
+    img : "/06.png"
 };
 
 const Effects = [

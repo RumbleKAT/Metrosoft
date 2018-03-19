@@ -51,15 +51,17 @@ class Cloud extends Component {
   };
   loadFeatures = obj => {
     return <div style={{ marginBottom: "50px" }}>
-        <div style={{padding:"50px 0 0 50px"}}>
-          <LabelContent onTitle={"주요특징"} />
+        <div style={{ padding: "50px 0 0 50px" }}>
+          <div style={{marginBottom:"100px"}}>
+            <RoundTitle onTitle={"주요 특징"} />
+          </div>
         </div>
         {obj.map((el, i) => {
           return <div style={{ marginTop: "50px" }} key={i}>
-              <div style={{minWidth:"320px"}}>
+              <div style={{ minWidth: "320px" }}>
                 <img src={path + el.image} alt="obj" style={imgLeftStyle} />
               </div>
-              <div style={{minWidth:"320px",overflow:"hidden",padding:"50px" }}>
+              <div style={{ minWidth: "320px", overflow: "hidden", padding: "50px" }}>
                 <h2>{el.title}</h2>
                 <div style={{ fontSize: "15px" }}>
                   {el.contents.split("|").map((e, i) => {
@@ -73,13 +75,10 @@ class Cloud extends Component {
   };
 
   loadEffects = (obj) => {
-    return <div style ={{ marginTop : "50px" }}>
-        <div style={{ padding: "50px 0 0 50px" }}>
-          <LabelContent onTitle={"주요특징"} />
-        </div>
+    return <div style={{ marginTop: "50px" }}>
         {obj.map((el, i) => {
-          return <div key = {i} style={{padding:"50px 0px 0px 50px"}}>
-              <h2>{el.title}</h2>
+          return <div key={i} style={{ padding: "50px 0px 0px 50px" }}>
+              <LabelContent onTitle={el.title}/>
               <ContentList OnContent={el.contents} />
             </div>;
         })}
