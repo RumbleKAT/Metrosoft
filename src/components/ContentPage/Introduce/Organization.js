@@ -61,6 +61,7 @@ class Organization extends Component {
           </div>
           <div className={style.boxes}>
             <div className={style.container}>
+            {/*
               <div
                 style={{
                   fontSize: "1em",
@@ -71,8 +72,9 @@ class Organization extends Component {
                   borderRadius: "2em"
                 }}
               >
-                {this._loadData(this.state.object)}
+               {this._loadData(this.state.object)} 
               </div>
+              */}
               <div
                 style={{
                   minWidth: "300px",

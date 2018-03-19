@@ -3,7 +3,7 @@ import PointDiv from "../pointDiv";
 import ContentList from "../ContentList";
 import LabelContent from "../LabelContent";
 import exImg from "../../../Image/mPOC.png";
-import DottedTitle from '../DottedTitle';
+//import DottedTitle from '../DottedTitle';
 
 const imgLeftStyle = {
   width: "200px",
@@ -149,7 +149,7 @@ const Effects = [
         img : "/10.png"
     }
 ]
-
+/*
 const contentStyle = {
   marginTop: "20px",
   float: "left",
@@ -160,13 +160,17 @@ const contentStyle = {
   position: "inherit",
   padding: "20px"
 };
+*/
+
 const path = process.env.PUBLIC_URL + "/T_Biz";
 const divStyle = { padding: "50px" };
+
+/*
 const con_style = {
   padding: "50px",
   marginTop: "10px"
 };
-
+*/
 class T_Biz extends Component {
 
   loadFeature = obj => {
