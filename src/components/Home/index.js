@@ -12,6 +12,7 @@ class Home extends Component {
             <ImageSlider />
             <ProductList />
             <Certified />
+            <Hotline/>
           </div>;
     }
 }

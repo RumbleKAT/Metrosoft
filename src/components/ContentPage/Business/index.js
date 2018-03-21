@@ -6,6 +6,7 @@ import Cloud from "./Cloud";
 import TitleList from '../TitleList';
 import HealthCare from "./HealthCare";
 import MetroSMS from "./MetroSMS";
+import Alarm from "./Alarm";
 import url from "../../server.json";
 
 const Lists = [
@@ -14,6 +15,7 @@ const Lists = [
   "헬스케어 서비스",
   "VOIP 사업",
   "MetroSMS",
+  "알림톡",
   "주요 고객사"
 ];
 
@@ -29,6 +31,7 @@ class Business extends Component {
             <HealthCare />
             <VoIP />
             <MetroSMS/>
+            <Alarm/>
             <Target url={url.url} dir={dir} />
           </div>;
     }

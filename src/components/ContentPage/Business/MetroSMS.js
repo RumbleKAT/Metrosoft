@@ -3,7 +3,7 @@ import PointDiv from "../pointDiv";
 import ContentList from "../ContentList";
 import RoundTitle from "../RoundTitle";
 import LabelContent from '../LabelContent';
-
+/*
 const Features = [
     "사용자 친화적인 유저 인터페이스 제공",
     "SMS, LMS, MMS, HPS의 다양한 형태의 문자발송기능 지원",
@@ -80,18 +80,104 @@ const detail = [
   }
 ];
 
-const path = process.env.PUBLIC_URL + "/MetroSMS";
-const con_style = { padding: "50px", marginTop: "10px" };
-const contentStyle = { padding: "10px", marginTop: "20px" };
+*/
 
+const progress = [
+  {
+    title: "사용자 친화적인 유저 인터페이스 제공",
+    contents:
+      "메인으로 들어가기 위한 인증화면 (부여받은 아이디와 설정된 패스워드로 로그인 실행)",
+    img: "/01.png"
+  },
+  {
+    title: "SMS, LMS, MMS, HPS",
+    contents:
+      "다양한 기능과 작업자의 편의성을 고려하여 다양한 형태의 문자발송이 가능",
+    img: "/02.png"
+  },
+  {
+    title: "그룹관리",
+    contents:
+      "그룹을 생성 하거나 관리하고 사용자 엑셀파일의 연락처를 업로드하는 기능을 제공",
+    img: "/03.png"
+  },
+  {
+    title: "통계",
+    contents:
+      "사용자 설정한 기간, 발송 건수에 대한 통계 및 요금을 확인할 수 있는 기능을 제공",
+    img: "/04.png"
+  }
+];
+
+const HPS = {
+  title: "HPS 문자발송",
+  description: "스마트폰과 연동 가입된 통신사의 문자메세지 발송 | (※ SMS,LMS,MMS 문자서비스를 MetroSMS HPS발송으로 요금절감)",
+  contents: [
+    {
+      title: "HPS 문자 발송 (발송방법 동일)",
+      img: "/05.png"
+    },
+    {
+      title : "안드로이드 문자신궁 어플 클릭 실행",
+      img : "/06.png"
+    },
+    {
+      title:"대상건수 및 내용확인 후 전송시작 실행",
+      img: "/07.png"
+    }
+  ]
+};
+
+const features = [
+  {
+    title: "보안 등급별 사용자 관리 기능",
+    contents: ["사용자 ID, 패스워드 관리", "사용자의 보안등급 별로 유저관리"]
+  },
+  {
+    title: "그룹 관리 기능",
+    contents: ["공용자료 및 개인자료 분류 기능" ,"통합자료 변환 후 조건검색 기능으로 대상자 추출 가능"]
+  },
+  {
+    title : "080 수신거부 자동삽입",
+    contents :["문자 발송시 무료수신거부 체크 문구 자동 삽입"]
+  },
+  {
+    title : "발송 실패건 환급",
+    contents : ["문자 발송시 실패 건수에 따라 빌링 처리후 재충전"]
+  },
+  {
+    title : "HPS 발송에 따른 요금 절감",
+    contents : ["스마트폰 앱, 모바일 연동에 따른 문자발송 지원(문자신궁)"]
+  }
+];
+
+const path = process.env.PUBLIC_URL + "/MetroSMS";
+const con_style = { marginTop: "10px" };
+//const contentStyle = { padding: "10px", marginTop: "20px" };
+/*
+ {content.indexOf('|') !== -1 ? content.split("|").map((e, i) => {
+                      return <p key={i}>{e}</p>;
+                }) : <p>{content}</p>}
+*/
 class MetroSMS extends Component {
 
+    constructor(props){
+        super(props);
+        this.loadImg = this.loadImg.bind(this);
+    }
 
-    loadImg = (obj) => {
-        console.log(obj);
-        return <div style={{ padding: "10px", margin: "10px auto 0px auto", width: "40%", minWidth: "320px" }}>
-            <img src={path + obj} alt={obj} style={{ width: "95%" }} />
-        </div>;
+    loadImg(obj , content){
+
+        if(content !== null){
+            return <div style={{ padding: "10px", margin: "10px auto 0px auto", width: "40%", minWidth: "320px" }}>
+                <img src={path + obj} alt={obj} style={{ width: "95%" }} />
+                <div style={{textAlign:"center"}}>{content}</div>
+              </div>;
+        }else{
+            return <div style={{ padding: "10px", margin: "10px auto 0px auto", width: "40%", minWidth: "320px" }}>
+                <img src={path + obj} alt={obj} style={{ width: "95%" }} />
+            </div>;
+        }
     }
 
     loadTitle = () =>{
@@ -102,6 +188,55 @@ class MetroSMS extends Component {
         )
     }
 
+    loadHPS = (obj) =>{
+        return <div>
+            <div style={{ overflow: "hidden", marginBottom: "20px" }}>
+              <RoundTitle onTitle={obj.title} />
+              <div style={{ padding: "20px" ,marginTop:"60px" }}>{obj.description.split("|").map((el,i)=>{return <p key={i}>{el}</p>})}</div>
+              <div>
+                  {
+                      obj.contents.map((el,i)=>{
+                          return <div key={i} style={{padding:"10px"}}>
+                              {el.hasOwnProperty("img") === true  ? this.loadImg(el.img, el.title) : null}
+                            </div>;
+                      })
+                  }
+              </div>
+            </div>
+          </div>;
+    }
+
+    loadFeature = (obj) =>{
+        return(<div>
+            <div style={{overflow:"hidden",marginBottom:"20px"}}>
+              <RoundTitle onTitle={"특징"} />
+            </div>{
+                obj.map((el,i)=>{
+                    return <div key={i} style={{padding:"10px"}}>
+                        <LabelContent onTitle={el.title} />
+                        <ContentList OnContent={el.contents} />
+                      </div>;
+                })
+            }
+            </div>
+        )
+    }
+
+    loadProgress = (obj) =>{
+        return <div>
+            <div style={{overflow:"hidden",marginBottom:"20px"}}>
+              <RoundTitle onTitle={"기능"} />
+            </div>
+            {obj.map((el, i) => {
+              return <div key={i} style={{marginTop:"50px"}}>
+                  <LabelContent onTitle={el.title} />
+                  <div style={{ padding: "20px" }}>{el.contents}</div>
+                  {this.loadImg(el.img)}
+                </div>;
+            })}
+          </div>;
+    }
+/*
     loadFeatures =(obj)=>{
         return <div style={{ padding: "50px" }}>
             <RoundTitle onTitle={"특징"} />
@@ -111,6 +246,7 @@ class MetroSMS extends Component {
             {this.loadImg("/01.png")}
           </div>;
     }
+
 
     loadComp = (obj)=>{
         return (
@@ -148,16 +284,18 @@ class MetroSMS extends Component {
             })
         )
     }
+*/
+
+
+
 
     render() {
-        return (
-            <div>
-                {this.loadTitle()}
-                {this.loadFeatures(Features)}
-                {this.loadComp(comps)}
-                {this.loadDetail(detail)}
-            </div>
-        );
+        return <div style={{ padding: "50px" }}>
+            {this.loadTitle()}
+            {this.loadFeature(features)}
+            {this.loadProgress(progress)}
+            {this.loadHPS(HPS)}
+          </div>;
     }
 }
 

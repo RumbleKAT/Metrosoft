@@ -8,7 +8,7 @@ const style = { minWidth: "280px", float:"left" ,width:"30%",padding:"10px",marg
 class Certified extends Component {
 
     loadTitle = () =>{
-        return <div style={{ padding: "50px", marginBottom: "300px" }}>
+        return <div style={{ padding: "50px",overflow:"hidden"}}>
             <PointDiv onTitle={"Certified Partnership"} />
             <div style={{ width: "100%" }}>
               <div style={style}>
