@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-//import style from "./style.scss";
-//import paper from "../../Image/phone.jpg";
 import PointDiv from "../ContentPage/pointDiv";
 
 

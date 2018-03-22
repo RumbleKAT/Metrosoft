@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PointDiv from "../pointDiv";
 import RoundTitle from "../RoundTitle";
 import ContentList from "../ContentList";
-import ContentImg from "../../../Image/VOIP.svg";
-import FlowChart from "../../../Image/서비스 구성도.svg";
+import ContentImg from "../../../Image/VOIP.png";
+import FlowChart from "../../../Image/comp.png";
 
 const intro = [
     "유선 전화를 통한 가계비 부담을 줄이기 위해 기존 또는 신규 인터넷 회선을 이용하여 저렴한 통신비용과 PSTN과 PSDN의 양방향 통신 서비스를 지원하여 더욱 안정적인 서비스를 지원합니다."

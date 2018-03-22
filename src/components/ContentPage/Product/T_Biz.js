@@ -3,7 +3,6 @@ import PointDiv from "../pointDiv";
 import ContentList from "../ContentList";
 import LabelContent from "../LabelContent";
 import exImg from "../../../Image/TBiz.png";
-//import DottedTitle from '../DottedTitle';
 
 const imgLeftStyle = {
   width: "200px",

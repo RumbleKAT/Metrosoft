@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import db from "./Cloud.json";
 import RoundTitle from "../RoundTitle";
 import PointDiv from "../pointDiv";
-import description from "../../../Image/cloud.svg";
+import description from "../../../Image/cloud.png";
 import LabelContent from "../LabelContent";
 import ContentList from "../ContentList";
 

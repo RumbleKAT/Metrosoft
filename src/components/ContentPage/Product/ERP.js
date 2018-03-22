@@ -4,7 +4,7 @@ import ContentList from "../ContentList";
 import LabelContent from "../LabelContent";
 import PointDiv from "../pointDiv";
 
-import ERPImg from "../../../Image/ERP.svg";
+import ERPImg from "../../../Image/ERP.png";
 
 const MetroERP = {
     title : "Metro-ERP",

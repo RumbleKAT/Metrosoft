@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import style from "./styles.scss";
-import organization from "../../../Image/조직도.svg";
+import organization from "../../../Image/organization.png";
 import PointDiv from "../pointDiv";
 import Axios from 'axios';
 class Organization extends Component {
@@ -78,13 +78,10 @@ class Organization extends Component {
               <div
                 style={{
                   minWidth: "300px",
-                  width: "50%",
-                  display: "block",
-                  marginLeft: "auto",
-                  marginRight: "auto"
+                  textAlign: "center"
                 }}>
                 <img
-                  style={{ minWidth: "300px" }}
+                  style={{ minWidth: "300px", width:"50%" }}
                   src={organization}
                   alt="조직도"
                 />

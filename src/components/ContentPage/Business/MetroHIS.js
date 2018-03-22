@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PointDiv from "../pointDiv";
 import RoundTitle from "../RoundTitle";
-import BusinessContent from "../../../Image/businessContent.svg";
+import BusinessContent from "../../../Image/businessContent.png";
 
 const titleStyle = (obj) => {
     return (

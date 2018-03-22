@@ -3,10 +3,14 @@ import { compose, withProps, withState, withHandlers } from "recompose";
 import { withScriptjs, withGoogleMap, GoogleMap, Marker, InfoWindow } from "react-google-maps";
 import TiCompass from "react-icons/lib/ti/compass";
 
+//AIzaSyAMhTdeFBfOGiQCyQ2K_BfMvXC08NXWRT4
+//AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg
+
+
 const MapWithControlledZoom = compose(
   withProps({
     googleMapURL:
-      "https://maps.googleapis.com/maps/api/js?key=AIzaSyC4R6AN7SmujjPUIGKdyao2Kqitzr1kiRg&v=3.exp&libraries=geometry,drawing,places",
+      "https://maps.googleapis.com/maps/api/js?key=AIzaSyAMhTdeFBfOGiQCyQ2K_BfMvXC08NXWRT4&v=3.exp&libraries=geometry,drawing,places",
     loadingElement: <div style={{ height: `100%` }} />,
     containerElement: <div style={{ height: `500px` }} />,
     mapElement: <div style={{ height: `100%` }} />

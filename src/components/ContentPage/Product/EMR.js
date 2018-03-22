@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import EMRImg from "../../../Image/EMR.svg";
+import EMRImg from "../../../Image/EMR.png";
 import LabelContent from "../LabelContent";
 import ContentList from "../ContentList";
 import PointDiv from "../pointDiv";
@@ -43,6 +43,13 @@ const security = [
   }
 ];
 
+const imgLeftStyle = {
+  width: "200px",
+  float: "left",
+  margin: "30px 30px 30px 0px"
+};
+
+
 class EMR extends Component {
 
     constructor(props){
@@ -54,7 +61,7 @@ class EMR extends Component {
 
     loadIMG(){
       return <div style={{ minWidth: "230px", width: "10%", float: "left" ,margin: "30px" }}>
-          <img src={EMRImg} alt="Metro-EMR Img" />
+          <img src={EMRImg} alt="Metro-EMR Img" style={imgLeftStyle} />
         </div>;
     }
 

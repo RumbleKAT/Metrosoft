@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import LabelContent from "../LabelContent";
 import PointDiv from "../pointDiv";
 import ContentList from "../ContentList";
-import iEMRImg from "../../../Image/iEMR.svg";
+import iEMRImg from "../../../Image/iEMR.png";
 import DottedTitle from "../DottedTitle";
 
 const Title = {
