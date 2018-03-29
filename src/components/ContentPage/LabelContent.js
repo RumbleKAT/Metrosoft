@@ -9,7 +9,6 @@ class LabelContent extends Component {
             color : this.props.onColor,
             line : this.props.onAddLine
         }
-        //console.log(this.state);
         this.loadAddLine = this.loadAddLine.bind(this);
         this.loadLabel = this.loadLabel.bind(this);
     }

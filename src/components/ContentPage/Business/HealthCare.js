@@ -123,7 +123,7 @@ const metal = {
     ]
 }
 
-const path = process.env.PUBLIC_URL + "/HealthCare";
+const path = process.env.PUBLIC_URL + "images//HealthCare";
 const divStyle = { padding: "50px"};
 const imgStyle = { width: "100px",height:"100px"};
 

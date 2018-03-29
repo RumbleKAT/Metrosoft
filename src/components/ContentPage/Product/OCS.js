@@ -28,7 +28,7 @@ const contentStyle = {
   position:"inherit"
 };
 
-const path = process.env.PUBLIC_URL + "/Metro_product/OCS";
+const path = process.env.PUBLIC_URL + "/images/Metro_product/OCS";
 
 const selectedcolors = ["#64b764", "#649dc2", "#feb40e", "#9fc543"];
 

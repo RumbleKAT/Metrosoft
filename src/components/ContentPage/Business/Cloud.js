@@ -21,7 +21,7 @@ const imgCenterStyle = {
   overflow: "hidden"
 };
 
-const path = process.env.PUBLIC_URL + "/Cloud";
+const path = process.env.PUBLIC_URL + "/images/Cloud";
 
 class Cloud extends Component {
 

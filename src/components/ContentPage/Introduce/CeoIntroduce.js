@@ -21,14 +21,12 @@ class CEOIntroduce extends Component {
 
   upDated(response) {
     this.setState({ object: response });
-    console.log(this.state.object);
+    //console.log(this.state.object);
   }
 
   componentDidMount() {
 
-      Axios.get(
-        this.state.url + this.state.load + "&dir=" + this.props.dir
-      )
+      Axios.get('/Introduce/CeoIntroduce.json')
       .then(res => {
         const answer = res.data;
         this.upDated(answer);

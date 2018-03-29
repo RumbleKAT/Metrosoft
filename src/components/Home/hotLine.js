@@ -32,7 +32,6 @@ class HotLine extends Component {
   };
 
   loadTable = (obj) =>{
-    console.log(obj);
       return <table className="ui celled table" style={{marginTop:"50px"}}>
           <thead>
             <tr>

@@ -29,7 +29,7 @@ class Customer extends Component {
   }
 
   componentDidMount() {
-    Axios.get(this.state.url + this.state.load + "&dir=" + this.state.dir)
+    Axios.get('/Customer/index.json')
       .then(res => {
         const answer = res.data;
         this.upDated(answer);

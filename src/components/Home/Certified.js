@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PointDiv from "../ContentPage/pointDiv";
-import MS from "../../Image/Certified/MS.png";
-import HP from "../../Image/Certified/HP.png";
-import OCS from "../../Image/Certified/OCS.png";
+import MS from "../../Image/Certified/01.png";
+import HP from "../../Image/Certified/02.png";
+import OCS from "../../Image/Certified/03.png";
 
 const style = { minWidth: "280px", float:"left" ,width:"30%",padding:"10px",marginLeft:"15px",textAlign:"center"};
 class Certified extends Component {

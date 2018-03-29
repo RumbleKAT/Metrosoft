@@ -50,8 +50,7 @@ class Timeliner extends React.Component {
   }
 
   componentDidMount() {
-    console.log(this.state.url + this.state.load + "&dir=" + this.props.dir);
-    Axios.get(this.state.url + this.state.load + "&dir=" + this.props.dir)
+    Axios.get('/Introduce/Timeline.json')
       .then(res => {
         const answer = res.data;
         this.upDated(answer);
@@ -62,7 +61,6 @@ class Timeliner extends React.Component {
   }
 
   _loadTitle = obj => {
-    console.log(obj);
     return (
       <div>
         <div style={{ padding: "10px", marginTop: "100px" }}>

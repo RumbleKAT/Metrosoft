@@ -10,7 +10,7 @@ class Header extends Component {
   }
 
   loadtitles(){
-    console.log("!!");
+   // console.log("!!");
   }
 
     render() {
@@ -25,22 +25,22 @@ class Header extends Component {
                 <nav>
                   <ul className={styles.ul}>
                     <li className={styles.highlight}>
-                      <a className={styles.context} href="/introduce" onMouseOver={this.loadtitles}>
+                      <a className={styles.context} href={`${process.env.PUBLIC_URL}/introduce`} onMouseOver={this.loadtitles}>
                         회사소개
                       </a>
                     </li>
                     <li className={styles.highlight}>
-                      <a className={styles.context} href="/business">
+                      <a className={styles.context} href={`${process.env.PUBLIC_URL}/business`}>
                         사업영역
                       </a>
                     </li>
                     <li className={styles.highlight}>
-                      <a className={styles.context} href="/product">
+                      <a className={styles.context} href={`${process.env.PUBLIC_URL}/product`}>
                         제품소개
                       </a>
                     </li>
                     <li className={styles.highlight}>
-                      <a className={styles.context} href="/customer">
+                      <a className={styles.context} href={`${process.env.PUBLIC_URL}/customer`}>
                         고객센터
                       </a>
                     </li>

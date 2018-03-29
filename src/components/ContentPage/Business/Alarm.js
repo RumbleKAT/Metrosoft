@@ -36,7 +36,7 @@ const features = {
 }
 
 
-const path = process.env.PUBLIC_URL + "/Alarm";
+const path = process.env.PUBLIC_URL + "/images/Alarm";
 
 
 class Alarm extends Component {

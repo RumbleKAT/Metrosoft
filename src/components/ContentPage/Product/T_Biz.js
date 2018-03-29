@@ -161,7 +161,7 @@ const contentStyle = {
 };
 */
 
-const path = process.env.PUBLIC_URL + "/T_Biz";
+const path = process.env.PUBLIC_URL + "/images/T_Biz";
 const divStyle = { padding: "50px" };
 
 /*

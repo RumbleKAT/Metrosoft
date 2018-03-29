@@ -22,11 +22,11 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/introduce" component={Introduce} />
-              <Route path="/business" component={Business} />
-              <Route path="/product" component={Product} />
-              <Route path="/customer" component={Customer} />
+              <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
+              <Route path={`${process.env.PUBLIC_URL}/introduce`} component={Introduce} />
+              <Route path={`${process.env.PUBLIC_URL}/business`} component={Business} />
+              <Route path={`${process.env.PUBLIC_URL}/product`} component={Product} />
+              <Route path={`${process.env.PUBLIC_URL}/customer`} component={Customer} />
             </Switch>
             <ScrollToTop showUnder={200} style={{ bottom: "80px" }}>
               <div style={{ color: "#169b9b" }}>
@@ -35,7 +35,7 @@ class App extends Component {
             </ScrollToTop>
           </div>
         </BrowserRouter>
-        <Sitemap/>
+        <Sitemap />
         <Footer />
       </div>;
   }

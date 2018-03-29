@@ -4,7 +4,6 @@ import logo from "../../Image/metrologo.png";
 
 class Footer extends Component {
     render() {
-        console.log(styles);
         return <div className={styles.footer}>
             <div className={styles.container}>
               <div className={styles.boxes}>

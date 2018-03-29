@@ -18,7 +18,7 @@ function checkSize(title){
     }
 }
 const divStyle = { overflow: "hidden", padding: "40px", marginBottom: "100px" };
-const path =  process.env.PUBLIC_URL + "/Hospital_icon";
+const path =  process.env.PUBLIC_URL + "/images/Hospital_icon";
 const ImgStyle = { float: "left", padding: "20px 0px 20px 30px"  , height: "100px", margin: "30px 0 50px 0"};
 const ImgStyleSub = { float: "left", padding: "20px" , margin: "30px 0 50px 0"};
 class Target extends Component {
@@ -39,7 +39,7 @@ class Target extends Component {
   }
 
   componentDidMount() {
-    Axios.get(this.state.url + this.state.load + "&dir=" + this.props.dir)
+    Axios.get('/Business/Hospital.json')
       .then(res => {
         const answer = res.data;
         this.upDated(answer);

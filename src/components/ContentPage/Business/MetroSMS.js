@@ -151,7 +151,7 @@ const features = [
   }
 ];
 
-const path = process.env.PUBLIC_URL + "/MetroSMS";
+const path = process.env.PUBLIC_URL + "/images/MetroSMS";
 const con_style = { marginTop: "10px" };
 //const contentStyle = { padding: "10px", marginTop: "20px" };
 /*

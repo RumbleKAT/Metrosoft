@@ -20,14 +20,14 @@ class ImageSlider extends Component {
     setQueue();
 
     var obj = papers.shift();
-    this.state = { image: obj, currentCount: 3 };
+    this.state = { image: obj, currentCount: 5 };
     papers.push(obj);
 
   }
 
   init() {
     this.setState({
-      currentCount: 3
+      currentCount: 5
     });
     this.intervalId = setInterval(this.timer.bind(this), 1000);
   }

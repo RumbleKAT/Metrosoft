@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 function CheckChild(objects, key) {
-        //console.log(key);
         var keys = Object.keys(objects);
         if (keys.includes(key)) {
             return true;
