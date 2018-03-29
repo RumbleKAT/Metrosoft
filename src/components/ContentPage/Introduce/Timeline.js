@@ -67,7 +67,7 @@ class Timeliner extends React.Component {
           <PointDiv onTitle={"회사소개"} />
         </div>
         <div style={{ marginBottom: "50px" }}>
-          <div style={{ alignContent: "center", padding: "50px 20% 50px 10%" }}>
+          <div style={{ alignContent: "center", padding: "50px 20% 50px 5%" }}>
             <ol className={styles.rectangleList}>
               <li>
                 <div style={box}>사업자명</div>
