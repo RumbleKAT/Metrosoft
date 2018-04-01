@@ -256,7 +256,7 @@ class T_Biz extends Component {
             padding: "10px",
             margin: "10px auto 0px auto",
             width: "40%",
-            minWidth: "320px"
+            minWidth: "280px"
           }}
         >
           <img src={path + obj.img} alt={obj.img} style={{ width: "100%" }} />

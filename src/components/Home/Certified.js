@@ -8,17 +8,17 @@ const style = { minWidth: "280px", float:"left" ,width:"30%",padding:"10px",marg
 class Certified extends Component {
 
     loadTitle = () =>{
-        return <div style={{ padding: "50px",overflow:"hidden"}}>
+        return <div style={{ padding: "50px", overflow: "hidden" }}>
             <PointDiv onTitle={"Certified Partnership"} />
             <div style={{ width: "100%" }}>
               <div style={style}>
-                <img src={MS} alt={"MS"} style={{ width: "260px" }} />
+                <img src={MS} alt={"MS"} style={{ width: "260px", height: "260px" }} />
               </div>
               <div style={style}>
-                <img src={HP} alt={"Hp"} style={{ width: "260px" }} />
+                <img src={HP} alt={"Hp"} style={{ width: "260px", height: "260px" }} />
               </div>
               <div style={style}>
-                <img src={OCS} alt={"OCS"} style={{ width: "260px" }} />
+                <img src={OCS} alt={"OCS"} style={{ width: "260px", height: "260px" }} />
               </div>
             </div>
           </div>;

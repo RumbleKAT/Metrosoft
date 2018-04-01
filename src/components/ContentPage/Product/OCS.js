@@ -14,6 +14,7 @@ const imgStyle = {
   padding: "10px",
   margin: "10px auto 0px auto",
   width: "50%",
+  height:"5%",
   minWidth: "280px",
   overflow: "hidden"
 };
@@ -21,7 +22,7 @@ const imgStyle = {
 const contentStyle = {
   marginTop: "20px",
   float: "left",
-  minWidth: "220px",
+  minWidth: "250px",
   width:"20%",
   marginRight: "10px",
   height: "230px",

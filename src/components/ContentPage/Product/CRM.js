@@ -37,6 +37,7 @@ const imgCenterStyle = {
   padding: "10px",
   margin: "10px auto 0px auto",
   width: "50%",
+  height: "5%",
   minWidth: "280px",
   overflow: "hidden"
 };

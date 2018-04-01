@@ -85,13 +85,13 @@ class VoIPContent extends Component {
             <RoundTitle onTitle={"사업 내용"} />
             <div style={{ marginLeft: "20px" }}>
               <div style={imgCenterStyle}>
-                <img style={{ width: "90%" }} src={ContentImg} alt="VOIP 사업내용 이미지" />
+                <img style={{ width: "90%"}} src={ContentImg} alt="VOIP 사업내용 이미지" />
               </div>
             </div>
             <RoundTitle onTitle={"서비스 구성도"} />
             <div style={{ marginLeft: "20px" }}>
               <div style={imgCenterStyle}>
-                <img style={{ width: "90%" }} src={FlowChart} alt="VOIP 서비스 구성도" />
+                <img style={{ width: "90%"}} src={FlowChart} alt="VOIP 서비스 구성도" />
               </div>
             </div>
             <RoundTitle onTitle={"특징"} />

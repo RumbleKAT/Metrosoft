@@ -70,27 +70,27 @@ const table = [
         img : "/02.png"
     },
     {
-        title : "2. 신체 힐링 (2)",
+        title : "3. 신체 힐링 (2)",
         img : "/03.png"
     },
     {
-        title : "2. 신체 힐링 (3)",
+        title : "4. 신체 힐링 (3)",
         img : "/04.png"
     },
     {
-        title : "3. 마음 힐링 | (정서 + 무의식 치유)",
+        title : "5. 마음 힐링 | (정서 + 무의식 치유)",
         img : "/05.png"
     },
     {
-        title : "4. 내면 심리 힐링 | (긍정 정서 촉진 및 무의식 정화)",
+        title : "6. 내면 심리 힐링 | (긍정 정서 촉진 및 무의식 정화)",
         img : "/06.png"
     },
     {
-        title : "5. 집중력 개발",
+        title : "7. 집중력 개발",
         img : "/07.png"
     },
     {
-        title : "5. 집중력 개발 2 (선택)",
+        title : "8. 집중력 개발 2 (선택)",
         img : "/08.png"
     }
 ];
@@ -125,7 +125,6 @@ const metal = {
 
 const path = process.env.PUBLIC_URL + "/images/HealthCare";
 const divStyle = { padding: "50px"};
-const imgStyle = { width: "100px",height:"100px"};
 
 const contentStyle = {
   marginTop: "20px",
@@ -219,21 +218,25 @@ class HealthCare extends Component {
   loadTable = obj => {
     return (
       <div style={{ padding: "50px", overflow: "hidden" }}>
-        <div className="ui steps" style={{overflow:"-webkit-paged-x",marginLeft:"20px" }}>
-        {
+        <div className="ui eight column grid">
+          {
             obj.map((el,i)=>{
-                return <div className="step" key={i} style={{ position: "inherit"}}>
-                    <img src={path + el.img} alt={el.img} style={imgStyle} />
-                    <div className="content">
-                      <div className="title" style={{ marginLeft: "10px" }}>
-                        {el.title.split("|").map((e, i) => {
-                          return <div key={i}>{e}</div>;
-                        })}
-                      </div>
+              return <div className="column" key={i} style={{ minWidth:"280px",position:"inherit",marginLeft:"20px" }}>
+                  <div className="ui fluid card" style={{position:"inherit"}}>
+                    <div className="image" style={{ textAlign: "center", position: "inherit" }}>
+                      <img src={path + el.img} alt="obj" style={{ width: "100%", height: "140px" }} />
                     </div>
-                  </div>;
+                    <div className="content" style={{textAlign:"center"}}>
+                      <a className="header">{el.title.split('|').map((e,i)=>{
+                        return(
+                          <p key ={i}>{e}</p>
+                        );
+                      })}</a>
+                    </div>
+                  </div>
+                </div>;
             })
-        }
+          }
         </div>
       </div>
     );
@@ -253,7 +256,7 @@ class HealthCare extends Component {
                             <div key={i} style={{marginTop:"20px"}}>
                                 <LabelContent onTitle={el.title}/>
                                 <div style={{ padding: "10px", margin: "10px auto 0px auto", width: "40%", minWidth: "280px" }}>
-                                    <img src={path + el.img} alt={el.img} style={{ width:"95%" }} />
+                                    <img src={path + el.img} alt={el.img} style={{ width:"100%" }} />
                                 </div>
                             </div>
                         )

@@ -35,7 +35,7 @@ const selectedcolors = ["#64b764", "#649dc2", "#feb40e", "#9fc543"];
 const contentStyle = {
   marginTop: "20px",
   float: "left",
-  minWidth: "220px",
+  minWidth: "255px",
   width: "20%",
   marginRight: "10px",
   height: "230px",
@@ -140,7 +140,7 @@ class MetroHIS extends Component {
         return <div style={{ padding: "50px" }}>
             <PointDiv onTitle={"의료정보사업"} />
             <RoundTitle onTitle={"의료정보사업부문 (Medical Health Care Solution) "} />
-            <div style={{ padding: "20px", marginTop: "70px" }}>
+            <div style={{ padding: "10px", marginTop: "70px" }}>
               <span>
                 메트로소프트는 중/소 병원을 중심으로 MetroHIS(메트로 병원정보시스템)을 공급하고 있습니다.<br />
                 MetroHIS는 OCS, EMR, HealthCare, CRM, EIS, mPocs 등의 다양한 제품 군을 가지고 병원실정에 맞는 패키지 의료정보 기능을 제공합니다.
@@ -148,7 +148,7 @@ class MetroHIS extends Component {
               <div style={{ marginTop: "50px" }}>
                 {this.loadTitle("사업내용")}
                 <div style={imgCenterStyle}>
-                  <img style={{ width: "80%" }} src={BusinessContent} alt="사업 내용 그림" />
+                  <img style={{ width: "80%" ,height:"10%" }} src={BusinessContent} alt="사업 내용 그림" />
                 </div>
               </div>
               <div style={{ marginTop: "50px" }}>
