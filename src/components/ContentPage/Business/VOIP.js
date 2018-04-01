@@ -5,6 +5,14 @@ import ContentList from "../ContentList";
 import ContentImg from "../../../Image/VOIP.png";
 import FlowChart from "../../../Image/comp.png";
 
+const imgCenterStyle = {
+  padding: "10px",
+  width: "50%",
+  minWidth: "280px",
+  margin: "0px auto 0px"
+};
+
+
 const intro = [
     "유선 전화를 통한 가계비 부담을 줄이기 위해 기존 또는 신규 인터넷 회선을 이용하여 저렴한 통신비용과 PSTN과 PSDN의 양방향 통신 서비스를 지원하여 더욱 안정적인 서비스를 지원합니다."
 ];
@@ -76,14 +84,14 @@ class VoIPContent extends Component {
             </div>
             <RoundTitle onTitle={"사업 내용"} />
             <div style={{ marginLeft: "20px" }}>
-              <div style={{ padding: "10px", margin: "90px auto 0px auto", width: "50%", minWidth: "320px" }}>
-                <img style={{ marginRight: "50px" }} src={ContentImg} alt="VOIP 사업내용 이미지" />
+              <div style={imgCenterStyle}>
+                <img style={{ width: "90%" }} src={ContentImg} alt="VOIP 사업내용 이미지" />
               </div>
             </div>
             <RoundTitle onTitle={"서비스 구성도"} />
             <div style={{ marginLeft: "20px" }}>
-              <div style={{ padding: "10px", margin: "90px auto 0px auto", width: "50%", minWidth: "320px" }}>
-                <img style={{ marginRight: "50px" }} src={FlowChart} alt="VOIP 서비스 구성도" />
+              <div style={imgCenterStyle}>
+                <img style={{ width: "90%" }} src={FlowChart} alt="VOIP 서비스 구성도" />
               </div>
             </div>
             <RoundTitle onTitle={"특징"} />

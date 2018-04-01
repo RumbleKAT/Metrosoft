@@ -23,17 +23,17 @@ class CEOIntroduce extends Component {
     this.setState({ object: response });
     //console.log(this.state.object);
   }
-
+//
   componentDidMount() {
-
-      Axios.get('/Introduce/CeoIntroduce.json')
-      .then(res => {
-        const answer = res.data;
-        this.upDated(answer);
-      })
-      .catch(err => {
-        console.log(err);
-      });
+    //'/Introduce/CeoIntroduce.json'
+      Axios.get("/Introduce/CeoIntroduce.json")
+        .then(res => {
+          const answer = res.data;
+          this.upDated(answer);
+        })
+        .catch(err => {
+          console.log(err);
+        });
   }
 
   _loadArray = obj => {

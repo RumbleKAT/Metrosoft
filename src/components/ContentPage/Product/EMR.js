@@ -45,6 +45,7 @@ const security = [
 
 const imgLeftStyle = {
   width: "200px",
+  height: "200px",
   float: "left",
   margin: "30px 30px 30px 0px"
 };

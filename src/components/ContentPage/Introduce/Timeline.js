@@ -23,7 +23,7 @@ import Axios from 'axios';
 
     const boxLabel = {
       float:"left",padding:"20px",
-      width:"76%",
+      width:"80%",
       minWidth:"350px"
     };
 
@@ -48,9 +48,10 @@ class Timeliner extends React.Component {
   upDated(response) {
     this.setState({ object: response });
   }
-
+  //http://localhost:8000/get?load=Timeline&dir=01
+  //Introduce/Timeline.json
   componentDidMount() {
-    Axios.get('/Introduce/Timeline.json')
+    Axios.get("Introduce/Timeline.json")
       .then(res => {
         const answer = res.data;
         this.upDated(answer);
@@ -168,13 +169,19 @@ class Timeliner extends React.Component {
   };
 
   render() {
-    if(!this.state.object) {
+    if (!this.state.object) {
       return "loading...";
-    }
-    else{
-      return <div className={styles.TimelineStyle}>
+    } else {
+      return (
+        <div className={styles.TimelineStyle}>
           {this._loadTitle(this.state.object.init)}
-          <div style={{ padding: "30px", marginBottom: "50px", marginTop: "100px" }}>
+          <div
+            style={{
+              padding: "30px",
+              marginBottom: "50px",
+              marginTop: "100px"
+            }}
+          >
             <div style={{ padding: "30px", overflow: "hidden" }}>
               <PointDiv onTitle={"연혁"} />
             </div>
@@ -184,7 +191,8 @@ class Timeliner extends React.Component {
               })}
             </div>
           </div>
-        </div>;
+        </div>
+      );
     }
   }
 }

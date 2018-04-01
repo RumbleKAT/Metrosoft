@@ -51,10 +51,28 @@ br{
 }
 
 .boxImg{
-    width: 65%;
+    width: 50%;
+    height: 400px;
     //margin-top:30px;
     min-width: 250px;
+    min-height: 300px;
     border : 0;
+
+       // 반응형 디자인
+        @include media("<huge") {
+            width: 55%;
+            height: 350px;
+        }
+
+        @include media("<large") {
+            width: 55%;
+            height: 350px;
+        }
+
+        @include media("<medium") {
+            width: 250px;
+            height: 350px;
+        }
 }
 
 .sign{

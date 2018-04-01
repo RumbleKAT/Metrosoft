@@ -10,6 +10,13 @@ const Title = {
     subtitle : '(Image Electronic Medical Record)',
     content : 'EMR이 도입되지 않은 의료기관에서 환자 서비스를 위해 필요한 기존의 종이 의무 기록 차트를 Scanning하고 이를 체계적으로 / indexing하여 OCS System과 연계함으로써 기존의 진료 시스템을 유지하며 진료지원 부서와 공유도를 높이고 환자 진료의 활용도를 높였습니다. / 또한 차트의 보관 및 불출의 번거로움을 없앤 인적,물적 자원의 절약과 진료 효율을 높이는 영상의무기록시스템입니다.'
 };
+const imgCenterStyle = {
+  padding: "10px",
+  width: "35%",
+  minWidth: "320px",
+  margin: "0px auto 0px",
+  overflow: "hidden"
+};
 
 const features =[
     "OCS 및 EMR, PACS System과의 연동",
@@ -32,15 +39,8 @@ class IEMR extends Component {
           onColor={"#dfdfdf"}
         />
         <div style={{ marginTop: "50px" }}>
-          <div
-            style={{
-              padding: "10px",
-              margin: "10px auto 0px auto",
-              width: "40%",
-              minWidth: "320px"
-            }}
-          >
-            <img style={{ marginRight: "50px" }} src={iEMRImg} alt="iEMR" />
+          <div style={imgCenterStyle}>
+            <img style={{ width: "90%" }} src={iEMRImg} alt="iEMR" />
           </div>
         </div>
       </div>

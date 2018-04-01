@@ -12,7 +12,7 @@ const styles = {
     fontSize: "20px",
     fontWeight: "bold",
     color: "#888",
-    minWidth: "330px",
+    minWidth: "280px",
     float: "left"
   },
   borderline: {

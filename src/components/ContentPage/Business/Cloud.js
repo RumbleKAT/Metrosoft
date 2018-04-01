@@ -8,6 +8,7 @@ import ContentList from "../ContentList";
 
 const imgLeftStyle = {
   width: "110px",
+  height:"105px",
   float: "left",
   margin: "50px 30px 30px 130px",
   padding:"10px"
@@ -16,7 +17,7 @@ const imgLeftStyle = {
 const imgCenterStyle = {
   padding: "10px",
   width: "35%",
-  minWidth: "320px",
+  minWidth: "270px",
   margin: "0px auto 0px",
   overflow: "hidden"
 };
@@ -45,7 +46,7 @@ class Cloud extends Component {
   loadImg = () => {
     return (
       <div style={imgCenterStyle}>
-        <img src={description} alt="obj" style={{ width: "100%" }} />
+        <img src={description} alt="obj" style={{ width: "100%",height:"100%" }} />
       </div>
     );
   };
@@ -58,10 +59,10 @@ class Cloud extends Component {
         </div>
         {obj.map((el, i) => {
           return <div style={{ marginTop: "50px" }} key={i}>
-              <div style={{ minWidth: "320px" }}>
+              <div style={{ minWidth: "280px" }}>
                 <img src={path + el.image} alt="obj" style={imgLeftStyle} />
               </div>
-              <div style={{ minWidth: "320px", overflow: "hidden", padding: "50px" }}>
+              <div style={{ minWidth: "280px", overflow: "hidden", padding: "50px" }}>
                 <h2>{el.title}</h2>
                 <div style={{ fontSize: "15px" }}>
                   {el.contents.split("|").map((e, i) => {

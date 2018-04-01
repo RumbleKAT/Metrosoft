@@ -28,6 +28,7 @@ const divStyle = {
 
 const imgLeftStyle = {
   width: "200px",
+  height: "200px",
   float: "left",
   margin: "30px 30px 30px 100px"
 };
@@ -36,7 +37,7 @@ const imgCenterStyle = {
   padding: "10px",
   margin: "10px auto 0px auto",
   width: "50%",
-  minWidth: "320px",
+  minWidth: "280px",
   overflow: "hidden"
 };
 

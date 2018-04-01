@@ -10,7 +10,7 @@ import url from "../../server.json";
 
 const Lists = [
     '인사말',
-    '회사연력',
+    '연혁',
     '조직도',
     '오시는 길'
 ];

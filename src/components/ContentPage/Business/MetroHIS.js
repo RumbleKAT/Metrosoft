@@ -42,6 +42,14 @@ const contentStyle = {
   position: "inherit"
 };
 
+const imgCenterStyle = {
+  padding: "10px",
+  width: "35%",
+  minWidth: "280px",
+  margin: "0px auto 0px",
+  overflow: "hidden"
+};
+
 class MetroHIS extends Component {
 
     constructor(props){
@@ -139,8 +147,8 @@ class MetroHIS extends Component {
               </span>
               <div style={{ marginTop: "50px" }}>
                 {this.loadTitle("사업내용")}
-                <div style={{ padding: "10px", margin: "10px auto 0px auto", width: "40%", minWidth: "320px" }}>
-                  <img style={{ marginRight: "50px" }} src={BusinessContent} alt="사업 내용 그림" />
+                <div style={imgCenterStyle}>
+                  <img style={{ width: "80%" }} src={BusinessContent} alt="사업 내용 그림" />
                 </div>
               </div>
               <div style={{ marginTop: "50px" }}>

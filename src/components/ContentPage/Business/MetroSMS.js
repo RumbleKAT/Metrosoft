@@ -169,12 +169,12 @@ class MetroSMS extends Component {
     loadImg(obj , content){
 
         if(content !== null){
-            return <div style={{ padding: "10px", margin: "10px auto 0px auto", width: "40%", minWidth: "320px" }}>
+            return <div style={{ padding: "10px", margin: "10px auto 0px auto", width: "40%", minWidth: "270px" }}>
                 <img src={path + obj} alt={obj} style={{ width: "95%" }} />
                 <div style={{textAlign:"center"}}>{content}</div>
               </div>;
         }else{
-            return <div style={{ padding: "10px", margin: "10px auto 0px auto", width: "40%", minWidth: "320px" }}>
+            return <div style={{ padding: "10px", margin: "10px auto 0px auto", width: "40%", minWidth: "270px" }}>
                 <img src={path + obj} alt={obj} style={{ width: "95%" }} />
             </div>;
         }

@@ -123,7 +123,7 @@ const metal = {
     ]
 }
 
-const path = process.env.PUBLIC_URL + "images//HealthCare";
+const path = process.env.PUBLIC_URL + "/images/HealthCare";
 const divStyle = { padding: "50px"};
 const imgStyle = { width: "100px",height:"100px"};
 
@@ -252,7 +252,7 @@ class HealthCare extends Component {
                         return (
                             <div key={i} style={{marginTop:"20px"}}>
                                 <LabelContent onTitle={el.title}/>
-                                <div style={{ padding: "10px", margin: "10px auto 0px auto", width: "40%", minWidth: "320px" }}>
+                                <div style={{ padding: "10px", margin: "10px auto 0px auto", width: "40%", minWidth: "280px" }}>
                                     <img src={path + el.img} alt={el.img} style={{ width:"95%" }} />
                                 </div>
                             </div>
@@ -273,7 +273,7 @@ class HealthCare extends Component {
           <div>
             {obj.content.map((el, i) => {
               return <div key={i} style={{ marginTop: "50px" }}>
-                  <div style={{ padding: "10px", margin: "10px auto 0px auto", width: "40%", minWidth: "320px" }}>
+                  <div style={{ padding: "10px", margin: "10px auto 0px auto", width: "40%", minWidth: "280px" }}>
                     <img src={path + el} alt={el} style={{ width: "100%" }} />
                   </div>
                 </div>;

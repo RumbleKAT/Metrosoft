@@ -14,7 +14,7 @@ const imgStyle = {
   padding: "10px",
   margin: "10px auto 0px auto",
   width: "50%",
-  minWidth: "320px",
+  minWidth: "280px",
   overflow: "hidden"
 };
 
@@ -489,7 +489,7 @@ class MetroOCS extends Component {
       <div>
         <PointDiv onTitle={"OCS"} />
         <DottedTitle onTitle={Title} />
-        <div style={{ padding: "60px", marginRight: "10px" }}>
+        <div style={{ padding: "60px"}}>
           {this.loadComposition()}
           {Lists.map((list, i) => {
             return <div key={i}>{this.loadContent(list)}</div>;

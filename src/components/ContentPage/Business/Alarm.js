@@ -45,7 +45,7 @@ class Alarm extends Component {
     };
 
     loadImg = (obj) => {
-        return <div style={{ padding: "10px", margin: "10px auto 0px auto", width: "40%", minWidth: "320px" }}>
+        return <div style={{ padding: "10px", margin: "10px auto 0px auto", width: "40%", minWidth: "280px" }}>
             <img src={path + obj} alt={obj} style={{ width: "95%" }} />
         </div>;
     }

@@ -6,6 +6,7 @@ import exImg from "../../../Image/TBiz.png";
 
 const imgLeftStyle = {
   width: "200px",
+  height : "200px",
   float: "left",
   margin: "-10px 30px 30px 50px"
 };
@@ -22,7 +23,7 @@ const styles = {
     fontSize: "20px",
     fontWeight: "bold",
     color: "#888",
-    minWidth: "330px",
+    minWidth: "280px",
     float: "left"
   },
   borderline: {
@@ -221,7 +222,7 @@ class T_Biz extends Component {
                   padding: "10px",
                   margin: "10px auto 0px auto",
                   width: "40%",
-                  minWidth: "320px"
+                  minWidth: "280px"
                 }}
               >
                 <img
