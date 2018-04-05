@@ -51,7 +51,7 @@ class Timeliner extends React.Component {
   //http://localhost:8000/get?load=Timeline&dir=01
   //Introduce/Timeline.json
   componentDidMount() {
-    Axios.get("Introduce/Timeline.json")
+    Axios.get("/Introduce/Timeline.json")
       .then(res => {
         const answer = res.data;
         this.upDated(answer);

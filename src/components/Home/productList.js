@@ -47,7 +47,7 @@ class productList extends Component {
     }
     content(obj,i){
         return <div style={{ marginTop: "50px", width: "10%", minWidth: "150px", padding: "20px", borderRadius: "5px", float: "left", marginRight: "6%", textAlign: "center" }}>
-            <img src={obj} alt="EMR" style={{ width: "110px", height: "100px", padding: "10px" }} />
+            <img src={obj} alt="EMR" style={{ width: "110px", height: "100px", padding: "10px"}} />
             <div style={{ textAlign: "center", marginTop: "5px" }}>
               <a className="ui teal basic button" href={"./product/#" + check(contents.lists[i])}>
                 {contents.lists[i]}

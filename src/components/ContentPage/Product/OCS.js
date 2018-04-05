@@ -25,7 +25,7 @@ const contentStyle = {
   minWidth: "250px",
   width:"20%",
   marginRight: "10px",
-  height: "230px",
+  height: "250px",
   position:"inherit"
 };
 

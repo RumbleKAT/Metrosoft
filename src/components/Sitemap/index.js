@@ -3,15 +3,23 @@ import React, { Component } from "react";
 const Lists = [
   {
     title: "회사소개",
-    contents: ["인사말", "연혁", "조직도", "오시는 길"]
+    contents: ["인사말", "조직도", "회사소개", "연혁", "오시는 길"]
   },
   {
     title: "사업영역",
-    contents: ["의료정보사업", "VOIP 사업", "주요 고객사"]
+    contents: [
+      "의료정보사업",
+      "Metro-cERP",
+      "헬스케어 서비스",
+      "VOIP 사업",
+      "MetroSMS",
+      "알림톡",
+      "주요 고객사"
+    ]
   },
   {
     title: "제품소개",
-    contents: ["EMR", "iEMR", "OCS", "mPOC", "mEAMS", "ERP", "CRM"]
+    contents: ["EMR", "iEMR", "OCS", "T-BIZ 모바일 EMR", "ERP", "CRM"]
   },
   {
     title: "고객센터",

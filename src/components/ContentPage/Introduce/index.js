@@ -8,12 +8,7 @@ import PointDiv from "../pointDiv";
 import TitleList from "../TitleList";
 import url from "../../server.json";
 
-const Lists = [
-    '인사말',
-    '연혁',
-    '조직도',
-    '오시는 길'
-];
+const Lists = ["인사말", "조직도","회사소개", "연혁", "오시는 길"];
 
 const dir = "01";
 

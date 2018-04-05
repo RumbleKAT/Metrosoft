@@ -36,7 +36,7 @@ const stock = [
 const imgStyle = {
   padding: "10px",
   margin: "10px auto 0px auto",
-  width: "50%",
+  width: "35%",
   minWidth: "320px",
   overflow: "hidden"
 };
